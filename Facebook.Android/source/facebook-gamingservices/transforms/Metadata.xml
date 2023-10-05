@@ -17,6 +17,8 @@
 	      name="managedReturn">Java.Lang.Object</attr>
     <attr path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentConfig.Builder']/method[@name='readFrom' and count(parameter)=1]"
           name="managedReturn">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentConfig.Builder']/method[@name='readFrom' and count(parameter)=1]/parameter[1]"
+          name="managedType">Java.Lang.Object</attr>
 	<attr path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentConfig.CREATOR']/method[@name='createFromParcel' and count(parameter)=1]"
 	      name="managedReturn">Java.Lang.Object</attr>
 	<attr path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentConfig.CREATOR']/method[@name='newArray' and count(parameter)=1]"

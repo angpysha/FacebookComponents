@@ -11,67 +11,66 @@ namespace Xamarin.Facebook.GamingServices
         //{
         //    return OrderedModeHandlers.ToList();
         //}
-        //protected override IList _OrderedModeHandlers()
-        //{
-        //    return OrderedModeHandlers.ToList();
-        //}
+        protected override IList _OrderedModeHandlers()
+        {
+            return OrderedModeHandlers.ToList();
+        }
     }
 
     public partial class TournamentJoinDialog
     {
-        //protected override IList _OrderedModeHandlers()
-        //{
-        //    return OrderedModeHandlers.ToList();
-        //}
+        protected override IList _OrderedModeHandlers()
+        {
+            return OrderedModeHandlers.ToList();
+        }
     }
 
     public partial class GamingGroupIntegration
     {
-        //protected override IList _OrderedModeHandlers()
-        //{
-        //    return OrderedModeHandlers.ToList();
-        //}
+        protected override IList _OrderedModeHandlers()
+        {
+            return OrderedModeHandlers.ToList();
+        }
     }
 
     public partial class GameRequestDialog
     {
-        //protected override global::System.Collections.IList _OrderedModeHandlers()
-        //{
-        //    return OrderedModeHandlers.ToList();
-        //}
+        protected override IList _OrderedModeHandlers()
+        {
+            return OrderedModeHandlers.ToList();
+        }
     }
 
     public partial class ContextChooseDialog
     {
-        //protected override global::System.Collections.IList _OrderedModeHandlers()
-        //{
-        //    return OrderedModeHandlers.ToList();
-        //}
+        protected override IList _OrderedModeHandlers()
+        {
+            return OrderedModeHandlers.ToList();
+        }
     }
 
     public partial class ContextCreateDialog
     {
-        //protected override global::System.Collections.IList _OrderedModeHandlers()
-        //{
-        //    return OrderedModeHandlers.ToList();
-        //}
+        protected override IList _OrderedModeHandlers()
+        {
+            return OrderedModeHandlers.ToList();
+        }
     }
 
     public partial class ContextSwitchDialog
     {
-        //protected override global::System.Collections.IList _OrderedModeHandlers()
-        //{
-        //    return OrderedModeHandlers.ToList();
-        //}
+        protected override IList _OrderedModeHandlers()
+        {
+            return OrderedModeHandlers.ToList();
+        }
     }
 
     public partial class TournamentShareDialog
     {
-        //protected override global::System.Collections.IList _OrderedModeHandlers()
-        //{
-        //    return OrderedModeHandlers.ToList();
-        //}
-        //}
+        protected override IList _OrderedModeHandlers()
+        {
+            return OrderedModeHandlers.ToList();
+        }
 
         //public partial class TournamentConfig
         //{

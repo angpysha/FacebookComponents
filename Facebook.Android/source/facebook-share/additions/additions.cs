@@ -107,11 +107,15 @@ namespace Xamarin.Facebook.Share.Widget
 
     public partial class GameRequestDialog
     {
-		protected override IList _OrderedModeHandlers()
-		{
-			return OrderedModeHandlers.ToList();
-		}
-	}
+        //protected override IList _OrderedModeHandlers()
+        //{
+        //	return OrderedModeHandlers.ToList();
+        //}
+        protected override IList _OrderedModeHandlers()
+        {
+            return OrderedModeHandlers.ToList();
+        }
+    }
 
     public partial class AppInviteDialog
 	{
