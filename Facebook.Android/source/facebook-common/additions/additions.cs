@@ -1,3 +1,4 @@
+using Android.Content;
 using Android.Runtime;
 using System;
 using System.Linq;
@@ -78,13 +79,13 @@ namespace Xamarin.Facebook.Share.Model
 		{
 			static IntPtr id_build;
 
-			[Register("build", "()Lcom/facebook/share/model/ShareOpenGraphValueContainer;", "")]
-			public global::Java.Lang.Object Build()
-			{
-				if (id_build == IntPtr.Zero)
-					id_build = JNIEnv.GetMethodID(class_ref, "build", "()Lcom/facebook/share/model/ShareOpenGraphValueContainer;");
-				return global::Java.Lang.Object.GetObject<global::Java.Lang.Object>(JNIEnv.CallObjectMethod(Handle, id_build), JniHandleOwnership.TransferLocalRef);
-			}
+			//[Register("build", "()Lcom/facebook/share/model/ShareOpenGraphValueContainer;", "")]
+			//public global::Java.Lang.Object Build()
+			//{
+			//	if (id_build == IntPtr.Zero)
+			//		id_build = JNIEnv.GetMethodID(class_ref, "build", "()Lcom/facebook/share/model/ShareOpenGraphValueContainer;");
+			//	return global::Java.Lang.Object.GetObject<global::Java.Lang.Object>(JNIEnv.CallObjectMethod(Handle, id_build), JniHandleOwnership.TransferLocalRef);
+			//}
 
 			//// This method is explicitly implemented as a member of an instantiated Xamarin.Facebook.Share.Model.IShareModelBuilder
 			//global::Java.Lang.Object global::Xamarin.Facebook.Share.Model.IShareModelBuilder.ReadFrom (global::Android.OS.Parcel p0)
@@ -94,14 +95,14 @@ namespace Xamarin.Facebook.Share.Model
 
 			static IntPtr id_readFrom_Landroid_os_Parcel_;
 
-			[Register("readFrom", "(Landroid/os/Parcel;)Lcom/facebook/share/model/ShareOpenGraphValueContainer$Builder;", "")]
-			public global::Xamarin.Facebook.Share.Model.ShareOpenGraphValueContainer.Builder ReadFrom(global::Android.OS.Parcel p0)
-			{
-				if (id_readFrom_Landroid_os_Parcel_ == IntPtr.Zero)
-					id_readFrom_Landroid_os_Parcel_ = JNIEnv.GetMethodID(class_ref, "readFrom", "(Landroid/os/Parcel;)Lcom/facebook/share/model/ShareOpenGraphValueContainer$Builder;");
-				global::Xamarin.Facebook.Share.Model.ShareOpenGraphValueContainer.Builder __ret = global::Java.Lang.Object.GetObject<global::Xamarin.Facebook.Share.Model.ShareOpenGraphValueContainer.Builder>(JNIEnv.CallObjectMethod(Handle, id_readFrom_Landroid_os_Parcel_, new JValue(p0)), JniHandleOwnership.TransferLocalRef);
-				return __ret;
-			}
+			//[Register("readFrom", "(Landroid/os/Parcel;)Lcom/facebook/share/model/ShareOpenGraphValueContainer$Builder;", "")]
+			//public global::Xamarin.Facebook.Share.Model.ShareOpenGraphValueContainer.Builder ReadFrom(global::Android.OS.Parcel p0)
+			//{
+			//	if (id_readFrom_Landroid_os_Parcel_ == IntPtr.Zero)
+			//		id_readFrom_Landroid_os_Parcel_ = JNIEnv.GetMethodID(class_ref, "readFrom", "(Landroid/os/Parcel;)Lcom/facebook/share/model/ShareOpenGraphValueContainer$Builder;");
+			//	global::Xamarin.Facebook.Share.Model.ShareOpenGraphValueContainer.Builder __ret = global::Java.Lang.Object.GetObject<global::Xamarin.Facebook.Share.Model.ShareOpenGraphValueContainer.Builder>(JNIEnv.CallObjectMethod(Handle, id_readFrom_Landroid_os_Parcel_, new JValue(p0)), JniHandleOwnership.TransferLocalRef);
+			//	return __ret;
+			//}
 		}
 	}
 
@@ -286,13 +287,18 @@ namespace Xamarin.Facebook.Share.Widget
 	//	}
 	//}
 
-	public partial class ShareDialog
-	{
-        protected override global::System.Collections.IList _OrderedModeHandlers()
-		{
-			return OrderedModeHandlers.ToList();
-		}
-	}
+	//public partial class ShareDialog
+	//{
+ //       protected override global::System.Collections.IList _OrderedModeHandlers()
+	//	{
+	//		return OrderedModeHandlers.ToList();
+	//	}
+
+ //  //      public bool ShouldFailOnDataError
+ //  //      {
+	//		// get =>
+ //  //      }
+ //   }
 }
 
 //namespace Xamarin.Facebook.Share
@@ -305,4 +311,25 @@ namespace Xamarin.Facebook.Share.Widget
 //		}
 //	}
 //}
+
+// namespace Xamarin.Facebook.Login
+// {
+//     public partial class LoginManager
+//     {
+//         partial class FacebookLoginActivityResultContract 
+//         {
+//             public Intent CreateIntent(Context context, Java.Lang.Object input)
+//             {
+//                 
+//             }
+//         
+//             public Java.Lang.Object ParseResult(int resultCode, Intent intent)
+//             {
+//                 throw new NotImplementedException();
+//             }
+//         }
+//     }
+// }
+
+
 

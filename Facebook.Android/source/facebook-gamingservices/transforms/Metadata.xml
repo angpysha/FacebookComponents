@@ -15,8 +15,75 @@
 	      name="managedReturn">Java.Lang.Object[]</attr>
 	<attr path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentConfig.Builder']/method[@name='build' and count(parameter)=0]"
 	      name="managedReturn">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentConfig.Builder']/method[@name='readFrom' and count(parameter)=1]"
+          name="managedReturn">Java.Lang.Object</attr>
 	<attr path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentConfig.CREATOR']/method[@name='createFromParcel' and count(parameter)=1]"
 	      name="managedReturn">Java.Lang.Object</attr>
 	<attr path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentConfig.CREATOR']/method[@name='newArray' and count(parameter)=1]"
 	      name="managedReturn">Java.Lang.Object[]</attr>
+    <!--<attr path="/api/package[@name='com.facebook.gamingservices.model']/class[@name='ContextChooseContent.CREATOR']/method[@name='createFromParcel' and count(parameter)=1]"
+          name="managedReturn">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='com.facebook.gamingservices.model']/class[@name='ContextChooseContent.CREATOR']/method[@name='newArray' and count(parameter)=1]"
+          name="managedReturn">Java.Lang.Object[]</attr>-->
+    <attr path="/api/package[@name='com.facebook.gamingservices.model']/class[@name='ContextCreateContent.CREATOR']/method[@name='createFromParcel' and count(parameter)=1]"
+          name="managedReturn">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='com.facebook.gamingservices.model']/class[@name='ContextCreateContent.CREATOR']/method[@name='newArray' and count(parameter)=1]"
+          name="managedReturn">Java.Lang.Object[]</attr>
+    <attr path="/api/package[@name='com.facebook.gamingservices.model']/class[@name='ContextSwitchContent.CREATOR']/method[@name='createFromParcel' and count(parameter)=1]"
+          name="managedReturn">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='com.facebook.gamingservices.model']/class[@name='ContextSwitchContent.CREATOR']/method[@name='newArray' and count(parameter)=1]"
+          name="managedReturn">Java.Lang.Object[]</attr>
+
+    <add-node path="/api/package[@name='com.facebook.gamingservices.model']">
+        <class abstract="false" deprecated="not deprecated" final="false" name="ContextChooseContent.Builder" static="false" visibility="public" extends="java.lang.Object" implements="com.facebook.share.model.IShareModelBuilder">
+            <method abstract="false" deprecated="not deprecated" final="false" name="readFrom" native="false" return="java.lang.Object" static="false" synchronized="false" visibility="public">
+                <parameter name="model" type="java.lang.Object"/>
+            </method>
+
+            <!-- Adding the setter method with return type 'void' -->
+            <!--<method abstract="false" deprecated="not deprecated" final="false" name="setShouldFailOnDataError" native="false" return="void" static="false" synchronized="false" visibility="public">
+                <parameter name="shouldFailOnDataError" type="boolean"/>
+            </method>-->
+        </class>
+        <class abstract="false" deprecated="not deprecated" final="false" name="ContextCreateContent.Builder" static="false" visibility="public" extends="java.lang.Object" implements="com.facebook.share.model.IShareModelBuilder">
+            <method abstract="false" deprecated="not deprecated" final="false" name="readFrom" native="false" return="java.lang.Object" static="false" synchronized="false" visibility="public">
+                <parameter name="model" type="java.lang.Object"/>
+            </method>
+
+            <!-- Adding the setter method with return type 'void' -->
+            <!--<method abstract="false" deprecated="not deprecated" final="false" name="setShouldFailOnDataError" native="false" return="void" static="false" synchronized="false" visibility="public">
+                <parameter name="shouldFailOnDataError" type="boolean"/>
+            </method>-->
+        </class>
+        <class abstract="false" deprecated="not deprecated" final="false" name="ContextSwitchContent.Builder" static="false" visibility="public" extends="java.lang.Object" implements="com.facebook.share.model.IShareModelBuilder">
+            <method abstract="false" deprecated="not deprecated" final="false" name="readFrom" native="false" return="java.lang.Object" static="false" synchronized="false" visibility="public">
+                <parameter name="model" type="java.lang.Object"/>
+            </method>
+
+            <!-- Adding the setter method with return type 'void' -->
+            <!--<method abstract="false" deprecated="not deprecated" final="false" name="setShouldFailOnDataError" native="false" return="void" static="false" synchronized="false" visibility="public">
+                <parameter name="shouldFailOnDataError" type="boolean"/>
+            </method>-->
+        </class>
+
+        <!--<class abstract="false" deprecated="not deprecated" final="true" name="ContextChooseContent.CREATOR" static="true" visibility="public" extends="java.lang.Object">
+            <method abstract="false" deprecated="not deprecated" final="false" name="createFromParcel" native="false" return="java.lang.Object" static="true" synchronized="false" visibility="public">
+                <parameter name="parcelable" type="android.os.Parcel"/>
+            </method>
+            <method abstract="false" deprecated="not deprecated" final="false" name="newArray" native="false" return="java.lang.Object[]" static="true" synchronized="false" visibility="public">
+                <parameter name="size" type="int"/>
+            </method>
+        </class>-->
+        <class abstract="false" deprecated="not deprecated" final="true" name="ContextChooseContent.CREATOR" static="true" visibility="public" extends="java.lang.Object">
+            <!-- Corrected the return type for createFromParcel -->
+            <method abstract="false" deprecated="not deprecated" final="false" name="createFromParcel" native="false" return="com.facebook.gamingservices.model.ContextChooseContent" static="true" synchronized="false" visibility="public">
+                <parameter name="parcelable" type="android.os.Parcel"/>
+            </method>
+
+            <!-- Corrected the return type for newArray -->
+            <method abstract="false" deprecated="not deprecated" final="false" name="newArray" native="false" return="com.facebook.gamingservices.model.ContextChooseContent[]" static="true" synchronized="false" visibility="public">
+                <parameter name="size" type="int"/>
+            </method>
+        </class>
+    </add-node>
 </metadata>

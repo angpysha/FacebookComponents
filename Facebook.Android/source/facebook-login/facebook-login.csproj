@@ -1,8 +1,8 @@
-<Project Sdk="MSBuild.Sdk.Extras/2.0.54">
+<Project Sdk="MSBuild.Sdk.Extras/3.0.44">
 
   <PropertyGroup>
     <AndroidCodegenTarget>XAJavaInterop1</AndroidCodegenTarget>
-    <TargetFrameworks>MonoAndroid12.0</TargetFrameworks>
+    <TargetFrameworks>MonoAndroid12.0;net6.0-android31</TargetFrameworks>
     <IsBindingProject>true</IsBindingProject>
 
     <AssemblyName>Xamarin.Facebook.Login.Android</AssemblyName>
@@ -39,6 +39,7 @@
     
   <PropertyGroup>
     <Java8DocPaths>..\..\externals\facebook-login-docs\</Java8DocPaths>
+    <RootNamespace>$(MSBuildProjectName.Replace(" ", "_").Replace("-","_"))</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

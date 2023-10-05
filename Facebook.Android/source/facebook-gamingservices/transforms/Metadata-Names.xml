@@ -1,0 +1,963 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='ContextChooseDialog']/method[@name='setRequestCode' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+    name="managedName">requestCode</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='ContextChooseDialog']/method[@name='canShow' and count(parameter)=1 and parameter[1][@type='com.facebook.gamingservices.model/ContextChooseContent']]/parameter[1]"
+    name="managedName">content</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='ContextChooseDialog']/constructor[@name='ContextChooseDialog' and count(parameter)=1 and parameter[1][@type='android.app.Activity']]/parameter[1]"
+    name="managedName">activity</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='ContextChooseDialog']/constructor[@name='ContextChooseDialog' and count(parameter)=1 and parameter[1][@type='androidx.fragment.app.Fragment']]/parameter[1]"
+    name="managedName">fragment</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='ContextChooseDialog']/constructor[@name='ContextChooseDialog' and count(parameter)=1 and parameter[1][@type='android.app.Fragment']]/parameter[1]"
+    name="managedName">fragment</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='ContextChooseDialog.Result']/method[@name='setContextID' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+    name="managedName">contextID</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='ContextCreateDialog']/method[@name='setRequestCode' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+    name="managedName">requestCode</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='ContextCreateDialog']/method[@name='canShow' and count(parameter)=1 and parameter[1][@type='com.facebook.gamingservices.model/ContextCreateContent']]/parameter[1]"
+    name="managedName">content</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='ContextCreateDialog']/constructor[@name='ContextCreateDialog' and count(parameter)=1 and parameter[1][@type='android.app.Activity']]/parameter[1]"
+    name="managedName">activity</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='ContextCreateDialog']/constructor[@name='ContextCreateDialog' and count(parameter)=1 and parameter[1][@type='androidx.fragment.app.Fragment']]/parameter[1]"
+    name="managedName">fragment</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='ContextCreateDialog']/constructor[@name='ContextCreateDialog' and count(parameter)=1 and parameter[1][@type='android.app.Fragment']]/parameter[1]"
+    name="managedName">fragment</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='ContextCreateDialog.Result']/method[@name='setContextID' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+    name="managedName">contextID</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='ContextSwitchDialog']/method[@name='setRequestCode' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+    name="managedName">requestCode</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='ContextSwitchDialog']/method[@name='canShow' and count(parameter)=1 and parameter[1][@type='com.facebook.gamingservices.model/ContextSwitchContent']]/parameter[1]"
+    name="managedName">content</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='ContextSwitchDialog']/constructor[@name='ContextSwitchDialog' and count(parameter)=1 and parameter[1][@type='android.app.Activity']]/parameter[1]"
+    name="managedName">activity</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='ContextSwitchDialog']/constructor[@name='ContextSwitchDialog' and count(parameter)=1 and parameter[1][@type='androidx.fragment.app.Fragment']]/parameter[1]"
+    name="managedName">fragment</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='ContextSwitchDialog']/constructor[@name='ContextSwitchDialog' and count(parameter)=1 and parameter[1][@type='android.app.Fragment']]/parameter[1]"
+    name="managedName">fragment</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='ContextSwitchDialog.Result']/method[@name='setContextID' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+    name="managedName">contextID</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/interface[@name='CustomUpdate']/method[@name='newCustomUpdateRequest' and count(parameter)=2 and parameter[1][@type='com.facebook.gamingservices.model/CustomUpdateContent'] and parameter[2][@type='GraphRequest.Callback']]/parameter[1]"
+    name="managedName">content</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/interface[@name='CustomUpdate']/method[@name='newCustomUpdateRequest' and count(parameter)=2 and parameter[1][@type='com.facebook.gamingservices.model/CustomUpdateContent'] and parameter[2][@type='GraphRequest.Callback']]/parameter[2]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='FriendFinderDialog']/method[@name='show' and count(parameter)=1 and parameter[1][@type='java.lang.Void']]/parameter[1]"
+    name="managedName">content</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='FriendFinderDialog']/constructor[@name='FriendFinderDialog' and count(parameter)=1 and parameter[1][@type='android.app.Activity']]/parameter[1]"
+    name="managedName">activity</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='FriendFinderDialog']/constructor[@name='FriendFinderDialog' and count(parameter)=1 and parameter[1][@type='android.app.Fragment']]/parameter[1]"
+    name="managedName">fragment</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='FriendFinderDialog']/constructor[@name='FriendFinderDialog' and count(parameter)=1 and parameter[1][@type='androidx.fragment.app.Fragment']]/parameter[1]"
+    name="managedName">fragment</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GameRequestDialog']/method[@name='show' and count(parameter)=2 and parameter[1][@type='android.app.Activity'] and parameter[2][@type='GameRequestContent']]/parameter[1]"
+    name="managedName">activity</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GameRequestDialog']/method[@name='show' and count(parameter)=2 and parameter[1][@type='android.app.Activity'] and parameter[2][@type='GameRequestContent']]/parameter[2]"
+    name="managedName">gameRequestContent</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GameRequestDialog']/method[@name='show' and count(parameter)=2 and parameter[1][@type='androidx.fragment.app.Fragment'] and parameter[2][@type='GameRequestContent']]/parameter[1]"
+    name="managedName">fragment</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GameRequestDialog']/method[@name='show' and count(parameter)=2 and parameter[1][@type='androidx.fragment.app.Fragment'] and parameter[2][@type='GameRequestContent']]/parameter[2]"
+    name="managedName">gameRequestContent</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GameRequestDialog']/method[@name='show' and count(parameter)=2 and parameter[1][@type='android.app.Fragment'] and parameter[2][@type='GameRequestContent']]/parameter[1]"
+    name="managedName">fragment</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GameRequestDialog']/method[@name='show' and count(parameter)=2 and parameter[1][@type='android.app.Fragment'] and parameter[2][@type='GameRequestContent']]/parameter[2]"
+    name="managedName">gameRequestContent</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GameRequestDialog']/constructor[@name='GameRequestDialog' and count(parameter)=1 and parameter[1][@type='android.app.Activity']]/parameter[1]"
+    name="managedName">activity</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GameRequestDialog']/constructor[@name='GameRequestDialog' and count(parameter)=1 and parameter[1][@type='androidx.fragment.app.Fragment']]/parameter[1]"
+    name="managedName">fragment</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GameRequestDialog']/constructor[@name='GameRequestDialog' and count(parameter)=1 and parameter[1][@type='android.app.Fragment']]/parameter[1]"
+    name="managedName">fragment</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/interface[@name='GamingContext.Companion']/method[@name='setCurrentGamingContext' and count(parameter)=1 and parameter[1][@type='com.facebook.gamingservices.GamingContext']]/parameter[1]"
+    name="managedName">ctx</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingContext']/constructor[@name='GamingContext' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+    name="managedName">contextID</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingGroupIntegration']/method[@name='show' and count(parameter)=1 and parameter[1][@type='java.lang.Void']]/parameter[1]"
+    name="managedName">content</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingGroupIntegration']/constructor[@name='GamingGroupIntegration' and count(parameter)=1 and parameter[1][@type='android.app.Activity']]/parameter[1]"
+    name="managedName">activity</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingGroupIntegration']/constructor[@name='GamingGroupIntegration' and count(parameter)=1 and parameter[1][@type='android.app.Fragment']]/parameter[1]"
+    name="managedName">fragment</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingGroupIntegration']/constructor[@name='GamingGroupIntegration' and count(parameter)=1 and parameter[1][@type='androidx.fragment.app.Fragment']]/parameter[1]"
+    name="managedName">fragment</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingImageUploader']/method[@name='uploadToMediaLibrary' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.graphics.Bitmap'] and parameter[3][@type='boolean']]/parameter[1]"
+    name="managedName">caption</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingImageUploader']/method[@name='uploadToMediaLibrary' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.graphics.Bitmap'] and parameter[3][@type='boolean']]/parameter[2]"
+    name="managedName">imageBitmap</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingImageUploader']/method[@name='uploadToMediaLibrary' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.graphics.Bitmap'] and parameter[3][@type='boolean']]/parameter[3]"
+    name="managedName">shouldLaunchMediaDialog</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingImageUploader']/method[@name='uploadToMediaLibrary' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.graphics.Bitmap'] and parameter[3][@type='boolean'] and parameter[4][@type='GraphRequest.Callback']]/parameter[1]"
+    name="managedName">caption</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingImageUploader']/method[@name='uploadToMediaLibrary' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.graphics.Bitmap'] and parameter[3][@type='boolean'] and parameter[4][@type='GraphRequest.Callback']]/parameter[2]"
+    name="managedName">imageBitmap</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingImageUploader']/method[@name='uploadToMediaLibrary' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.graphics.Bitmap'] and parameter[3][@type='boolean'] and parameter[4][@type='GraphRequest.Callback']]/parameter[3]"
+    name="managedName">shouldLaunchMediaDialog</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingImageUploader']/method[@name='uploadToMediaLibrary' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.graphics.Bitmap'] and parameter[3][@type='boolean'] and parameter[4][@type='GraphRequest.Callback']]/parameter[4]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingImageUploader']/method[@name='uploadToMediaLibrary' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.io.File'] and parameter[3][@type='boolean']]/parameter[1]"
+    name="managedName">caption</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingImageUploader']/method[@name='uploadToMediaLibrary' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.io.File'] and parameter[3][@type='boolean']]/parameter[2]"
+    name="managedName">imageFile</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingImageUploader']/method[@name='uploadToMediaLibrary' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.io.File'] and parameter[3][@type='boolean']]/parameter[3]"
+    name="managedName">shouldLaunchMediaDialog</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingImageUploader']/method[@name='uploadToMediaLibrary' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.io.File'] and parameter[3][@type='boolean'] and parameter[4][@type='GraphRequest.Callback']]/parameter[1]"
+    name="managedName">caption</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingImageUploader']/method[@name='uploadToMediaLibrary' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.io.File'] and parameter[3][@type='boolean'] and parameter[4][@type='GraphRequest.Callback']]/parameter[2]"
+    name="managedName">imageFile</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingImageUploader']/method[@name='uploadToMediaLibrary' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.io.File'] and parameter[3][@type='boolean'] and parameter[4][@type='GraphRequest.Callback']]/parameter[3]"
+    name="managedName">shouldLaunchMediaDialog</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingImageUploader']/method[@name='uploadToMediaLibrary' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.io.File'] and parameter[3][@type='boolean'] and parameter[4][@type='GraphRequest.Callback']]/parameter[4]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingImageUploader']/method[@name='uploadToMediaLibrary' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.net.Uri'] and parameter[3][@type='boolean']]/parameter[1]"
+    name="managedName">caption</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingImageUploader']/method[@name='uploadToMediaLibrary' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.net.Uri'] and parameter[3][@type='boolean']]/parameter[2]"
+    name="managedName">imageUri</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingImageUploader']/method[@name='uploadToMediaLibrary' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.net.Uri'] and parameter[3][@type='boolean']]/parameter[3]"
+    name="managedName">shouldLaunchMediaDialog</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingImageUploader']/method[@name='uploadToMediaLibrary' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.net.Uri'] and parameter[3][@type='boolean'] and parameter[4][@type='GraphRequest.Callback']]/parameter[1]"
+    name="managedName">caption</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingImageUploader']/method[@name='uploadToMediaLibrary' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.net.Uri'] and parameter[3][@type='boolean'] and parameter[4][@type='GraphRequest.Callback']]/parameter[2]"
+    name="managedName">imageUri</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingImageUploader']/method[@name='uploadToMediaLibrary' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.net.Uri'] and parameter[3][@type='boolean'] and parameter[4][@type='GraphRequest.Callback']]/parameter[3]"
+    name="managedName">shouldLaunchMediaDialog</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingImageUploader']/method[@name='uploadToMediaLibrary' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.net.Uri'] and parameter[3][@type='boolean'] and parameter[4][@type='GraphRequest.Callback']]/parameter[4]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingImageUploader']/constructor[@name='GamingImageUploader' and count(parameter)=1 and parameter[1][@type='android.content.Context']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingPayload']/method[@name='loadPayloadFromCloudGame' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+    name="managedName">payloadString</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingPayload']/method[@name='loadPayloadFromIntent' and count(parameter)=1 and parameter[1][@type='android.content.Intent']]/parameter[1]"
+    name="managedName">intent</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingVideoUploader']/method[@name='uploadToMediaLibrary' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.net.Uri']]/parameter[1]"
+    name="managedName">caption</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingVideoUploader']/method[@name='uploadToMediaLibrary' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.net.Uri']]/parameter[2]"
+    name="managedName">videoUri</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingVideoUploader']/method[@name='uploadToMediaLibrary' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.net.Uri'] and parameter[3][@type='GraphRequest.OnProgressCallback']]/parameter[1]"
+    name="managedName">caption</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingVideoUploader']/method[@name='uploadToMediaLibrary' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.net.Uri'] and parameter[3][@type='GraphRequest.OnProgressCallback']]/parameter[2]"
+    name="managedName">videoUri</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingVideoUploader']/method[@name='uploadToMediaLibrary' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.net.Uri'] and parameter[3][@type='GraphRequest.OnProgressCallback']]/parameter[3]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingVideoUploader']/method[@name='uploadToMediaLibrary' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.net.Uri'] and parameter[3][@type='boolean'] and parameter[4][@type='GraphRequest.OnProgressCallback']]/parameter[1]"
+    name="managedName">caption</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingVideoUploader']/method[@name='uploadToMediaLibrary' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.net.Uri'] and parameter[3][@type='boolean'] and parameter[4][@type='GraphRequest.OnProgressCallback']]/parameter[2]"
+    name="managedName">videoUri</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingVideoUploader']/method[@name='uploadToMediaLibrary' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.net.Uri'] and parameter[3][@type='boolean'] and parameter[4][@type='GraphRequest.OnProgressCallback']]/parameter[3]"
+    name="managedName">shouldLaunchMediaDialog</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingVideoUploader']/method[@name='uploadToMediaLibrary' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.net.Uri'] and parameter[3][@type='boolean'] and parameter[4][@type='GraphRequest.OnProgressCallback']]/parameter[4]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GamingVideoUploader']/constructor[@name='GamingVideoUploader' and count(parameter)=1 and parameter[1][@type='android.content.Context']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='GraphAPIException']/constructor[@name='GraphAPIException' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+    name="managedName">message</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='OpenGamingMediaDialog']/method[@name='onCompleted' and count(parameter)=1 and parameter[1][@type='GraphResponse']]/parameter[1]"
+    name="managedName">response</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='OpenGamingMediaDialog']/method[@name='onProgress' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='long']]/parameter[1]"
+    name="managedName">current</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='OpenGamingMediaDialog']/method[@name='onProgress' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='long']]/parameter[2]"
+    name="managedName">max</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='OpenGamingMediaDialog']/constructor[@name='OpenGamingMediaDialog' and count(parameter)=1 and parameter[1][@type='android.content.Context']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='OpenGamingMediaDialog']/constructor[@name='OpenGamingMediaDialog' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='GraphRequest.Callback']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='OpenGamingMediaDialog']/constructor[@name='OpenGamingMediaDialog' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='GraphRequest.Callback']]/parameter[2]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/interface[@name='Tournament.CREATOR']/method[@name='createFromParcel' and count(parameter)=1 and parameter[1][@type='android.os.Parcel']]/parameter[1]"
+    name="managedName">parcel</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/interface[@name='Tournament.CREATOR']/method[@name='newArray' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+    name="managedName">size</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='Tournament']/method[@name='setExpiration' and count(parameter)=1 and parameter[1][@type='java.time.ZonedDateTime']]/parameter[1]"
+    name="managedName">expiration</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='Tournament']/method[@name='writeToParcel' and count(parameter)=2 and parameter[1][@type='android.os.Parcel'] and parameter[2][@type='int']]/parameter[1]"
+    name="managedName">@out</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='Tournament']/method[@name='writeToParcel' and count(parameter)=2 and parameter[1][@type='android.os.Parcel'] and parameter[2][@type='int']]/parameter[2]"
+    name="managedName">flags</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='Tournament']/constructor[@name='Tournament' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.lang.String'] and parameter[4][@type='java.lang.String']]/parameter[1]"
+    name="managedName">identifier</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='Tournament']/constructor[@name='Tournament' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.lang.String'] and parameter[4][@type='java.lang.String']]/parameter[2]"
+    name="managedName">endTime</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='Tournament']/constructor[@name='Tournament' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.lang.String'] and parameter[4][@type='java.lang.String']]/parameter[3]"
+    name="managedName">title</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='Tournament']/constructor[@name='Tournament' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.lang.String'] and parameter[4][@type='java.lang.String']]/parameter[4]"
+    name="managedName">payload</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='Tournament']/constructor[@name='Tournament' and count(parameter)=1 and parameter[1][@type='android.os.Parcel']]/parameter[1]"
+    name="managedName">parcel</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentConfig.Builder']/method[@name='setTitle' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+    name="managedName">title</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentConfig.Builder']/method[@name='setSortOrder' and count(parameter)=1 and parameter[1][@type='com.facebook.gamingservices.internal/TournamentSortOrder']]/parameter[1]"
+    name="managedName">sortOrder</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentConfig.Builder']/method[@name='setScoreType' and count(parameter)=1 and parameter[1][@type='com.facebook.gamingservices.internal/TournamentScoreType']]/parameter[1]"
+    name="managedName">scoreType</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentConfig.Builder']/method[@name='setEndTime' and count(parameter)=1 and parameter[1][@type='java.time.Instant']]/parameter[1]"
+    name="managedName">endTime</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentConfig.Builder']/method[@name='setImage' and count(parameter)=1 and parameter[1][@type='android.media.Image']]/parameter[1]"
+    name="managedName">image</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentConfig.Builder']/method[@name='setPayload' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+    name="managedName">payload</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentConfig.Builder']/method[@name='setTournamentTitle' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+    name="managedName">title</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentConfig.Builder']/method[@name='setTournamentSortOrder' and count(parameter)=1 and parameter[1][@type='com.facebook.gamingservices.internal/TournamentSortOrder']]/parameter[1]"
+    name="managedName">sortOrder</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentConfig.Builder']/method[@name='setTournamentScoreType' and count(parameter)=1 and parameter[1][@type='com.facebook.gamingservices.internal/TournamentScoreType']]/parameter[1]"
+    name="managedName">scoreType</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentConfig.Builder']/method[@name='setTournamentEndTime' and count(parameter)=1 and parameter[1][@type='java.time.Instant']]/parameter[1]"
+    name="managedName">endTime</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentConfig.Builder']/method[@name='setTournamentImage' and count(parameter)=1 and parameter[1][@type='android.media.Image']]/parameter[1]"
+    name="managedName">image</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentConfig.Builder']/method[@name='setTournamentPayload' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+    name="managedName">payload</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentConfig.Builder']/method[@name='readFrom' and count(parameter)=1 and parameter[1][@type='com.facebook.gamingservices.TournamentConfig']]/parameter[1]"
+    name="managedName">model</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/interface[@name='TournamentConfig.CREATOR']/method[@name='createFromParcel' and count(parameter)=1 and parameter[1][@type='android.os.Parcel']]/parameter[1]"
+    name="managedName">parcel</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/interface[@name='TournamentConfig.CREATOR']/method[@name='newArray' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+    name="managedName">size</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentConfig']/method[@name='writeToParcel' and count(parameter)=2 and parameter[1][@type='android.os.Parcel'] and parameter[2][@type='int']]/parameter[1]"
+    name="managedName">@out</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentConfig']/method[@name='writeToParcel' and count(parameter)=2 and parameter[1][@type='android.os.Parcel'] and parameter[2][@type='int']]/parameter[2]"
+    name="managedName">flags</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentJoinDialog']/method[@name='setRequestCode' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+    name="managedName">requestCode</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentJoinDialog']/method[@name='show' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String']]/parameter[1]"
+    name="managedName">tournamentID</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentJoinDialog']/method[@name='show' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String']]/parameter[2]"
+    name="managedName">payload</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentJoinDialog']/method[@name='canShow' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+    name="managedName">content</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentJoinDialog']/constructor[@name='TournamentJoinDialog' and count(parameter)=1 and parameter[1][@type='android.app.Activity']]/parameter[1]"
+    name="managedName">activity</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentJoinDialog']/constructor[@name='TournamentJoinDialog' and count(parameter)=1 and parameter[1][@type='androidx.fragment.app.Fragment']]/parameter[1]"
+    name="managedName">fragment</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentJoinDialog']/constructor[@name='TournamentJoinDialog' and count(parameter)=1 and parameter[1][@type='android.app.Fragment']]/parameter[1]"
+    name="managedName">fragment</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentJoinDialog.Result']/method[@name='setRequestID' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+    name="managedName">requestID</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentJoinDialog.Result']/method[@name='setTournamentID' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+    name="managedName">tournamentID</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentJoinDialog.Result']/method[@name='setPayload' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+    name="managedName">payload</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentShareDialog']/method[@name='setScore' and count(parameter)=1 and parameter[1][@type='java.lang.Number']]/parameter[1]"
+    name="managedName">score</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentShareDialog']/method[@name='setTournament' and count(parameter)=1 and parameter[1][@type='com.facebook.gamingservices.Tournament']]/parameter[1]"
+    name="managedName">tournament</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentShareDialog']/method[@name='setRequestCode' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+    name="managedName">requestCode</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentShareDialog']/method[@name='show' and count(parameter)=2 and parameter[1][@type='java.lang.Number'] and parameter[2][@type='com.facebook.gamingservices.TournamentConfig']]/parameter[1]"
+    name="managedName">score</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentShareDialog']/method[@name='show' and count(parameter)=2 and parameter[1][@type='java.lang.Number'] and parameter[2][@type='com.facebook.gamingservices.TournamentConfig']]/parameter[2]"
+    name="managedName">newTournamentConfig</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentShareDialog']/method[@name='show' and count(parameter)=2 and parameter[1][@type='java.lang.Number'] and parameter[2][@type='com.facebook.gamingservices.Tournament']]/parameter[1]"
+    name="managedName">score</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentShareDialog']/method[@name='show' and count(parameter)=2 and parameter[1][@type='java.lang.Number'] and parameter[2][@type='com.facebook.gamingservices.Tournament']]/parameter[2]"
+    name="managedName">tournament</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentShareDialog']/constructor[@name='TournamentShareDialog' and count(parameter)=1 and parameter[1][@type='android.app.Activity']]/parameter[1]"
+    name="managedName">activity</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentShareDialog']/constructor[@name='TournamentShareDialog' and count(parameter)=1 and parameter[1][@type='androidx.fragment.app.Fragment']]/parameter[1]"
+    name="managedName">fragment</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentShareDialog']/constructor[@name='TournamentShareDialog' and count(parameter)=1 and parameter[1][@type='android.app.Fragment']]/parameter[1]"
+    name="managedName">fragment</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentShareDialog.Result']/method[@name='setRequestID' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+    name="managedName">requestID</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentShareDialog.Result']/method[@name='setTournamentID' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+    name="managedName">tournamentID</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentUpdater']/method[@name='update' and count(parameter)=2 and parameter[1][@type='com.facebook.gamingservices.Tournament'] and parameter[2][@type='java.lang.Number']]/parameter[1]"
+    name="managedName">tournament</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentUpdater']/method[@name='update' and count(parameter)=2 and parameter[1][@type='com.facebook.gamingservices.Tournament'] and parameter[2][@type='java.lang.Number']]/parameter[2]"
+    name="managedName">score</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentUpdater']/method[@name='update' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.Number']]/parameter[1]"
+    name="managedName">identifier</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices']/class[@name='TournamentUpdater']/method[@name='update' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.Number']]/parameter[2]"
+    name="managedName">score</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='AppToUserNotificationSender']/method[@name='scheduleAppToUserNotification' and count(parameter)=6 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='android.graphics.Bitmap'] and parameter[4][@type='int'] and parameter[5][@type='java.lang.String'] and parameter[6][@type='GraphRequest.Callback']]/parameter[1]"
+    name="managedName">title</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='AppToUserNotificationSender']/method[@name='scheduleAppToUserNotification' and count(parameter)=6 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='android.graphics.Bitmap'] and parameter[4][@type='int'] and parameter[5][@type='java.lang.String'] and parameter[6][@type='GraphRequest.Callback']]/parameter[2]"
+    name="managedName">body</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='AppToUserNotificationSender']/method[@name='scheduleAppToUserNotification' and count(parameter)=6 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='android.graphics.Bitmap'] and parameter[4][@type='int'] and parameter[5][@type='java.lang.String'] and parameter[6][@type='GraphRequest.Callback']]/parameter[3]"
+    name="managedName">media</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='AppToUserNotificationSender']/method[@name='scheduleAppToUserNotification' and count(parameter)=6 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='android.graphics.Bitmap'] and parameter[4][@type='int'] and parameter[5][@type='java.lang.String'] and parameter[6][@type='GraphRequest.Callback']]/parameter[4]"
+    name="managedName">timeInterval</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='AppToUserNotificationSender']/method[@name='scheduleAppToUserNotification' and count(parameter)=6 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='android.graphics.Bitmap'] and parameter[4][@type='int'] and parameter[5][@type='java.lang.String'] and parameter[6][@type='GraphRequest.Callback']]/parameter[5]"
+    name="managedName">payload</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='AppToUserNotificationSender']/method[@name='scheduleAppToUserNotification' and count(parameter)=6 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='android.graphics.Bitmap'] and parameter[4][@type='int'] and parameter[5][@type='java.lang.String'] and parameter[6][@type='GraphRequest.Callback']]/parameter[6]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='AppToUserNotificationSender']/method[@name='scheduleAppToUserNotification' and count(parameter)=6 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.io.File'] and parameter[4][@type='int'] and parameter[5][@type='java.lang.String'] and parameter[6][@type='GraphRequest.Callback']]/parameter[1]"
+    name="managedName">title</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='AppToUserNotificationSender']/method[@name='scheduleAppToUserNotification' and count(parameter)=6 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.io.File'] and parameter[4][@type='int'] and parameter[5][@type='java.lang.String'] and parameter[6][@type='GraphRequest.Callback']]/parameter[2]"
+    name="managedName">body</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='AppToUserNotificationSender']/method[@name='scheduleAppToUserNotification' and count(parameter)=6 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.io.File'] and parameter[4][@type='int'] and parameter[5][@type='java.lang.String'] and parameter[6][@type='GraphRequest.Callback']]/parameter[3]"
+    name="managedName">media</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='AppToUserNotificationSender']/method[@name='scheduleAppToUserNotification' and count(parameter)=6 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.io.File'] and parameter[4][@type='int'] and parameter[5][@type='java.lang.String'] and parameter[6][@type='GraphRequest.Callback']]/parameter[4]"
+    name="managedName">timeInterval</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='AppToUserNotificationSender']/method[@name='scheduleAppToUserNotification' and count(parameter)=6 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.io.File'] and parameter[4][@type='int'] and parameter[5][@type='java.lang.String'] and parameter[6][@type='GraphRequest.Callback']]/parameter[5]"
+    name="managedName">payload</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='AppToUserNotificationSender']/method[@name='scheduleAppToUserNotification' and count(parameter)=6 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.io.File'] and parameter[4][@type='int'] and parameter[5][@type='java.lang.String'] and parameter[6][@type='GraphRequest.Callback']]/parameter[6]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='AppToUserNotificationSender']/method[@name='scheduleAppToUserNotification' and count(parameter)=6 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='android.net.Uri'] and parameter[4][@type='int'] and parameter[5][@type='java.lang.String'] and parameter[6][@type='GraphRequest.Callback']]/parameter[1]"
+    name="managedName">title</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='AppToUserNotificationSender']/method[@name='scheduleAppToUserNotification' and count(parameter)=6 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='android.net.Uri'] and parameter[4][@type='int'] and parameter[5][@type='java.lang.String'] and parameter[6][@type='GraphRequest.Callback']]/parameter[2]"
+    name="managedName">body</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='AppToUserNotificationSender']/method[@name='scheduleAppToUserNotification' and count(parameter)=6 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='android.net.Uri'] and parameter[4][@type='int'] and parameter[5][@type='java.lang.String'] and parameter[6][@type='GraphRequest.Callback']]/parameter[3]"
+    name="managedName">media</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='AppToUserNotificationSender']/method[@name='scheduleAppToUserNotification' and count(parameter)=6 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='android.net.Uri'] and parameter[4][@type='int'] and parameter[5][@type='java.lang.String'] and parameter[6][@type='GraphRequest.Callback']]/parameter[4]"
+    name="managedName">timeInterval</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='AppToUserNotificationSender']/method[@name='scheduleAppToUserNotification' and count(parameter)=6 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='android.net.Uri'] and parameter[4][@type='int'] and parameter[5][@type='java.lang.String'] and parameter[6][@type='GraphRequest.Callback']]/parameter[5]"
+    name="managedName">payload</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='AppToUserNotificationSender']/method[@name='scheduleAppToUserNotification' and count(parameter)=6 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='android.net.Uri'] and parameter[4][@type='int'] and parameter[5][@type='java.lang.String'] and parameter[6][@type='GraphRequest.Callback']]/parameter[6]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='CloudGameLoginHandler']/method[@name='init' and count(parameter)=1 and parameter[1][@type='android.content.Context']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='CloudGameLoginHandler']/method[@name='init' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='int']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='CloudGameLoginHandler']/method[@name='init' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='int']]/parameter[2]"
+    name="managedName">timeoutInSec</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='CloudGameLoginHandler']/method[@name='gameLoadComplete' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='CloudGameLoginHandler']/method[@name='gameLoadComplete' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[2]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/interface[@name='DaemonRequest.Callback']/method[@name='onCompleted' and count(parameter)=1 and parameter[1][@type='GraphResponse']]/parameter[1]"
+    name="managedName">response</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='DaemonRequest']/method[@name='executeAsync' and count(parameter)=4 and parameter[1][@type='android.content.Context'] and parameter[2][@type='org.json.JSONObject'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback'] and parameter[4][@type='com.facebook.gamingservices.cloudgaming.internal/SDKMessageEnum']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='DaemonRequest']/method[@name='executeAsync' and count(parameter)=4 and parameter[1][@type='android.content.Context'] and parameter[2][@type='org.json.JSONObject'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback'] and parameter[4][@type='com.facebook.gamingservices.cloudgaming.internal/SDKMessageEnum']]/parameter[2]"
+    name="managedName">parameters</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='DaemonRequest']/method[@name='executeAsync' and count(parameter)=4 and parameter[1][@type='android.content.Context'] and parameter[2][@type='org.json.JSONObject'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback'] and parameter[4][@type='com.facebook.gamingservices.cloudgaming.internal/SDKMessageEnum']]/parameter[3]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='DaemonRequest']/method[@name='executeAsync' and count(parameter)=4 and parameter[1][@type='android.content.Context'] and parameter[2][@type='org.json.JSONObject'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback'] and parameter[4][@type='com.facebook.gamingservices.cloudgaming.internal/SDKMessageEnum']]/parameter[4]"
+    name="managedName">type</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='DaemonRequest']/method[@name='executeAndWait' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='org.json.JSONObject'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.internal/SDKMessageEnum']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='DaemonRequest']/method[@name='executeAndWait' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='org.json.JSONObject'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.internal/SDKMessageEnum']]/parameter[2]"
+    name="managedName">parameters</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='DaemonRequest']/method[@name='executeAndWait' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='org.json.JSONObject'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.internal/SDKMessageEnum']]/parameter[3]"
+    name="managedName">type</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='DaemonRequest']/method[@name='executeAndWait' and count(parameter)=4 and parameter[1][@type='android.content.Context'] and parameter[2][@type='org.json.JSONObject'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.internal/SDKMessageEnum'] and parameter[4][@type='int']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='DaemonRequest']/method[@name='executeAndWait' and count(parameter)=4 and parameter[1][@type='android.content.Context'] and parameter[2][@type='org.json.JSONObject'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.internal/SDKMessageEnum'] and parameter[4][@type='int']]/parameter[2]"
+    name="managedName">parameters</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='DaemonRequest']/method[@name='executeAndWait' and count(parameter)=4 and parameter[1][@type='android.content.Context'] and parameter[2][@type='org.json.JSONObject'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.internal/SDKMessageEnum'] and parameter[4][@type='int']]/parameter[3]"
+    name="managedName">type</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='DaemonRequest']/method[@name='executeAndWait' and count(parameter)=4 and parameter[1][@type='android.content.Context'] and parameter[2][@type='org.json.JSONObject'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.internal/SDKMessageEnum'] and parameter[4][@type='int']]/parameter[4]"
+    name="managedName">timeout</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='DaemonRequest']/method[@name='executeAsync' and count(parameter)=4 and parameter[1][@type='android.content.Context'] and parameter[2][@type='org.json.JSONObject'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback'] and parameter[4][@type='java.lang.String']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='DaemonRequest']/method[@name='executeAsync' and count(parameter)=4 and parameter[1][@type='android.content.Context'] and parameter[2][@type='org.json.JSONObject'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback'] and parameter[4][@type='java.lang.String']]/parameter[2]"
+    name="managedName">parameters</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='DaemonRequest']/method[@name='executeAsync' and count(parameter)=4 and parameter[1][@type='android.content.Context'] and parameter[2][@type='org.json.JSONObject'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback'] and parameter[4][@type='java.lang.String']]/parameter[3]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='DaemonRequest']/method[@name='executeAsync' and count(parameter)=4 and parameter[1][@type='android.content.Context'] and parameter[2][@type='org.json.JSONObject'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback'] and parameter[4][@type='java.lang.String']]/parameter[4]"
+    name="managedName">type</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='getPayload' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='org.json.JSONObject'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='getPayload' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='org.json.JSONObject'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[2]"
+    name="managedName">parameters</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='getPayload' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='org.json.JSONObject'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[3]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='canCreateShortcut' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='org.json.JSONObject'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='canCreateShortcut' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='org.json.JSONObject'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[2]"
+    name="managedName">parameters</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='canCreateShortcut' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='org.json.JSONObject'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[3]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='createShortcut' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='org.json.JSONObject'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='createShortcut' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='org.json.JSONObject'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[2]"
+    name="managedName">parameters</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='createShortcut' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='org.json.JSONObject'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[3]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='postSessionScore' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='int'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='postSessionScore' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='int'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[2]"
+    name="managedName">score</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='postSessionScore' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='int'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[3]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='postSessionScoreAsync' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='int'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='postSessionScoreAsync' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='int'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[2]"
+    name="managedName">score</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='postSessionScoreAsync' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='int'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[3]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='getTournamentAsync' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='getTournamentAsync' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[2]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='createTournamentAsync' and count(parameter)=9 and parameter[1][@type='android.content.Context'] and parameter[2][@type='int'] and parameter[3][@type='java.lang.String'] and parameter[4][@type='java.lang.String'] and parameter[5][@type='java.lang.String'] and parameter[6][@type='java.lang.String'] and parameter[7][@type='int'] and parameter[8][@type='org.json.JSONObject'] and parameter[9][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='createTournamentAsync' and count(parameter)=9 and parameter[1][@type='android.content.Context'] and parameter[2][@type='int'] and parameter[3][@type='java.lang.String'] and parameter[4][@type='java.lang.String'] and parameter[5][@type='java.lang.String'] and parameter[6][@type='java.lang.String'] and parameter[7][@type='int'] and parameter[8][@type='org.json.JSONObject'] and parameter[9][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[2]"
+    name="managedName">score</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='createTournamentAsync' and count(parameter)=9 and parameter[1][@type='android.content.Context'] and parameter[2][@type='int'] and parameter[3][@type='java.lang.String'] and parameter[4][@type='java.lang.String'] and parameter[5][@type='java.lang.String'] and parameter[6][@type='java.lang.String'] and parameter[7][@type='int'] and parameter[8][@type='org.json.JSONObject'] and parameter[9][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[3]"
+    name="managedName">title</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='createTournamentAsync' and count(parameter)=9 and parameter[1][@type='android.content.Context'] and parameter[2][@type='int'] and parameter[3][@type='java.lang.String'] and parameter[4][@type='java.lang.String'] and parameter[5][@type='java.lang.String'] and parameter[6][@type='java.lang.String'] and parameter[7][@type='int'] and parameter[8][@type='org.json.JSONObject'] and parameter[9][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[4]"
+    name="managedName">image</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='createTournamentAsync' and count(parameter)=9 and parameter[1][@type='android.content.Context'] and parameter[2][@type='int'] and parameter[3][@type='java.lang.String'] and parameter[4][@type='java.lang.String'] and parameter[5][@type='java.lang.String'] and parameter[6][@type='java.lang.String'] and parameter[7][@type='int'] and parameter[8][@type='org.json.JSONObject'] and parameter[9][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[5]"
+    name="managedName">sortOrder</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='createTournamentAsync' and count(parameter)=9 and parameter[1][@type='android.content.Context'] and parameter[2][@type='int'] and parameter[3][@type='java.lang.String'] and parameter[4][@type='java.lang.String'] and parameter[5][@type='java.lang.String'] and parameter[6][@type='java.lang.String'] and parameter[7][@type='int'] and parameter[8][@type='org.json.JSONObject'] and parameter[9][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[6]"
+    name="managedName">scoreFormat</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='createTournamentAsync' and count(parameter)=9 and parameter[1][@type='android.content.Context'] and parameter[2][@type='int'] and parameter[3][@type='java.lang.String'] and parameter[4][@type='java.lang.String'] and parameter[5][@type='java.lang.String'] and parameter[6][@type='java.lang.String'] and parameter[7][@type='int'] and parameter[8][@type='org.json.JSONObject'] and parameter[9][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[7]"
+    name="managedName">endTime</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='createTournamentAsync' and count(parameter)=9 and parameter[1][@type='android.content.Context'] and parameter[2][@type='int'] and parameter[3][@type='java.lang.String'] and parameter[4][@type='java.lang.String'] and parameter[5][@type='java.lang.String'] and parameter[6][@type='java.lang.String'] and parameter[7][@type='int'] and parameter[8][@type='org.json.JSONObject'] and parameter[9][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[8]"
+    name="managedName">payload</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='createTournamentAsync' and count(parameter)=9 and parameter[1][@type='android.content.Context'] and parameter[2][@type='int'] and parameter[3][@type='java.lang.String'] and parameter[4][@type='java.lang.String'] and parameter[5][@type='java.lang.String'] and parameter[6][@type='java.lang.String'] and parameter[7][@type='int'] and parameter[8][@type='org.json.JSONObject'] and parameter[9][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[9]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='shareTournamentAsync' and count(parameter)=4 and parameter[1][@type='android.content.Context'] and parameter[2][@type='int'] and parameter[3][@type='org.json.JSONObject'] and parameter[4][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='shareTournamentAsync' and count(parameter)=4 and parameter[1][@type='android.content.Context'] and parameter[2][@type='int'] and parameter[3][@type='org.json.JSONObject'] and parameter[4][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[2]"
+    name="managedName">score</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='shareTournamentAsync' and count(parameter)=4 and parameter[1][@type='android.content.Context'] and parameter[2][@type='int'] and parameter[3][@type='org.json.JSONObject'] and parameter[4][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[3]"
+    name="managedName">payload</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='shareTournamentAsync' and count(parameter)=4 and parameter[1][@type='android.content.Context'] and parameter[2][@type='int'] and parameter[3][@type='org.json.JSONObject'] and parameter[4][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[4]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='postTournamentScoreAsync' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='int'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='postTournamentScoreAsync' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='int'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[2]"
+    name="managedName">score</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='postTournamentScoreAsync' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='int'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[3]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='getTournamentsAsync' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='getTournamentsAsync' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[2]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='joinTournamentAsync' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='joinTournamentAsync' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[2]"
+    name="managedName">tournamentId</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='joinTournamentAsync' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[3]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='GameFeaturesLibrary']/method[@name='performHapticFeedback' and count(parameter)=1 and parameter[1][@type='android.content.Context']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='InAppAdLibrary']/method[@name='loadRewardedVideo' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='InAppAdLibrary']/method[@name='loadRewardedVideo' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[2]"
+    name="managedName">placementID</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='InAppAdLibrary']/method[@name='loadRewardedVideo' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[3]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='InAppAdLibrary']/method[@name='loadInterstitialAd' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='InAppAdLibrary']/method[@name='loadInterstitialAd' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[2]"
+    name="managedName">placementID</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='InAppAdLibrary']/method[@name='loadInterstitialAd' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[3]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='InAppAdLibrary']/method[@name='showRewardedVideo' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='InAppAdLibrary']/method[@name='showRewardedVideo' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[2]"
+    name="managedName">placementID</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='InAppAdLibrary']/method[@name='showRewardedVideo' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[3]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='InAppAdLibrary']/method[@name='showInterstitialAd' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='InAppAdLibrary']/method[@name='showInterstitialAd' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[2]"
+    name="managedName">placementID</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='InAppAdLibrary']/method[@name='showInterstitialAd' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[3]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='InAppPurchaseLibrary']/method[@name='onReady' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='InAppPurchaseLibrary']/method[@name='onReady' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[2]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='InAppPurchaseLibrary']/method[@name='getCatalog' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='InAppPurchaseLibrary']/method[@name='getCatalog' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[2]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='InAppPurchaseLibrary']/method[@name='getPurchases' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='InAppPurchaseLibrary']/method[@name='getPurchases' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[2]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='InAppPurchaseLibrary']/method[@name='purchase' and count(parameter)=4 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.lang.String'] and parameter[4][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='InAppPurchaseLibrary']/method[@name='purchase' and count(parameter)=4 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.lang.String'] and parameter[4][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[2]"
+    name="managedName">productID</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='InAppPurchaseLibrary']/method[@name='purchase' and count(parameter)=4 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.lang.String'] and parameter[4][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[3]"
+    name="managedName">developerPayload</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='InAppPurchaseLibrary']/method[@name='purchase' and count(parameter)=4 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.lang.String'] and parameter[4][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[4]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='InAppPurchaseLibrary']/method[@name='consumePurchase' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='InAppPurchaseLibrary']/method[@name='consumePurchase' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[2]"
+    name="managedName">purchaseToken</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='InAppPurchaseLibrary']/method[@name='consumePurchase' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[3]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='InAppPurchaseLibrary']/method[@name='getSubscribableCatalog' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='InAppPurchaseLibrary']/method[@name='getSubscribableCatalog' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[2]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='InAppPurchaseLibrary']/method[@name='purchaseSubscription' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='InAppPurchaseLibrary']/method[@name='purchaseSubscription' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[2]"
+    name="managedName">productID</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='InAppPurchaseLibrary']/method[@name='purchaseSubscription' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[3]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='InAppPurchaseLibrary']/method[@name='getSubscriptions' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='InAppPurchaseLibrary']/method[@name='getSubscriptions' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[2]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='InAppPurchaseLibrary']/method[@name='cancelSubscription' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='InAppPurchaseLibrary']/method[@name='cancelSubscription' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[2]"
+    name="managedName">purchaseToken</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='InAppPurchaseLibrary']/method[@name='cancelSubscription' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[3]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='PlayableAdsLibrary']/method[@name='openAppStore' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='org.json.JSONObject'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='PlayableAdsLibrary']/method[@name='openAppStore' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='org.json.JSONObject'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[2]"
+    name="managedName">parameters</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='PlayableAdsLibrary']/method[@name='openAppStore' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='org.json.JSONObject'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[3]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='PlayableAdsLibrary']/method[@name='markGameLoaded' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='org.json.JSONObject'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='PlayableAdsLibrary']/method[@name='markGameLoaded' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='org.json.JSONObject'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[2]"
+    name="managedName">parameters</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming']/class[@name='PlayableAdsLibrary']/method[@name='markGameLoaded' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='org.json.JSONObject'] and parameter[3][@type='com.facebook.gamingservices.cloudgaming.DaemonRequest.Callback']]/parameter[3]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.internal']/interface[@name='GamingMediaUploader']/method[@name='uploadToGamingServices' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.graphics.Bitmap'] and parameter[3][@type='android.os.Bundle'] and parameter[4][@type='GraphRequest.Callback']]/parameter[1]"
+    name="managedName">caption</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.internal']/interface[@name='GamingMediaUploader']/method[@name='uploadToGamingServices' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.graphics.Bitmap'] and parameter[3][@type='android.os.Bundle'] and parameter[4][@type='GraphRequest.Callback']]/parameter[2]"
+    name="managedName">imageBitmap</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.internal']/interface[@name='GamingMediaUploader']/method[@name='uploadToGamingServices' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.graphics.Bitmap'] and parameter[3][@type='android.os.Bundle'] and parameter[4][@type='GraphRequest.Callback']]/parameter[3]"
+    name="managedName">@params</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.internal']/interface[@name='GamingMediaUploader']/method[@name='uploadToGamingServices' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.graphics.Bitmap'] and parameter[3][@type='android.os.Bundle'] and parameter[4][@type='GraphRequest.Callback']]/parameter[4]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.internal']/interface[@name='GamingMediaUploader']/method[@name='uploadToGamingServices' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.io.File'] and parameter[3][@type='android.os.Bundle'] and parameter[4][@type='GraphRequest.Callback']]/parameter[1]"
+    name="managedName">caption</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.internal']/interface[@name='GamingMediaUploader']/method[@name='uploadToGamingServices' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.io.File'] and parameter[3][@type='android.os.Bundle'] and parameter[4][@type='GraphRequest.Callback']]/parameter[2]"
+    name="managedName">imageFile</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.internal']/interface[@name='GamingMediaUploader']/method[@name='uploadToGamingServices' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.io.File'] and parameter[3][@type='android.os.Bundle'] and parameter[4][@type='GraphRequest.Callback']]/parameter[3]"
+    name="managedName">@params</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.internal']/interface[@name='GamingMediaUploader']/method[@name='uploadToGamingServices' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.io.File'] and parameter[3][@type='android.os.Bundle'] and parameter[4][@type='GraphRequest.Callback']]/parameter[4]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.internal']/interface[@name='GamingMediaUploader']/method[@name='uploadToGamingServices' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.net.Uri'] and parameter[3][@type='android.os.Bundle'] and parameter[4][@type='GraphRequest.Callback']]/parameter[1]"
+    name="managedName">caption</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.internal']/interface[@name='GamingMediaUploader']/method[@name='uploadToGamingServices' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.net.Uri'] and parameter[3][@type='android.os.Bundle'] and parameter[4][@type='GraphRequest.Callback']]/parameter[2]"
+    name="managedName">imageUri</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.internal']/interface[@name='GamingMediaUploader']/method[@name='uploadToGamingServices' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.net.Uri'] and parameter[3][@type='android.os.Bundle'] and parameter[4][@type='GraphRequest.Callback']]/parameter[3]"
+    name="managedName">@params</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.internal']/interface[@name='GamingMediaUploader']/method[@name='uploadToGamingServices' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.net.Uri'] and parameter[3][@type='android.os.Bundle'] and parameter[4][@type='GraphRequest.Callback']]/parameter[4]"
+    name="managedName">callback</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.model']/class[@name='ContextChooseContent.Builder']/method[@name='setFilters' and count(parameter)=1 and parameter[1][starts-with(@type,'java.util.List&lt;java.lang.String&gt;')]]/parameter[1]"
+    name="managedName">filters</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.model']/class[@name='ContextChooseContent.Builder']/method[@name='setMaxSize' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+    name="managedName">maxSize</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.model']/class[@name='ContextChooseContent.Builder']/method[@name='setMinSize' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+    name="managedName">minSize</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.model']/class[@name='ContextChooseContent.Builder']/method[@name='readFrom' and count(parameter)=1 and parameter[1][@type='com.facebook.gamingservices.model.ContextChooseContent']]/parameter[1]"
+    name="managedName">model</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.model']/class[@name='ContextChooseContent.Builder']/method[@name='readFrom' and count(parameter)=1 and parameter[1][@type='android.os.Parcel']]/parameter[1]"
+    name="managedName">parcel</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.model']/interface[@name='ContextChooseContent.CREATOR']/method[@name='createFromParcel' and count(parameter)=1 and parameter[1][@type='android.os.Parcel']]/parameter[1]"
+    name="managedName">parcel</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.model']/interface[@name='ContextChooseContent.CREATOR']/method[@name='newArray' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+    name="managedName">size</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.model']/class[@name='ContextChooseContent']/method[@name='writeToParcel' and count(parameter)=2 and parameter[1][@type='android.os.Parcel'] and parameter[2][@type='int']]/parameter[1]"
+    name="managedName">@out</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.model']/class[@name='ContextChooseContent']/method[@name='writeToParcel' and count(parameter)=2 and parameter[1][@type='android.os.Parcel'] and parameter[2][@type='int']]/parameter[2]"
+    name="managedName">flags</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.model']/class[@name='ContextCreateContent.Builder']/method[@name='setSuggestedPlayerID' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+    name="managedName">suggestedPlayerID</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.model']/class[@name='ContextCreateContent.Builder']/method[@name='readFrom' and count(parameter)=1 and parameter[1][@type='com.facebook.gamingservices.model.ContextCreateContent']]/parameter[1]"
+    name="managedName">model</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.model']/class[@name='ContextCreateContent.Builder']/method[@name='readFrom' and count(parameter)=1 and parameter[1][@type='android.os.Parcel']]/parameter[1]"
+    name="managedName">parcel</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.model']/interface[@name='ContextCreateContent.CREATOR']/method[@name='createFromParcel' and count(parameter)=1 and parameter[1][@type='android.os.Parcel']]/parameter[1]"
+    name="managedName">parcel</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.model']/interface[@name='ContextCreateContent.CREATOR']/method[@name='newArray' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+    name="managedName">size</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.model']/class[@name='ContextCreateContent']/method[@name='writeToParcel' and count(parameter)=2 and parameter[1][@type='android.os.Parcel'] and parameter[2][@type='int']]/parameter[1]"
+    name="managedName">@out</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.model']/class[@name='ContextCreateContent']/method[@name='writeToParcel' and count(parameter)=2 and parameter[1][@type='android.os.Parcel'] and parameter[2][@type='int']]/parameter[2]"
+    name="managedName">flags</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.model']/class[@name='ContextSwitchContent.Builder']/method[@name='setContextID' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+    name="managedName">contextID</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.model']/class[@name='ContextSwitchContent.Builder']/method[@name='readFrom' and count(parameter)=1 and parameter[1][@type='com.facebook.gamingservices.model.ContextSwitchContent']]/parameter[1]"
+    name="managedName">model</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.model']/class[@name='ContextSwitchContent.Builder']/method[@name='readFrom' and count(parameter)=1 and parameter[1][@type='android.os.Parcel']]/parameter[1]"
+    name="managedName">parcel</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.model']/interface[@name='ContextSwitchContent.CREATOR']/method[@name='createFromParcel' and count(parameter)=1 and parameter[1][@type='android.os.Parcel']]/parameter[1]"
+    name="managedName">parcel</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.model']/interface[@name='ContextSwitchContent.CREATOR']/method[@name='newArray' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+    name="managedName">size</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.model']/class[@name='ContextSwitchContent']/method[@name='writeToParcel' and count(parameter)=2 and parameter[1][@type='android.os.Parcel'] and parameter[2][@type='int']]/parameter[1]"
+    name="managedName">@out</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.model']/class[@name='ContextSwitchContent']/method[@name='writeToParcel' and count(parameter)=2 and parameter[1][@type='android.os.Parcel'] and parameter[2][@type='int']]/parameter[2]"
+    name="managedName">flags</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.model']/class[@name='CustomUpdateContent.Builder']/method[@name='setCta' and count(parameter)=1 and parameter[1][@type='com.facebook.gamingservices.model.CustomUpdateLocalizedText']]/parameter[1]"
+    name="managedName">cta</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.model']/class[@name='CustomUpdateContent.Builder']/method[@name='setData' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+    name="managedName">data</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.model']/class[@name='CustomUpdateContent.Builder']/method[@name='setCta' and count(parameter)=1 and parameter[1][@type='com.facebook.gamingservices.model.CustomUpdateLocalizedText']]/parameter[1]"
+    name="managedName">cta</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.model']/class[@name='CustomUpdateContent.Builder']/method[@name='setData' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+    name="managedName">data</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.model']/class[@name='CustomUpdateLocalizedText']/constructor[@name='CustomUpdateLocalizedText' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][starts-with(@type,'java.util.HashMap&lt;String, String&gt;')]]/parameter[1]"
+    name="managedName">default</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.model']/class[@name='CustomUpdateLocalizedText']/constructor[@name='CustomUpdateLocalizedText' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][starts-with(@type,'java.util.HashMap&lt;String, String&gt;')]]/parameter[2]"
+    name="managedName">localizations</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.model']/class[@name='CustomUpdateMedia']/constructor[@name='CustomUpdateMedia' and count(parameter)=2 and parameter[1][@type='com.facebook.gamingservices.model.CustomUpdateMediaInfo'] and parameter[2][@type='com.facebook.gamingservices.model.CustomUpdateMediaInfo']]/parameter[1]"
+    name="managedName">gif</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.model']/class[@name='CustomUpdateMedia']/constructor[@name='CustomUpdateMedia' and count(parameter)=2 and parameter[1][@type='com.facebook.gamingservices.model.CustomUpdateMediaInfo'] and parameter[2][@type='com.facebook.gamingservices.model.CustomUpdateMediaInfo']]/parameter[2]"
+    name="managedName">video</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.model']/class[@name='CustomUpdateMediaInfo']/constructor[@name='CustomUpdateMediaInfo' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+    name="managedName">url</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming.internal']/class[@name='SDKLogger']/method[@name='getInstance' and count(parameter)=1 and parameter[1][@type='android.content.Context']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming.internal']/class[@name='SDKLogger']/method[@name='getInstance' and count(parameter)=1 and parameter[1][@type='android.content.Context']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming.internal']/class[@name='SDKLogger']/method[@name='setAppID' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+    name="managedName">appID</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming.internal']/class[@name='SDKLogger']/method[@name='setUserID' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+    name="managedName">userID</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming.internal']/class[@name='SDKLogger']/method[@name='setSessionID' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+    name="managedName">sessionID</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming.internal']/class[@name='SDKLogger']/method[@name='logInternalError' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='com.facebook.gamingservices.cloudgaming.internal.SDKMessageEnum'] and parameter[3][@type='java.lang.Exception']]/parameter[1]"
+    name="managedName">context</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming.internal']/class[@name='SDKLogger']/method[@name='logInternalError' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='com.facebook.gamingservices.cloudgaming.internal.SDKMessageEnum'] and parameter[3][@type='java.lang.Exception']]/parameter[2]"
+    name="managedName">functionType</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming.internal']/class[@name='SDKLogger']/method[@name='logInternalError' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='com.facebook.gamingservices.cloudgaming.internal.SDKMessageEnum'] and parameter[3][@type='java.lang.Exception']]/parameter[3]"
+    name="managedName">e</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming.internal']/class[@name='SDKLogger']/method[@name='logPreparingRequest' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='org.json.JSONObject']]/parameter[1]"
+    name="managedName">functionType</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming.internal']/class[@name='SDKLogger']/method[@name='logPreparingRequest' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='org.json.JSONObject']]/parameter[2]"
+    name="managedName">requestID</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming.internal']/class[@name='SDKLogger']/method[@name='logPreparingRequest' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='org.json.JSONObject']]/parameter[3]"
+    name="managedName">payloads</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming.internal']/class[@name='SDKLogger']/method[@name='logSentRequest' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='org.json.JSONObject']]/parameter[1]"
+    name="managedName">functionType</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming.internal']/class[@name='SDKLogger']/method[@name='logSentRequest' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='org.json.JSONObject']]/parameter[2]"
+    name="managedName">requestID</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming.internal']/class[@name='SDKLogger']/method[@name='logSentRequest' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='org.json.JSONObject']]/parameter[3]"
+    name="managedName">payloads</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming.internal']/class[@name='SDKLogger']/method[@name='logSendingSuccessResponse' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+    name="managedName">requestID</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming.internal']/class[@name='SDKLogger']/method[@name='logSendingErrorResponse' and count(parameter)=2 and parameter[1][@type='FacebookRequestError'] and parameter[2][@type='java.lang.String']]/parameter[1]"
+    name="managedName">error</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming.internal']/class[@name='SDKLogger']/method[@name='logSendingErrorResponse' and count(parameter)=2 and parameter[1][@type='FacebookRequestError'] and parameter[2][@type='java.lang.String']]/parameter[2]"
+    name="managedName">requestID</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming.internal']/class[@name='SDKLogger']/method[@name='logInternalError' and count(parameter)=2 and parameter[1][@type='com.facebook.gamingservices.cloudgaming.internal.SDKMessageEnum'] and parameter[2][@type='java.lang.Exception']]/parameter[1]"
+    name="managedName">functionType</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming.internal']/class[@name='SDKLogger']/method[@name='logInternalError' and count(parameter)=2 and parameter[1][@type='com.facebook.gamingservices.cloudgaming.internal.SDKMessageEnum'] and parameter[2][@type='java.lang.Exception']]/parameter[2]"
+    name="managedName">e</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming.internal']/interface[@name='SDKMessageEnum']/method[@name='fromString' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+    name="managedName">messageType</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming.internal']/interface[@name='SDKMessageEnum']/method[@name='valueOf' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+    name="managedName">name</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming.internal']/interface[@name='SDKShareIntentEnum']/method[@name='validate' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+    name="managedName">intentType</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming.internal']/interface[@name='SDKShareIntentEnum']/method[@name='fromString' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+    name="managedName">intentType</attr>
+  <attr
+    path="/api/package[@name='com.facebook.gamingservices.cloudgaming.internal']/interface[@name='SDKShareIntentEnum']/method[@name='valueOf' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+    name="managedName">name</attr>
+</metadata>

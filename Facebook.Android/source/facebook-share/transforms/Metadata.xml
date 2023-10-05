@@ -10,4 +10,16 @@
 
     <attr path="/api/package[@name='com.facebook.share.model']/class[@name='AppInviteContent.Builder']/method[@name='readFrom' and count(parameter)=1 and parameter[1][@type='com.facebook.share.model.AppInviteContent']]" name="managedReturn">Java.Lang.Object</attr>
     <attr path="/api/package[@name='com.facebook.share.model']/class[@name='AppInviteContent.Builder']/method[@name='readFrom' and count(parameter)=1 and parameter[1][@type='com.facebook.share.model.AppInviteContent']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
+
+    <add-node path="/api/package[@name='com.facebook.share.widget']">
+        <class abstract="false" deprecated="not deprecated" final="false" name="MessageDialog" static="false" visibility="public" extends="java.lang.Object" implements="com.facebook.share.Sharer">
+            <method abstract="false" deprecated="not deprecated" final="false" name="getShouldFailOnDataError" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+            </method>
+
+            <!-- Adding the setter method with return type 'void' -->
+            <method abstract="false" deprecated="not deprecated" final="false" name="setShouldFailOnDataError" native="false" return="void" static="false" synchronized="false" visibility="public">
+                <parameter name="shouldFailOnDataError" type="boolean"/>
+            </method>
+        </class>
+    </add-node>
 </metadata>

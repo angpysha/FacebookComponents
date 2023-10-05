@@ -2,7 +2,7 @@
     <attr path="/api/package[@name='com.facebook']" name="managedName">Xamarin.Facebook</attr>
     <attr path="/api/package[@name='com.facebook.common']" name="managedName">Xamarin.Facebook.Common</attr>
     <attr path="/api/package[@name='com.facebook.devicerequests.internal']" name="managedName">Xamarin.Facebook.DeviceRequests.Internal</attr>
-    
+
     <attr path="/api/package[@name='com.facebook.internal']" name="managedName">Xamarin.Facebook.Internal</attr>
     <attr path="/api/package[@name='com.facebook.login']" name="managedName">Xamarin.Facebook.Login</attr>
     <attr path="/api/package[@name='com.facebook.referrals']" name="managedName">Xamarin.Facebook.Referrals</attr>
@@ -10,31 +10,101 @@
     <attr path="/api/package[@name='com.facebook.share.internal']" name="managedName">Xamarin.Facebook.Share.Internal</attr>
     <attr path="/api/package[@name='com.facebook.share.model']" name="managedName">Xamarin.Facebook.Share.Model</attr>
     <attr path="/api/package[@name='com.facebook.share.widget']" name="managedName">Xamarin.Facebook.Share.Widget</attr>
-    
-	<!--<attr path="/api/package[@name='com.facebook']/class[@name='GraphRequestAsyncTask']/method[@name='doInBackground' and count(parameter)=1 and parameter[1][@type='java.lang.Void...']]/parameter[1]" name="managedType">params Java.Lang.Object[]</attr>
+
+    <!--<attr path="/api/package[@name='com.facebook']/class[@name='GraphRequestAsyncTask']/method[@name='doInBackground' and count(parameter)=1 and parameter[1][@type='java.lang.Void...']]/parameter[1]" name="managedType">params Java.Lang.Object[]</attr>
     <attr path="/api/package[@name='com.facebook']/class[@name='GraphRequestAsyncTask']/method[@name='doInBackground' and count(parameter)=1 and parameter[1][@type='java.lang.Void...']]" name="managedReturn">Java.Lang.Object</attr>
 -->
     <remove-node path="/api/package[contains(@name, 'com.facebook.share.internal')]" />
-    
+
     <attr path="/api/package[@name='com.facebook.login']/class[@name='WebLoginMethodHandler']" name="visibility">public</attr>
     <attr path="/api/package[@name='com.facebook.login']/class[@name='LoginMethodHandler']" name="visibility">public</attr>
-<!--    <attr path="/api/package[@name='com.facebook.login']/class[@name='LoginClient']" name="visibility">public</attr>-->
+    <!--    <attr path="/api/package[@name='com.facebook.login']/class[@name='LoginClient']" name="visibility">public</attr>-->
 
     <!-- FacebookDialogBase has an abstract IList OrderedModeHandlers and the generator tries to create proper generic list types, but that doesn't match the overridden member -->
-    <attr path="/api/package[@name='com.facebook.internal']/class[@name='FacebookDialogBase']/method[@name='getOrderedModeHandlers' and count(parameter)=0]" name="managedName">_OrderedModeHandlers</attr>
+    <attr
+        path="/api/package[@name='com.facebook.internal']/class[@name='FacebookDialogBase']/method[@name='getOrderedModeHandlers' and count(parameter)=0]"
+        name="managedName">
+        _OrderedModeHandlers
+    </attr>
 
-    <attr path="/api/package[@name='com.facebook.share.model']/class[@name='ShareHashtag.Builder']/method[@name='build' and count(parameter)=0]" name="managedReturn">Java.Lang.Object</attr>
-    <attr path="/api/package[@name='com.facebook.share.model']/class[@name='AppGroupCreationContent.Builder']/method[@name='build' and count(parameter)=0]" name="managedReturn">Java.Lang.Object</attr>
-    <attr path="/api/package[@name='com.facebook.share.model']/class[@name='CameraEffectTextures.Builder']/method[@name='build' and count(parameter)=0]" name="managedReturn">Java.Lang.Object</attr>
-    <attr path="/api/package[@name='com.facebook.share.model']/class[@name='CameraEffectArguments.Builder']/method[@name='build' and count(parameter)=0]" name="managedReturn">Java.Lang.Object</attr>
-    <attr path="/api/package[@name='com.facebook.share.model']/class[@name='GameRequestContent.Builder']/method[@name='build' and count(parameter)=0]" name="managedReturn">Java.Lang.Object</attr>
-    <attr path="/api/package[@name='com.facebook.share.model']/class[@name='ShareMessengerGenericTemplateElement.Builder']/method[@name='build' and count(parameter)=0]" name="managedReturn">Java.Lang.Object</attr>
+    <attr
+        path="/api/package[@name='com.facebook.share.model']/class[@name='ShareHashtag.Builder']/method[@name='build' and count(parameter)=0]"
+        name="managedReturn">
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='com.facebook.share.model']/class[@name='AppGroupCreationContent.Builder']/method[@name='build' and count(parameter)=0]"
+        name="managedReturn">
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='com.facebook.share.model']/class[@name='CameraEffectTextures.Builder']/method[@name='build' and count(parameter)=0]"
+        name="managedReturn">
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='com.facebook.share.model']/class[@name='CameraEffectArguments.Builder']/method[@name='build' and count(parameter)=0]"
+        name="managedReturn">
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='com.facebook.share.model']/class[@name='GameRequestContent.Builder']/method[@name='build' and count(parameter)=0]"
+        name="managedReturn">
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='com.facebook.share.model']/class[@name='ShareMessengerGenericTemplateElement.Builder']/method[@name='build' and count(parameter)=0]"
+        name="managedReturn">
+        Java.Lang.Object
+    </attr>
 
 
     <!-- FacebookDialogBase has an abstract IList OrderedModeHandlers and the generator tries to create proper generic list types, but that doesn't match the overridden member -->
-    <attr path="/api/package[@name='com.facebook.internal']/class[@name='FacebookDialogBase']/method[@name='getOrderedModeHandlers' and count(parameter)=0]" name="managedName">_OrderedModeHandlers</attr>
+    <attr
+        path="/api/package[@name='com.facebook.internal']/class[@name='FacebookDialogBase']/method[@name='getOrderedModeHandlers' and count(parameter)=0]"
+        name="managedName">
+        _OrderedModeHandlers
+    </attr>
 
-    <remove-node path="/api/package[@name='com.facebook.login']/class[@name='LoginFragment']/method[@name='createLoginClient' and count(parameter)=0]" />
-    <remove-node path="/api/package[@name='com.facebook.login']/class[@name='LoginMethodHandler']/field[@name='loginClient']" />
-    <remove-node path="/api/package[@name='com.facebook.login']/class[@name='NativeAppLoginMethodHandler']/method[@name='tryAuthorize' and count(parameter)=1]"/>
+    <remove-node
+        path="/api/package[@name='com.facebook.login']/class[@name='LoginFragment']/method[@name='createLoginClient' and count(parameter)=0]" />
+    <remove-node
+        path="/api/package[@name='com.facebook.login']/class[@name='LoginMethodHandler']/field[@name='loginClient']" />
+    <remove-node
+        path="/api/package[@name='com.facebook.login']/class[@name='NativeAppLoginMethodHandler']/method[@name='tryAuthorize' and count(parameter)=1]" />
+    <!-- <add-node path="/api/package[@name='com.facebook.login']/class[@name='LoginManager.FacebookLoginActivityResultContract']/method[@name='createIntent' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][starts-with(@type,'java.util.Collection&lt;java.lang.String&gt;')]]" /> -->
+    <add-node path="/api/package[@name='com.facebook.login']">
+        <class abstract="false" name="LoginManager.FacebookLoginActivityResultContract" static="false" final="false" visibility="internal">
+        </class>
+    </add-node>
+
+    <!--<add-node path="/api/package[@name='org.alljoyn.bus']">
+        <class abstract="false" deprecated="not deprecated" final="false" name="AuthListener.AuthRequest" static="true" visibility="public" extends="java.lang.Object">
+            <constructor deprecated="not deprecated" final="false" name="AuthListener.AuthRequest" static="false" type="org.alljoyn.bus.AuthListener.AuthRequest" visibility="public" />
+            <field name="p0" type="org.alljoyn.bus.AuthListener.Credentials" />
+        </class>
+    </add-node>-->
+
+    <add-node path="/api/package[@name='com.facebook.share.widget']">
+        <class abstract="false" deprecated="not deprecated" final="false" name="ShareDialog" static="false" visibility="public" extends="java.lang.Object" implements="com.facebook.share.Sharer">
+            <method abstract="false" deprecated="not deprecated" final="false" name="getShouldFailOnDataError" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+            </method>
+
+            <!-- Adding the setter method with return type 'void' -->
+            <method abstract="false" deprecated="not deprecated" final="false" name="setShouldFailOnDataError" native="false" return="void" static="false" synchronized="false" visibility="public">
+                <parameter name="shouldFailOnDataError" type="boolean"/>
+            </method>
+        </class>
+    </add-node>
+    <!-- <add-node path="/api/package[@name='com.facebook.share.widget']/class[@name='ShareDialog']/method[@name='"/> -->
+    <!--<attr path="/api/package[@name='com.facebook.share.widget']/class[@name='ShareDialog']/method[@name='getShouldFailOnDataError' and count(parameter)=0]"
+          name="propertyName">ShouldFailOnDataError</attr>
+    <attr path="/api/package[@name='com.facebook.share.widget']/class[@name='ShareDialog']/method[@name='setShouldFailOnDataError' and count(parameter)=1 and parameter[1][@type='boolean']]"
+          name="propertyName">ShouldFailOnDataError</attr>-->
+
+    <!-- <attr path="/api/package[@name='com.facebook.share.widget']/class[@name='ShareDialog']" -->
+    <!--       name="propertyName">ShouldFailOnDataError</attr> -->
+
+    <attr path="/api/package[@name='com.facebook.share']/interface[@name='Sharer']/method[@name='getShouldFailOnDataError']" name="propertyName"></attr>
+
 </metadata>
