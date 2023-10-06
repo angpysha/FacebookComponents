@@ -20,14 +20,16 @@
     <attr path="/api/package[@name='com.facebook.ads']/interface[@name='RewardedVideoAd.RewardedVideoAdLoadConfigBuilder']/method[@name='withBid' and count(parameter)=1 and parameter[1][@type='java.lang.String']]" name="managedReturn">Xamarin.Facebook.Ads.IAdLoadConfigBuilder</attr>
     <attr path="/api/package[@name='com.facebook.ads']/interface[@name='RewardedVideoAd.RewardedVideoAdShowConfigBuilder']/method[@name='build' and count(parameter)=0]" name="managedReturn">Xamarin.Facebook.Ads.IFullScreenAdShowAdConfig</attr>
     
-    <attr path="/api/package[@name='com.facebook.ads']/interface[@name='InstreamVideoAdView.InstreamVideoLoadConfigBuilder']/method[@name='build' and count(parameter)=0]" name="managedReturn">Xamarin.Facebook.Ads.IAdLoadAdConfig</attr>
-    <attr path="/api/package[@name='com.facebook.ads']/interface[@name='InstreamVideoAdView.InstreamVideoLoadConfigBuilder']/method[@name='withBid' and count(parameter)=1 and parameter[1][@type='java.lang.String']]" name="managedReturn">Xamarin.Facebook.Ads.IAdLoadConfigBuilder</attr>
     
-    <attr path="/api/package[@name='com.facebook.ads']/interface[@name='NativeAdBase.NativeAdLoadConfigBuilder']/method[@name='build' and count(parameter)=0]" name="managedReturn">Xamarin.Facebook.Ads.IAdLoadAdConfig</attr>
-    <attr path="/api/package[@name='com.facebook.ads']/interface[@name='NativeAdBase.NativeAdLoadConfigBuilder']/method[@name='withBid' and count(parameter)=1 and parameter[1][@type='java.lang.String']]" name="managedReturn">Xamarin.Facebook.Ads.IAdLoadConfigBuilder</attr>
     
     <attr path="/api/package[@name='com.facebook.ads']/interface[@name='AdView.AdViewLoadConfigBuilder']/method[@name='build' and count(parameter)=0]" name="managedReturn">Xamarin.Facebook.Ads.IAdLoadAdConfig</attr>-->
-    <attr path="/api/package[@name='com.facebook.ads']/interface[@name='AdView.AdViewLoadConfigBuilder']/method[@name='withBid' and count(parameter)=1 and parameter[1][@type='java.lang.String']]" name="managedReturn">Xamarin.Facebook.Ads.IAdLoadConfigBuilder</attr>
+    <!--<attr path="/api/package[@name='com.facebook.ads']/interface[@name='AdView.AdViewLoadConfigBuilder']/method[@name='withBid' and count(parameter)=1 and parameter[1][@type='java.lang.String']]" name="managedReturn">Xamarin.Facebook.Ads.IAdLoadConfigBuilder</attr>-->
+
+    <!--<attr path="/api/package[@name='com.facebook.ads']/interface[@name='InstreamVideoAdView.InstreamVideoLoadConfigBuilder']/method[@name='build' and count(parameter)=0]" name="managedReturn">Xamarin.Facebook.Ads.IAdLoadAdConfig</attr>
+    <attr path="/api/package[@name='com.facebook.ads']/interface[@name='InstreamVideoAdView.InstreamVideoLoadConfigBuilder']/method[@name='withBid' and count(parameter)=1 and parameter[1][@type='java.lang.String']]" name="managedReturn">Xamarin.Facebook.Ads.IAdLoadConfigBuilder</attr>
+    <attr path="/api/package[@name='com.facebook.ads']/interface[@name='NativeAdBase.NativeAdLoadConfigBuilder']/method[@name='build' and count(parameter)=0]" name="managedReturn">Xamarin.Facebook.Ads.IAdLoadAdConfig</attr>
+    <attr path="/api/package[@name='com.facebook.ads']/interface[@name='NativeAdBase.NativeAdLoadConfigBuilder']/method[@name='withBid' and count(parameter)=1 and parameter[1][@type='java.lang.String']]" name="managedReturn">Xamarin.Facebook.Ads.IAdLoadConfigBuilder</attr>-->
+
     <add-node path="/api/package[@name='com.facebook.ads']">
         <class abstract="false" deprecated="not deprecated" final="false" name="InterstitialAd" static="false"
                visibility="public" extends="java.lang.Object" implements="com.facebook.ads.FullScreenAd">
@@ -73,6 +75,75 @@
             <method abstract="false" deprecated="not deprecated" final="false" name="build" bridge="false"
                     native="false" return="com.facebook.ads.InterstitialAd.InterstitialShowAdConfig" static="false"
                     synchronized="false" synthetic="false" visibility="public" />
+            <!--<method abstract="false" deprecated="not deprecated" final="false" name="withBid" bridge="false"
+                    native="false" return="com.facebook.ads.InterstitialAd.InterstitialAdLoadConfigBuilder"
+                    static="false" synchronized="false" synthetic="false" visibility="public">
+                <parameter name="p0" type="java.lang.String" jni-type="Ljava/lang/String;" />
+            </method>-->
         </class>
+        <interface abstract="false" deprecated="not deprecated" final="false"
+                   name="NativeAdBase.NativeAdLoadConfigBuilder" static="false" visibility="public"
+                   extends="java.lang.Object">
+            <method abstract="false" deprecated="not deprecated" final="false" name="build" bridge="false"
+                    native="false" return="com.facebook.ads.NativeAdBase.NativeLoadAdConfig" static="false"
+                    synchronized="false" synthetic="false" visibility="public" />
+            <!--<method abstract="false" deprecated="not deprecated" final="false" name="withBid" bridge="false"
+                    native="false" return="com.facebook.ads.InterstitialAd.InterstitialAdLoadConfigBuilder"
+                    static="false" synchronized="false" synthetic="false" visibility="public">
+                <parameter name="p0" type="java.lang.String" jni-type="Ljava/lang/String;" />
+            </method>-->
+        </interface>
+        <class abstract="false" deprecated="not deprecated" final="false"
+               name="RewardedInterstitialAd" static="false" visibility="public"
+               extends="java.lang.Object" implements="com.facebook.ads.FullScreenAd">
+            <method abstract="false" deprecated="not deprecated" final="false" name="buildLoadAdConfig"
+                    jni-signature="()Lcom/facebook/ads/Ad$LoadConfigBuilder;" bridge="false" native="false"
+                    return="com.facebook.ads.Ad.LoadConfigBuilder" jni-return="Lcom/facebook/ads/Ad$LoadConfigBuilder;"
+                    static="false" synchronized="false" synthetic="false" visibility="public" />
+            <method abstract="false" deprecated="not deprecated" final="false" name="buildShowAdConfig"
+                    jni-signature="()Lcom/facebook/ads/FullScreenAd$ShowConfigBuilder;" bridge="false" native="false"
+                    return="com.facebook.ads.FullScreenAd.ShowConfigBuilder"
+                    jni-return="Lcom/facebook/ads/FullScreenAd$ShowConfigBuilder;" static="false" synchronized="false"
+                    synthetic="false" visibility="public" />
+            <method abstract="false" deprecated="not deprecated" final="false" name="show" jni-signature="()Z"
+                    bridge="false" native="false" return="boolean" jni-return="Z" static="false" synchronized="false"
+                    synthetic="false" visibility="public" />
+        </class>
+        <interface abstract="false" deprecated="not deprecated" final="false"
+                   name="RewardedInterstitialAd.RewardedInterstitialAdLoadConfigBuilder"
+                   static="false" visibility="public">
+
+        </interface>
+        <interface abstract="false" deprecated="not deprecated" final="false"
+                   name="RewardedInterstitialAd.RewardedInterstitialAdShowConfigBuilder"
+                   static="false" visibility="public">
+
+        </interface>
+        <class abstract="false" deprecated="not deprecated" final="false"
+               name="RewardedVideoAd" static="false" visibility="public"
+               extends="java.lang.Object" implements="com.facebook.ads.FullScreenAd">
+            <method abstract="false" deprecated="not deprecated" final="false" name="buildLoadAdConfig"
+                    jni-signature="()Lcom/facebook/ads/Ad$LoadConfigBuilder;" bridge="false" native="false"
+                    return="com.facebook.ads.Ad.LoadConfigBuilder" jni-return="Lcom/facebook/ads/Ad$LoadConfigBuilder;"
+                    static="false" synchronized="false" synthetic="false" visibility="public" />
+            <method abstract="false" deprecated="not deprecated" final="false" name="buildShowAdConfig"
+                    jni-signature="()Lcom/facebook/ads/FullScreenAd$ShowConfigBuilder;" bridge="false" native="false"
+                    return="com.facebook.ads.FullScreenAd.ShowConfigBuilder"
+                    jni-return="Lcom/facebook/ads/FullScreenAd$ShowConfigBuilder;" static="false" synchronized="false"
+                    synthetic="false" visibility="public" />
+            <method abstract="false" deprecated="not deprecated" final="false" name="show" jni-signature="()Z"
+                    bridge="false" native="false" return="boolean" jni-return="Z" static="false" synchronized="false"
+                    synthetic="false" visibility="public" />
+        </class>
+        <interface abstract="false" deprecated="not deprecated" final="false"
+                   name="RewardedVideoAd.RewardedVideoAdLoadConfigBuilder"
+                   static="false" visibility="public">
+
+        </interface>
+        <interface abstract="false" deprecated="not deprecated" final="false"
+                   name="RewardedVideoAd.RewardedVideoAdShowConfigBuilder"
+                   static="false" visibility="public">
+
+        </interface>
     </add-node>
 </metadata>
