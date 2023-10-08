@@ -17,7 +17,7 @@ namespace HelloFacebook
 
 		// This permission is set by default, even if you don't add it, but FB recommends to add it anyway
 		List<string> readPermissions = new List<string> { "public_profile" };
-
+		FBSDKProfile profile;
 		LoginButton loginButton;
 		ProfilePictureView pictureView;
 		UILabel nameLabel;
@@ -30,12 +30,12 @@ namespace HelloFacebook
 		{
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
-
+			
 			// If was send true to Profile.EnableUpdatesOnAccessTokenChange method
 			// this notification will be called after the user is logged in and
 			// after the AccessToken is gotten
 			Profile.Notifications.ObserveDidChange ((sender, e) => {
-
+			
 				if (e.NewProfile == null)
 					return;
 

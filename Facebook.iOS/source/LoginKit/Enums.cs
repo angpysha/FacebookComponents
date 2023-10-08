@@ -6,30 +6,16 @@ using ObjCRuntime;
 namespace Facebook.LoginKit
 {
 	[Native]
-	public enum LoginButtonTooltipBehavior : ulong
+	public enum FBSDKDefaultAudience : ulong
 	{
-		Automatic = 0,
-		ForceDisplay = 1,
-		Disable = 2
+		Friends = 0,
+		OnlyMe = 1,
+		Everyone = 2
 	}
 
 	[Native]
-	public enum LoginError : long {
-		Reserved = 300,
-		Unknown,
-		PasswordChanged,
-		UserCheckpointed,
-		UserMismatch,
-		UnconfirmedUser,
-		SystemAccountAppDisabled,
-		SystemAccountUnavailable,
-		BadChallengeString,
-		InvalidIdToken,
-		MissingAccessToken,
-	}
-
-	[Native]
-	public enum DeviceLoginError : long {
+	public enum FBSDKDeviceLoginError : long
+	{
 		ExcessivePolling = 1349172,
 		AuthorizationDeclined = 1349173,
 		AuthorizationPending = 1349174,
@@ -37,30 +23,48 @@ namespace Facebook.LoginKit
 	}
 
 	[Native]
-	public enum DefaultAudience : ulong
+	public enum FBSDKLoginButtonTooltipBehavior : ulong
 	{
-		Friends = 0,
-		OnlyMe,
-		Everyone
+		Automatic = 0,
+		ForceDisplay = 1,
+		Disable = 2
 	}
 
 	[Native]
-	public enum TooltipViewArrowDirection : ulong
+	public enum FBSDKTooltipViewArrowDirection : ulong
 	{
 		Down = 0,
 		Up = 1
 	}
 
 	[Native]
-	public enum TooltipColorStyle : ulong
+	public enum FBSDKTooltipColorStyle : ulong
 	{
 		FriendlyBlue = 0,
 		NeutralGray = 1
 	}
 
 	[Native]
-	public enum LoginTracking : ulong {
-		Enabled,
-		Limited,
+	public enum FBSDKLoginError : long
+	{
+		Reserved = 300,
+		Unknown = 301,
+		PasswordChanged = 302,
+		UserCheckpointed = 303,
+		UserMismatch = 304,
+		UnconfirmedUser = 305,
+		SystemAccountAppDisabled = 306,
+		SystemAccountUnavailable = 307,
+		BadChallengeString = 308,
+		InvalidIDToken = 309,
+		MissingAccessToken = 310
 	}
+
+	[Native]
+	public enum FBSDKLoginTracking : ulong
+	{
+		Enabled = 0,
+		Limited = 1
+	}
+
 }
