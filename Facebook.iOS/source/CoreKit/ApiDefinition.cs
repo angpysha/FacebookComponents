@@ -6600,6 +6600,16 @@ namespace Facebook.CoreKit {
 		[Export ("initWithProfile:")]
 		NativeHandle Constructor ([NullAllowed] FBSDKProfile profile);
 
+		// -(instancetype _Nonnull)initWithFrame:(CGRect)frame __attribute__((objc_designated_initializer));
+		[Export ("initWithFrame:")]
+		[DesignatedInitializer]
+		NativeHandle Constructor (CGRect frame);
+
+		//// -(instancetype _Nullable)initWithCoder:(NSCoder * _Nonnull)coder __attribute__((objc_designated_initializer));
+		//[Export ("initWithCoder:")]
+		//[DesignatedInitializer]
+		//NativeHandle Constructor (NSCoder coder);
+
 		// -(void)setNeedsImageUpdate;
 		[Export ("setNeedsImageUpdate")]
 		void SetNeedsImageUpdate ();
