@@ -28,7 +28,8 @@
     <MtouchLink>None</MtouchLink>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <CreatePackage>false</CreatePackage>
-    <MtouchExtraArgs>-v -v -v -v --gcc_flags="-L/Applications/Xcode-14.3.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator -L/Applications/Xcode-14.3.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift-5.5/iphonesimulator -L/Applications/Xcode-14.3.1.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/swift -lswiftCompatibility51 -lswiftCompatibility50 -lswiftDataDetection"</MtouchExtraArgs>
+    <MtouchExtraArgs>-v -v -v -v</MtouchExtraArgs>
+    <!--gcc_flags="-L/Applications/Xcode-14.3.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator -L/Applications/Xcode-14.3.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift-5.5/iphonesimulator -L/Applications/Xcode-14.3.1.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/swift -lswiftCompatibility51 -lswiftCompatibility50 -lswiftDataDetection"-->
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>full</DebugType>

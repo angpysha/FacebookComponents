@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>true</ImplicitUsings>
     <IsBindingProject>true</IsBindingProject>
-    <NoBindingEmbedding>false</NoBindingEmbedding>
+    <NoBindingEmbedding>true</NoBindingEmbedding>
     <SupportedOSPlatformVersion>12.0</SupportedOSPlatformVersion>
     <RootNamespace>Facebook.ShareKit</RootNamespace>
     <AssemblyName>Facebook.ShareKit</AssemblyName>

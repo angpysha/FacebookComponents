@@ -1530,7 +1530,7 @@ namespace Facebook.CoreKit {
 	  protocol, then [Model] is redundant and will generate code that will never
 	  be used.
 	*/
-	[Protocol]
+	[Protocol(Name= "FBSDKGraphRequest")]
 	interface FBSDKGraphRequestProtocol {
 		// @required @property (copy, nonatomic) NSDictionary<NSString *,id> * _Nonnull parameters;
 		[Abstract]
@@ -1587,9 +1587,9 @@ namespace Facebook.CoreKit {
 		
 	}
 	
-	[BaseType (typeof(NSObject))]
+[BaseType (typeof(NSObject))]
 [DisableDefaultCtor]
-interface FBSDKGraphRequest : FBSDKGraphRequestProtocol
+interface FBSDKGraphRequest : IFBSDKGraphRequestProtocol
 {
 	// +(void)configureWithSettings:(id<FBSDKSettings> _Nonnull)settings currentAccessTokenStringProvider:(Class<FBSDKTokenStringProviding> _Nonnull)accessTokenProvider graphRequestConnectionFactory:(id<FBSDKGraphRequestConnectionFactory> _Nonnull)_graphRequestConnectionFactory __attribute__((swift_name("configure(settings:currentAccessTokenStringProvider:graphRequestConnectionFactory:)")));
 	[Static]
@@ -6631,5 +6631,14 @@ interface FBSDKApplicationDelegate
 	[Export ("removeObserver:")]
 	void RemoveObserver (IFBSDKApplicationObserving observer);
 }
-#endregion
+
+	// @interface FBSDKCoreKit_Swift_883 (FBSDKProfile)
+	[BaseType (typeof (FBSDKProfile))]
+	interface BSDKProfile_FBSDKCoreKit_Swift_883 {
+		// +(void)loadCurrentProfileWithCompletion:(FBSDKProfileBlock _Nullable)completion;
+		[Static]
+		[Export ("loadCurrentProfileWithCompletion:")]
+		void LoadCurrentProfileWithCompletion ([NullAllowed] FBSDKProfileBlock completion);
+	}
+	#endregion
 }

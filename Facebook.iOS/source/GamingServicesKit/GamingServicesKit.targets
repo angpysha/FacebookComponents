@@ -22,7 +22,7 @@
         <Kind>Framework</Kind>
         <SmartLink>True</SmartLink>
         <ForceLoad>True</ForceLoad>
-        <LinkerFlags>-ObjC -L/Applications/Xcode-14.3.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift-5.0/iphonesimulator</LinkerFlags>
+        <LinkerFlags>-ObjC</LinkerFlags>
         <!--<Frameworks>Foundation UIKit CoreGraphics WebKit Metal Metal</Frameworks>-->
       </_NativeReference>
       <NativeReference Include="@(_NativeReference)" />

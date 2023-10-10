@@ -7,6 +7,7 @@ using Facebook.LoginKit;
 using Facebook.CoreKit;
 using CoreGraphics;
 using Foundation;
+using static CoreFoundation.DispatchSource;
 
 namespace HelloFacebook
 {
@@ -30,7 +31,7 @@ namespace HelloFacebook
 		{
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
-			
+
 			// If was send true to Profile.EnableUpdatesOnAccessTokenChange method
 			// this notification will be called after the user is logged in and
 			// after the AccessToken is gotten
@@ -41,7 +42,8 @@ namespace HelloFacebook
 			//
 			// 	nameLabel.Text = e.NewProfile.Name;
 			// });
-
+			var proo = FBSDKAuthenticationStatusUtility.ProfileSetter;
+			var iii = 0;
 			// Set the Read and Publish permissions you want to get
 			loginButton = new FBSDKLoginButton (new CGRect (80, 20, 220, 46)) {
 				Permissions = readPermissions.ToArray (),
@@ -59,7 +61,12 @@ namespace HelloFacebook
 
 			// If you have been logged into the app before, ask for the your profile name
 			if (FBSDKAccessToken.CurrentAccessToken != null) {
-				var request = new FBSDKGraphRequest ("/me?fields=name", null, FBSDKAccessToken.CurrentAccessToken.TokenString, null, "GET");
+
+				BSDKProfile_FBSDKCoreKit_Swift_883.LoadCurrentProfileWithCompletion ((profile, error) => {
+					int iiei = 0;
+				});
+
+				var request = new FBSDKGraphRequest ("/me", new NSDictionary<NSString, NSObject>(), FBSDKAccessToken.CurrentAccessToken.TokenString, null, "GET");
 				request.StartWithCompletion ((connection, result, error) => {
 					// Handle if something went wrong with the request
 					if (error != null) {
@@ -71,6 +78,20 @@ namespace HelloFacebook
 					var userInfo = result as NSDictionary;
 					nameLabel.Text = userInfo ["name"].ToString ();
 				});
+
+				//		var facebookProfileUrl = NSURL (string: "http://graph.facebook.com/\(userID)/picture?type=large")
+
+				//      if let data = NSData (contentsOfURL: facebookProfileUrl!) {
+				//			imageProfile.image = UIImage (data: data)
+
+				//}
+
+				//var facebookProfileUrl = new NSUrl ($@"http://graph.facebook.com/{FBSDKAccessToken.CurrentAccessToken}/picture?type=large");
+				//var data = NSData.FromUrl (facebookProfileUrl);
+
+				//if (data is not null) {
+				//	//pictureView.Image = new UIImage (data);
+				//}
 			}
 
 			// Add views to main view

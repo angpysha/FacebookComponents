@@ -33,7 +33,7 @@ namespace HelloFacebook
 			//var sharedSettings = FBSDKSettingsModel.SharedSettings;
 			//FBSDKSettingsModel.SharedSettings.AppID = appId;
 			//FBSDKSettingsModel.SharedSettings.ClientToken = appToken;
-
+			ObjCRuntime.Class.ThrowOnInitFailure = false;
 			// This method verifies if you have been logged into the app before, and keep you logged in after you reopen or kill your app.
 			return FBSDKApplicationDelegate.SharedInstance.FinishedLaunching (application, launchOptions);
 		}
