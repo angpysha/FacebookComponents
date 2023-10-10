@@ -51,7 +51,6 @@ namespace HelloFacebook
 			};
 
 			// The user image profile is set automatically once is logged in
-			pictureView = new FBSDKProfilePictureView (new CGRect (80, 100, 220, 220), profile);
 
 			// Create the label that will hold user's facebook name
 			nameLabel = new UILabel (new CGRect (80, 340, 220, 21)) {
@@ -62,8 +61,11 @@ namespace HelloFacebook
 			// If you have been logged into the app before, ask for the your profile name
 			if (FBSDKAccessToken.CurrentAccessToken != null) {
 
-				BSDKProfile_FBSDKCoreKit_Swift_883.LoadCurrentProfileWithCompletion ((profile, error) => {
+				FBSDKProfile.LoadCurrentProfileWithCompletion ((profile, error) => {
 					int iiei = 0;
+					this.profile = profile;
+					pictureView = new FBSDKProfilePictureView (new CGRect (80, 100, 220, 220), profile);
+					View.AddSubview (pictureView);
 				});
 
 				var request = new FBSDKGraphRequest ("/me", new NSDictionary<NSString, NSObject>(), FBSDKAccessToken.CurrentAccessToken.TokenString, null, "GET");
@@ -96,7 +98,6 @@ namespace HelloFacebook
 
 			// Add views to main view
 			View.AddSubview (loginButton);
-			View.AddSubview (pictureView);
 			View.AddSubview (nameLabel);
 		}
 
