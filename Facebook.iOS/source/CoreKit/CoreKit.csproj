@@ -7,13 +7,14 @@
     <ImplicitUsings>true</ImplicitUsings>
     <IsBindingProject>true</IsBindingProject>
     <NoBindingEmbedding>true</NoBindingEmbedding>
-    <SupportedOSPlatformVersion>10.0</SupportedOSPlatformVersion>
+    <SupportedOSPlatformVersion>12.0</SupportedOSPlatformVersion>
     <RootNamespace>Facebook.CoreKit</RootNamespace>
     <AssemblyName>Facebook.CoreKit</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>16.2.0.0</FileVersion>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <ProcessEnums>true</ProcessEnums>
+    <MtouchEnableBitcode>false</MtouchEnableBitcode>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -55,7 +56,29 @@
     </_NativeReference>
   </ItemGroup>
   <!-- End of workaround -->
-
+<!--<ItemGroup>
+  <NativeReference Include="..\..\externals\FBSDKCoreKit.xcframework">
+    <Kind>Framework</Kind>
+    <SmartLink>True</SmartLink>
+    <ForceLoad>True</ForceLoad>
+    <LinkerFlags>-ObjC</LinkerFlags>
+    <Frameworks>Foundation UIKit CoreGraphics WebKit Metal Metal</Frameworks>
+  </NativeReference>
+  <NativeReference Include="..\..\externals\FBAEMKit.xcframework">
+    <Kind>Framework</Kind>
+        <SmartLink>True</SmartLink>
+     <ForceLoad>True</ForceLoad>
+        <LinkerFlags>-ObjC</LinkerFlags>
+    <Frameworks>Foundation UIKit CoreGraphics WebKit Metal Metal</Frameworks>
+  </NativeReference>
+  <NativeReference Include="..\..\externals\FBSDKCoreKit_Basics.xcframework">
+    <Kind>Framework</Kind>
+        <SmartLink>True</SmartLink>
+     <ForceLoad>True</ForceLoad>
+        <LinkerFlags>-ObjC</LinkerFlags>
+    <Frameworks>Foundation UIKit CoreGraphics WebKit Metal Metal</Frameworks>
+  </NativeReference>
+</ItemGroup>-->
   <ItemGroup>
     <None Include="CoreKit.targets" Pack="True" PackagePath="build/Xamarin.Facebook.CoreKit.iOS.targets" />
     <None Include="CoreKit.targets" Pack="True" PackagePath="buildTransitive/Xamarin.Facebook.CoreKit.iOS.targets" />

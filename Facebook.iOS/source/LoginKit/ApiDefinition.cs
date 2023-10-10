@@ -158,7 +158,7 @@ interface FBSDKLoginButton
 
 	[Wrap ("WeakDelegate")]
 	[NullAllowed]
-	FBSDKLoginButtonDelegate Delegate { get; set; }
+	IFBSDKLoginButtonDelegate Delegate { get; set; }
 
 	// @property (nonatomic, weak) id<FBSDKLoginButtonDelegate> _Nullable delegate __attribute__((iboutlet));
 	[NullAllowed, Export ("delegate", ArgumentSemantic.Weak)]
@@ -352,6 +352,8 @@ interface FBSDKLoginButtonDelegate
 	[Export ("loginButtonWillLogin:")]
 	bool LoginButtonWillLogin (FBSDKLoginButton loginButton);
 }
+
+interface IFBSDKLoginButtonDelegate {}
 
 // @interface FBSDKLoginConfiguration : NSObject
 [BaseType (typeof(NSObject))]

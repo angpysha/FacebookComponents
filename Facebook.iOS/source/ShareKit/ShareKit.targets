@@ -16,9 +16,10 @@
     <ItemGroup>
       <_NativeReference Update="@(_NativeReference)" Condition="'%(_NativeReference._Id)' == '$(_FBSDKShareKitId)'">
         <Kind>Framework</Kind>
+        <!--<Frameworks>Foundation UIKit CoreGraphics WebKit Metal Metal</Frameworks>-->
         <SmartLink>True</SmartLink>
         <ForceLoad>True</ForceLoad>
-        <LinkerFlags>-ObjC</LinkerFlags>
+        <LinkerFlags>-ObjC -L/Applications/Xcode-14.3.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift-5.0/iphonesimulator</LinkerFlags>
       </_NativeReference>
       <NativeReference Include="@(_NativeReference)" />
     </ItemGroup>

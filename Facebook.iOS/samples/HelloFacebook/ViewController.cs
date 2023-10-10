@@ -10,7 +10,7 @@ using Foundation;
 
 namespace HelloFacebook
 {
-	public partial class ViewController : UIViewController, ILoginButtonDelegate
+	public partial class ViewController : UIViewController, IFBSDKLoginButtonDelegate
 	{
 		// To see the full list of permissions, visit the following link:
 		// https://developers.facebook.com/docs/facebook-login/permissions/v2.3
@@ -18,8 +18,8 @@ namespace HelloFacebook
 		// This permission is set by default, even if you don't add it, but FB recommends to add it anyway
 		List<string> readPermissions = new List<string> { "public_profile" };
 		FBSDKProfile profile;
-		LoginButton loginButton;
-		ProfilePictureView pictureView;
+		FBSDKLoginButton loginButton;
+		FBSDKProfilePictureView pictureView;
 		UILabel nameLabel;
 
 		public ViewController (IntPtr handle) : base (handle)
@@ -34,22 +34,22 @@ namespace HelloFacebook
 			// If was send true to Profile.EnableUpdatesOnAccessTokenChange method
 			// this notification will be called after the user is logged in and
 			// after the AccessToken is gotten
-			Profile.Notifications.ObserveDidChange ((sender, e) => {
-			
-				if (e.NewProfile == null)
-					return;
-
-				nameLabel.Text = e.NewProfile.Name;
-			});
+			// FBSDKProfile.Notifications.ObserveDidChange ((sender, e) => {
+			//
+			// 	if (e.NewProfile == null)
+			// 		return;
+			//
+			// 	nameLabel.Text = e.NewProfile.Name;
+			// });
 
 			// Set the Read and Publish permissions you want to get
-			loginButton = new LoginButton (new CGRect (80, 20, 220, 46)) {
+			loginButton = new FBSDKLoginButton (new CGRect (80, 20, 220, 46)) {
 				Permissions = readPermissions.ToArray (),
 				Delegate = this
 			};
 
 			// The user image profile is set automatically once is logged in
-			pictureView = new ProfilePictureView (new CGRect (80, 100, 220, 220));
+			pictureView = new FBSDKProfilePictureView (new CGRect (80, 100, 220, 220), profile);
 
 			// Create the label that will hold user's facebook name
 			nameLabel = new UILabel (new CGRect (80, 340, 220, 21)) {
@@ -58,9 +58,9 @@ namespace HelloFacebook
 			};
 
 			// If you have been logged into the app before, ask for the your profile name
-			if (AccessToken.CurrentAccessToken != null) {
-				var request = new GraphRequest ("/me?fields=name", null, AccessToken.CurrentAccessToken.TokenString, null, "GET");
-				request.Start ((connection, result, error) => {
+			if (FBSDKAccessToken.CurrentAccessToken != null) {
+				var request = new FBSDKGraphRequest ("/me?fields=name", null, FBSDKAccessToken.CurrentAccessToken.TokenString, null, "GET");
+				request.StartWithCompletion ((connection, result, error) => {
 					// Handle if something went wrong with the request
 					if (error != null) {
 						new UIAlertView ("Error...", error.Description, null, "Ok", null).Show ();
@@ -86,7 +86,7 @@ namespace HelloFacebook
 		}
 
 		// Handle actions once the user is logged in
-		public void DidComplete (LoginButton loginButton, LoginManagerLoginResult result, NSError error)
+		public void LoginButton (FBSDKLoginButton loginButton, FBSDKLoginManagerLoginResult result, NSError error)
         {
 				if (error != null)
 				{
@@ -107,7 +107,7 @@ namespace HelloFacebook
         }
 
         // Handle actions once the user is logged out
-        public void DidLogOut (LoginButton loginButton)
+        public void LoginButtonDidLogOut (FBSDKLoginButton loginButton)
         {
             // Handle your logout
             nameLabel.Text = "";

@@ -161,5 +161,15 @@ namespace Facebook.CoreKit {
 		Enabled = 1uL << 0,
 		RequireConfirmation = 1uL << 1
 	}
+	
+	[Native]
+	public enum FBSDKProfilePictureMode : ulong
+	{
+		Square = 0,
+		Normal = 1,
+		Album = 2,
+		Small = 3,
+		Large = 4
+	}
 
 }
