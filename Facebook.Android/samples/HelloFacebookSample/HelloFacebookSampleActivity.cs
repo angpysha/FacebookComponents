@@ -37,6 +37,7 @@ using AndroidX.Fragment.App;
 [assembly:Permission (Name = Android.Manifest.Permission.WriteExternalStorage)]
 [assembly:MetaData ("com.facebook.sdk.ApplicationId", Value ="@string/app_id")]
 [assembly:MetaData ("com.facebook.sdk.ApplicationName", Value ="@string/app_name")]
+[assembly:MetaData("com.facebook.sdk.ClientToken", Value = "@string/app_token")]
 
 namespace HelloFacebookSample
 {
@@ -74,7 +75,7 @@ namespace HelloFacebookSample
 		{
 			base.OnCreate (savedInstanceState);
 		
-            FacebookSdk.SdkInitialize (this.ApplicationContext);
+           // FacebookSdk.SdkInitialize (this.ApplicationContext);
             
             callbackManager = CallbackManagerFactory.Create ();
 
@@ -130,8 +131,8 @@ namespace HelloFacebookSample
                     ShowAlert (title, alertMsg);
                 }
             };
-
-            shareDialog = new ShareDialog (this);
+            var dialog = new ShareDialog(this);
+            //shareDialog = new ShareDialog()
             shareDialog.RegisterCallback (callbackManager, shareCallback);
 
             if (savedInstanceState != null) {
@@ -165,7 +166,7 @@ namespace HelloFacebookSample
             // Can we present the share dialog for regular links?
             canPresentShareDialog = ShareDialog.CanShow (Java.Lang.Class.FromType (typeof(ShareLinkContent)));
 
-            // Can we present the share dialog for photos?
+            //// Can we present the share dialog for photos?
             canPresentShareDialogWithPhotos = ShareDialog.CanShow (Java.Lang.Class.FromType (typeof(SharePhotoContent)));
 		}
 
@@ -199,7 +200,7 @@ namespace HelloFacebookSample
 		{
 			base.OnActivityResult (requestCode, resultCode, data);
 			
-            callbackManager.OnActivityResult (requestCode, (int)resultCode, data);
+          //  callbackManager.OnActivityResult (requestCode, (int)resultCode, data);
 		}
 
 		protected override void OnPause ()
@@ -285,12 +286,12 @@ namespace HelloFacebookSample
                 .SetPhotos (photos).Build ();
 
             if (canPresentShareDialogWithPhotos)
-                shareDialog.Show (sharePhotoContent);
-            else if (HasPublishPermission ())
-                ShareApi.Share (sharePhotoContent, shareCallback);
+                shareDialog.Show(sharePhotoContent);
+            //else if (HasPublishPermission())
+            //    ShareApi.Share(sharePhotoContent, shareCallback);
             else
                 pendingAction = PendingAction.POST_PHOTO;
-		}
+        }
         		
 		bool HasPublishPermission ()
 		{

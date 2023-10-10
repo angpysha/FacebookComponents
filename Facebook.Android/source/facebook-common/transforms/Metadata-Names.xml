@@ -1365,9 +1365,9 @@
   <attr
     path="/api/package[@name='com.facebook.login']/class[@name='WebViewLoginMethodHandler']/constructor[@name='WebViewLoginMethodHandler' and count(parameter)=1 and parameter[1][@type='android.os.Parcel']]/parameter[1]"
     name="managedName">source</attr>
-  <attr
+  <!--<attr
     path="/api/package[@name='com.facebook.share']/interface[@name='Sharer']/method[@name='setShouldFailOnDataError' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]"
-    name="managedName">shouldFailOnDataError</attr>
+    name="managedName">shouldFailOnDataError</attr>-->
   <attr
     path="/api/package[@name='com.facebook.devicerequests.internal']/interface[@name='DeviceRequestsHelper']/method[@name='getDeviceInfo' and count(parameter)=1 and parameter[1][starts-with(@type,'java.util.Map&lt;String, String&gt;')]]/parameter[1]"
     name="managedName">deviceInfo</attr>
@@ -2082,9 +2082,9 @@
   <attr
     path="/api/package[@name='com.facebook.share.widget']/class[@name='ShareDialog']/method[@name='setRequestCode' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
     name="managedName">requestCode</attr>
-  <attr
+  <!--<attr
     path="/api/package[@name='com.facebook.share.widget']/class[@name='ShareDialog']/method[@name='setShouldFailOnDataError' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]"
-    name="managedName">shouldFailOnDataError</attr>
+    name="managedName">shouldFailOnDataError</attr>-->
   <attr
     path="/api/package[@name='com.facebook.share.widget']/class[@name='ShareDialog']/method[@name='canShow' and count(parameter)=2 and parameter[1][starts-with(@type,'../model/ShareContent.html&lt;?, ?&gt;')] and parameter[2][@type='com.facebook.share.widget.ShareDialog.Mode']]/parameter[1]"
     name="managedName">content</attr>

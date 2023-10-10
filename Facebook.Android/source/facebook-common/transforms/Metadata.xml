@@ -74,7 +74,8 @@
         path="/api/package[@name='com.facebook.login']/class[@name='NativeAppLoginMethodHandler']/method[@name='tryAuthorize' and count(parameter)=1]" />
     <!-- <add-node path="/api/package[@name='com.facebook.login']/class[@name='LoginManager.FacebookLoginActivityResultContract']/method[@name='createIntent' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][starts-with(@type,'java.util.Collection&lt;java.lang.String&gt;')]]" /> -->
     <add-node path="/api/package[@name='com.facebook.login']">
-        <class abstract="false" name="LoginManager.FacebookLoginActivityResultContract" static="false" final="false" visibility="internal">
+        <class abstract="false" name="LoginManager.FacebookLoginActivityResultContract" static="false" final="false"
+               visibility="internal">
         </class>
     </add-node>
 
@@ -85,17 +86,17 @@
         </class>
     </add-node>-->
 
-    <add-node path="/api/package[@name='com.facebook.share.widget']">
+    <!--<add-node path="/api/package[@name='com.facebook.share.widget']">
         <class abstract="false" deprecated="not deprecated" final="false" name="ShareDialog" static="false" visibility="public" extends="java.lang.Object" implements="com.facebook.share.Sharer">
             <method abstract="false" deprecated="not deprecated" final="false" name="getShouldFailOnDataError" native="false" return="boolean" static="false" synchronized="false" visibility="public">
             </method>
 
-            <!-- Adding the setter method with return type 'void' -->
+            --><!-- Adding the setter method with return type 'void' --><!--
             <method abstract="false" deprecated="not deprecated" final="false" name="setShouldFailOnDataError" native="false" return="void" static="false" synchronized="false" visibility="public">
                 <parameter name="shouldFailOnDataError" type="boolean"/>
             </method>
         </class>
-    </add-node>
+    </add-node>-->
     <!-- <add-node path="/api/package[@name='com.facebook.share.widget']/class[@name='ShareDialog']/method[@name='"/> -->
     <!--<attr path="/api/package[@name='com.facebook.share.widget']/class[@name='ShareDialog']/method[@name='getShouldFailOnDataError' and count(parameter)=0]"
           name="propertyName">ShouldFailOnDataError</attr>
@@ -104,7 +105,34 @@
 
     <!-- <attr path="/api/package[@name='com.facebook.share.widget']/class[@name='ShareDialog']" -->
     <!--       name="propertyName">ShouldFailOnDataError</attr> -->
+    <!-- Remove the original methods -->
+    <remove-node path="/api/package[@name='com.facebook.share.widget']/class[@name='ShareDialog']/method[@name='getShouldFailOnDataError']" />
+    <remove-node path="/api/package[@name='com.facebook.share.widget']/class[@name='ShareDialog']/method[@name='setShouldFailOnDataError']" />
 
-    <attr path="/api/package[@name='com.facebook.share']/interface[@name='Sharer']/method[@name='getShouldFailOnDataError']" name="propertyName"></attr>
+    <add-node path="/api/package[@name='com.facebook.share.widget']/class[@name='ShareDialog']">
+        <method abstract="false" deprecated="not deprecated" final="false" name="getShouldFailOnDataError"
+                native="false" return="boolean" static="false" synchronized="false" visibility="public" 
+                managedName="GetShouldFailOnDataError">
+        </method>
+
+        <method abstract="false" deprecated="not deprecated" final="false" name="setShouldFailOnDataError"
+                native="false" return="void" static="false" synchronized="false" visibility="public"
+                managedName="SetShouldFailOnDataError">
+            <parameter name="shouldFailOnDataError" type="boolean" />
+        </method>
+    </add-node>
+    <attr
+        path="/api/package[@name='com.facebook.share']/interface[@name='Sharer']/method[@name='getShouldFailOnDataError']"
+        name="propertyName">
+    </attr>
+    <!--   <attr
+        path="/api/package[@name='com.facebook.share']/class[@name='ShareDialog']/method[@name='getShouldFailOnDataError']"
+        name="propertyName">
+    </attr>-->
+    <attr
+        path="/api/package[@name='com.facebook.share.widget']/class[@name='ShareDialog']/method[@name='getShouldFailOnDataError']"
+        name="propertyName">
+    </attr>
+
 
 </metadata>
