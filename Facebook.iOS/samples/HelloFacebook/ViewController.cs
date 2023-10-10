@@ -61,12 +61,15 @@ namespace HelloFacebook
 			// If you have been logged into the app before, ask for the your profile name
 			if (FBSDKAccessToken.CurrentAccessToken != null) {
 
-				FBSDKProfile.LoadCurrentProfileWithCompletion ((profile, error) => {
-					int iiei = 0;
-					this.profile = profile;
-					pictureView = new FBSDKProfilePictureView (new CGRect (80, 100, 220, 220), profile);
-					View.AddSubview (pictureView);
-				});
+				var profile = FBSDKProfile.CurrentProfile;
+
+				//FBSDKProfile.LoadCurrentProfileWithCompletion ((profile, error) => {
+				//	int iiei = 0;
+				//	this.profile = profile;
+				//	//pictureView.BackgroundColor = UIColor.Red;
+				//	pictureView.ProfileID = profile.UserID;
+				//});
+				pictureView = new FBSDKProfilePictureView (new CGRect (80, 100, 220, 220));
 
 				var request = new FBSDKGraphRequest ("/me", new NSDictionary<NSString, NSObject>(), FBSDKAccessToken.CurrentAccessToken.TokenString, null, "GET");
 				request.StartWithCompletion ((connection, result, error) => {
@@ -98,6 +101,7 @@ namespace HelloFacebook
 
 			// Add views to main view
 			View.AddSubview (loginButton);
+			View.AddSubview (pictureView);
 			View.AddSubview (nameLabel);
 		}
 
