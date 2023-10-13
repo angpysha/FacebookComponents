@@ -1,0 +1,89 @@
+trigger:
+  - main
+  - refs/tags/*
+
+variables:
+  DotNetVersion: 6.0.300
+  # NOTE: there wasn't a public release of 16.11 for macOS
+  LegacyXamarinAndroidPkg: https://download.visualstudio.microsoft.com/download/pr/b51d2f25-e4e9-4032-9cfa-152f6e4b01c6/0a0de518e3b7cf13417e7492f1bec07f/xamarin.android-12.0.0.3.pkg
+  LegacyXamarinAndroidVsix: https://download.visualstudio.microsoft.com/download/pr/497eaa29-8a2c-4ea8-947d-2418e8862e0a/3dc8e35223e5b18b8abde409574e09eb00c653237403d87a9f2f27b8ce048335/Xamarin.Android.Sdk-12.0.0.3.vsix
+  BUILD_COMMIT: $(Build.SourceVersion)
+  BUILD_NUMBER: $(Build.BuildNumber)
+
+resources:
+  repositories:
+    - repository: internal-templates
+      type: github
+      name: xamarin/yaml-templates
+      endpoint: xamarin
+      ref: refs/heads/main
+    - repository: components
+      type: github
+      name: xamarin/XamarinComponents
+      endpoint: xamarin
+
+jobs:
+  - template: .ci/build.yml@components
+    parameters:
+      ${{ if startsWith(variables['Build.SourceBranch'], 'refs/tags/') }}:  # We only need to ship from OSX builds so don't run on windows
+        windowsAgentPoolName: ''
+        windowsImage: ''
+      ${{ elseif eq(variables['System.TeamProject'], 'devdiv') }}:    # The AzurePipelines-EO pool is only available in DevDiv
+        windowsAgentPoolName: AzurePipelines-EO
+        windowsImage: ''  # Override the 'windows-latest' default settings
+        windowsImageOverride: AzurePipelinesWindows2019compliant
+      ${{ else }}:
+        windowsImage: windows-2019
+     
+      areaPath: 'DevDiv\VS Client - Runtime SDKs'
+      xcode: 13.2
+      cake: '0.33.0'
+      initSteps:
+        # Cake v0.33.0 uses this version
+        - task: UseDotNet@2
+          displayName: Install .NET 2.1.818
+          inputs:
+            version: '2.1.818'
+        - task: UseDotNet@2
+          displayName: install .NET $(DotNetVersion)
+          inputs:
+            version: $(DotNetVersion)
+        - pwsh: |
+            dotnet workload install android
+        - task: JavaToolInstaller@0
+          inputs:
+            versionSpec: '11'
+            jdkArchitectureOption: 'x64'
+            jdkSourceOption: 'PreInstalled'
+
+      preBuildSteps:
+        - pwsh: |
+            dotnet tool install --global boots
+            boots $(LegacyXamarinAndroidPkg)
+          displayName: Install .NET boots tool
+          condition: eq(variables['System.JobName'], 'macos')
+        - pwsh: |
+            dotnet workload install android
+          displayName: Install .NET 6 Android Workload
+          condition: ne(variables['System.JobName'], 'linux')
+        - pwsh: |
+            dotnet workload install ios --from-rollback-file https://maui.blob.core.windows.net/metadata/rollbacks/6.0.3xx.json --source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet6/nuget/v3/index.json --source https://api.nuget.org/v3/index.json
+          displayName: Install .NET 6 iOS Workload
+          condition: eq(variables['System.JobName'], 'macos')
+
+  - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
+    - template: sign-artifacts/jobs/v2.yml@internal-templates
+      parameters:
+        dependsOn: [ 'build' ]
+        condition: startsWith(variables['Build.SourceBranch'], 'refs/tags/')
+
+    - template: compliance/sbom/job.v1.yml@internal-templates             # Software Bill of Materials (SBOM): https://eng.ms/docs/cloud-ai-platform/devdiv/one-engineering-system-1es/1es-docs/secure-supply-chain/ado-sbom-generator
+      parameters:
+        packageName: 'Xamarin Facebook Components'
+        packageFilter: '*.nupkg'
+        ${{ if not(startsWith(variables['Build.SourceBranch'], 'refs/tags/')) }}:
+          artifactNames: ['nuget']
+          dependsOn: [ 'build' ]
+        ${{ if startsWith(variables['Build.SourceBranch'], 'refs/tags/') }}:
+          artifactNames: ['nuget-signed']
+          dependsOn: [ 'signing' ]
