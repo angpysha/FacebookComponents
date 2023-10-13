@@ -8,7 +8,7 @@ steps:
       targetType: 'inline'
       script: |
         # Write your PowerShell commands here.
-        
+        dotnet tool install Cake.Tool
         cd ./Facebook.Android
         
         dotnet cake --target nuget
