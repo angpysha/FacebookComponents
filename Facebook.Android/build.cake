@@ -109,11 +109,15 @@ Task ("nuget")
 	foreach (var art in ARTIFACTS) {
 		var csproj = "./source/" + art.ArtifactId + "/" + art.ArtifactId + ".csproj";
 
+var msBuildSettings = new DotNetCoreMSBuildSettings
+{
+    PackageVersion = art.NugetVersion,
+};
 		DotNetCorePack(csproj, new DotNetCorePackSettings
 {
     Configuration = "Release",
     NoBuild = true,
-    VersionSuffix = art.NugetVersion,
+    MSBuildSettings = msBuildSettings,
     OutputDirectory = "./output/",
     ArgumentCustomization = args => args.Append("/p:DesignTimeBuild=false")
 });
