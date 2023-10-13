@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <AndroidCodegenTarget>XAJavaInterop1</AndroidCodegenTarget>
-    <TargetFrameworks>MonoAndroid12.0;net6.0-android31</TargetFrameworks>
+    <TargetFrameworks>MonoAndroid12.0;net7.0-android</TargetFrameworks>
     <IsBindingProject>true</IsBindingProject>
 
     <AssemblyName>Xamarin.Facebook.GamingServices.Android</AssemblyName>
@@ -68,6 +68,6 @@
     <Folder Include="additions\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Kotlin.StdLib.Jdk8" Version="1.6.20.1" />
+    <PackageReference Include="Xamarin.Kotlin.StdLib.Jdk8" Version="1.9.10.1" />
   </ItemGroup>
 </Project>
