@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 using System;
 using System.Collections.Generic;
 using Android.App;
@@ -33,27 +34,30 @@ using Xamarin.Facebook.Share;
 using Xamarin.Facebook.Login;
 using AndroidX.Fragment.App;
 
-[assembly:Permission (Name = Android.Manifest.Permission.Internet)]
-[assembly:Permission (Name = Android.Manifest.Permission.WriteExternalStorage)]
-[assembly:MetaData ("com.facebook.sdk.ApplicationId", Value ="@string/app_id")]
-[assembly:MetaData ("com.facebook.sdk.ApplicationName", Value ="@string/app_name")]
-[assembly:MetaData("com.facebook.sdk.ClientToken", Value = "@string/app_token")]
+[assembly: Permission(Name = Android.Manifest.Permission.Internet)]
+[assembly: Permission(Name = Android.Manifest.Permission.WriteExternalStorage)]
+[assembly: MetaData("com.facebook.sdk.ApplicationId", Value = "@string/app_id")]
+[assembly: MetaData("com.facebook.sdk.ApplicationName", Value = "@string/app_name")]
+[assembly: MetaData("com.facebook.sdk.ClientToken", Value = "@string/app_token")]
 
 namespace HelloFacebookSample
 {
-	[Activity (Label = "@string/app_name", MainLauncher = true, WindowSoftInputMode = SoftInput.AdjustResize)]
-	public class HelloFacebookSampleActivity : FragmentActivity
-	{	
-        static readonly string [] PERMISSIONS = new [] { "publish_actions" };
-		static readonly Location SEATTLE_LOCATION = new Location ("") {
-			Latitude = (47.6097),
-			Longitude = (-122.3331)
-		};
+    [Activity(Label = "@string/app_name", MainLauncher = true, WindowSoftInputMode = SoftInput.AdjustResize)]
+    public class HelloFacebookSampleActivity : FragmentActivity
+    {
+        static readonly string[] PERMISSIONS = new[] { "public_profile", "email" };
 
-		private Login l = new Xamarin.Facebook.Login.Login();
+        static readonly Location SEATTLE_LOCATION = new Location("")
+        {
+            Latitude = (47.6097),
+            Longitude = (-122.3331)
+        };
+
+        private Login l = new Xamarin.Facebook.Login.Login();
         const String PENDING_ACTION_BUNDLE_KEY = "com.facebook.samples.hellofacebook:PendingAction";
-		Button postStatusUpdateButton;
-		Button postPhotoButton;
+        Button postStatusUpdateButton;
+        Button postPhotoButton;
+        private Button loginWithManagerButton;
         ProfilePictureView profilePictureView;
         TextView greeting;
         PendingAction pendingAction = PendingAction.NONE;
@@ -64,197 +68,224 @@ namespace HelloFacebookSample
         ShareDialog shareDialog;
         FacebookCallback<SharerResult> shareCallback;
 
-		enum PendingAction
-		{
-			NONE,
-			POST_PHOTO,
-			POST_STATUS_UPDATE
-		}
-        	
-		protected override void OnCreate (Bundle savedInstanceState)
-		{
-			base.OnCreate (savedInstanceState);
-		
-           // FacebookSdk.SdkInitialize (this.ApplicationContext);
-            
-            callbackManager = CallbackManagerFactory.Create ();
+        enum PendingAction
+        {
+            NONE,
+            POST_PHOTO,
+            POST_STATUS_UPDATE
+        }
 
-            var loginCallback = new FacebookCallback<LoginResult> {
-                HandleSuccess = loginResult => {
-                    HandlePendingAction ();
-                    UpdateUI ();
+        protected override void OnCreate(Bundle savedInstanceState)
+        {
+            base.OnCreate(savedInstanceState);
+
+            // FacebookSdk.SdkInitialize (this.ApplicationContext);
+
+            callbackManager = CallbackManagerFactory.Create();
+
+            var loginCallback = new FacebookCallback<LoginResult>
+            {
+                HandleSuccess = loginResult =>
+                {
+                    HandlePendingAction();
+                    UpdateUI();
                 },
-                HandleCancel = () => {
-                    if (pendingAction != PendingAction.NONE) {
-                        ShowAlert (
-                            GetString (Resource.String.cancelled),
-                            GetString (Resource.String.permission_not_granted));
+                HandleCancel = () =>
+                {
+                    if (pendingAction != PendingAction.NONE)
+                    {
+                        ShowAlert(
+                            GetString(Resource.String.cancelled),
+                            GetString(Resource.String.permission_not_granted));
                         pendingAction = PendingAction.NONE;
                     }
-                    UpdateUI ();                        
+
+                    UpdateUI();
                 },
-                HandleError = loginError => {
+                HandleError = loginError =>
+                {
                     if (pendingAction != PendingAction.NONE
-                        && loginError is FacebookAuthorizationException) {
-                        ShowAlert (
-                            GetString (Resource.String.cancelled),
-                            GetString (Resource.String.permission_not_granted));
+                        && loginError is FacebookAuthorizationException)
+                    {
+                        ShowAlert(
+                            GetString(Resource.String.cancelled),
+                            GetString(Resource.String.permission_not_granted));
                         pendingAction = PendingAction.NONE;
                     }
-                    UpdateUI ();
+
+                    UpdateUI();
                 }
             };
 
-            LoginManager.Instance.RegisterCallback (callbackManager, loginCallback);
+            LoginManager.Instance.RegisterCallback(callbackManager, loginCallback);
 
-            shareCallback = new FacebookCallback<SharerResult> {
-                HandleSuccess = shareResult => {
-                    Console.WriteLine ("HelloFacebook: Success!");
+            shareCallback = new FacebookCallback<SharerResult>
+            {
+                HandleSuccess = shareResult =>
+                {
+                    Console.WriteLine("HelloFacebook: Success!");
 
-                    if (shareResult.PostId != null) {
-                        var title = Parent.GetString (Resource.String.error);
+                    if (shareResult.PostId != null)
+                    {
+                        var title = Parent.GetString(Resource.String.error);
                         var id = shareResult.PostId;
-                        var alertMsg = Parent.GetString (Resource.String.successfully_posted_post, id);
+                        var alertMsg = Parent.GetString(Resource.String.successfully_posted_post, id);
 
-                        ShowAlert (title, alertMsg);
+                        ShowAlert(title, alertMsg);
                     }
                 },
-                HandleCancel = () => {
-                    Console.WriteLine ("HelloFacebook: Canceled");
-                },
-                HandleError = shareError => {
-                    Console.WriteLine ("HelloFacebook: Error: {0}", shareError);
+                HandleCancel = () => { Console.WriteLine("HelloFacebook: Canceled"); },
+                HandleError = shareError =>
+                {
+                    Console.WriteLine("HelloFacebook: Error: {0}", shareError);
 
-                    var title = Parent.GetString (Resource.String.error);
+                    var title = Parent.GetString(Resource.String.error);
                     var alertMsg = shareError.Message;
 
-                    ShowAlert (title, alertMsg);
+                    ShowAlert(title, alertMsg);
                 }
             };
-            var dialog = new ShareDialog(this);
+            var shareDialog = new ShareDialog(this);
             //shareDialog = new ShareDialog()
-            shareDialog.RegisterCallback (callbackManager, shareCallback);
+            shareDialog.RegisterCallback(callbackManager, shareCallback);
 
-            if (savedInstanceState != null) {
-                var name = savedInstanceState.GetString (PENDING_ACTION_BUNDLE_KEY);
-                pendingAction = (PendingAction)Enum.Parse (typeof(PendingAction), name);
+            if (savedInstanceState != null)
+            {
+                var name = savedInstanceState.GetString(PENDING_ACTION_BUNDLE_KEY);
+                pendingAction = (PendingAction)Enum.Parse(typeof(PendingAction), name);
             }
 
-            SetContentView (Resource.Layout.main);
+            SetContentView(Resource.Layout.main);
 
-            profileTracker = new CustomProfileTracker {
-                HandleCurrentProfileChanged = (oldProfile, currentProfile) => {
-                    UpdateUI ();
-                    HandlePendingAction ();
+            profileTracker = new CustomProfileTracker
+            {
+                HandleCurrentProfileChanged = (oldProfile, currentProfile) =>
+                {
+                    UpdateUI();
+                    HandlePendingAction();
                 }
             };
 
-            profilePictureView = FindViewById <ProfilePictureView> (Resource.Id.profilePicture);
+            profilePictureView = FindViewById<ProfilePictureView>(Resource.Id.profilePicture);
 
-            greeting = FindViewById<TextView> (Resource.Id.greeting);
+            greeting = FindViewById<TextView>(Resource.Id.greeting);
 
-            postStatusUpdateButton = FindViewById<Button> (Resource.Id.postStatusUpdateButton);
-            postStatusUpdateButton.Click += (sender, e) => {
-                PerformPublish (PendingAction.POST_STATUS_UPDATE, canPresentShareDialog);
+            postStatusUpdateButton = FindViewById<Button>(Resource.Id.postStatusUpdateButton);
+            postStatusUpdateButton.Click += (sender, e) =>
+            {
+                PerformPublish(PendingAction.POST_STATUS_UPDATE, canPresentShareDialog);
             };
 
-            postPhotoButton = FindViewById<Button> (Resource.Id.postPhotoButton);
-            postPhotoButton.Click += (sender, e) => {
-                PerformPublish (PendingAction.POST_PHOTO, canPresentShareDialogWithPhotos);
+            postPhotoButton = FindViewById<Button>(Resource.Id.postPhotoButton);
+            postPhotoButton.Click += (sender, e) =>
+            {
+                PerformPublish(PendingAction.POST_PHOTO, canPresentShareDialogWithPhotos);
             };
 
             // Can we present the share dialog for regular links?
-            canPresentShareDialog = ShareDialog.CanShow (Java.Lang.Class.FromType (typeof(ShareLinkContent)));
+            canPresentShareDialog = ShareDialog.CanShow(Java.Lang.Class.FromType(typeof(ShareLinkContent)));
 
             //// Can we present the share dialog for photos?
-            canPresentShareDialogWithPhotos = ShareDialog.CanShow (Java.Lang.Class.FromType (typeof(SharePhotoContent)));
-		}
-
-       
-        void ShowAlert (string title, string msg, string buttonText = null)
-        {
-            new AlertDialog.Builder (Parent)
-                .SetTitle (title)
-                .SetMessage (msg)
-                .SetPositiveButton (buttonText, (s2, e2) => { })
-                .Show ();
+            canPresentShareDialogWithPhotos = ShareDialog.CanShow(Java.Lang.Class.FromType(typeof(SharePhotoContent)));
+            loginWithManagerButton = FindViewById<Button>(Resource.Id.login_with_manager_button);
+            int ii = 0;
+            loginWithManagerButton.Click += LoginWithManagerButtonOnClick;
         }
 
-		protected override void OnResume ()
-		{
-            base.OnResume ();
+        private void LoginWithManagerButtonOnClick(object sender, EventArgs e)
+        {
+            LoginManager.Instance.LogInWithReadPermissions(this, callbackManager, PERMISSIONS);
+        }
+
+
+        void ShowAlert(string title, string msg, string buttonText = null)
+        {
+            new AlertDialog.Builder(Parent)
+                .SetTitle(title)
+                .SetMessage(msg)
+                .SetPositiveButton(buttonText, (s2, e2) => { })
+                .Show();
+        }
+
+        protected override void OnResume()
+        {
+            base.OnResume();
 
             AppEventsLogger.ActivateApp(this.Application);
 
-			UpdateUI ();
-		}
+            UpdateUI();
+        }
 
-		protected override void OnSaveInstanceState (Bundle outState)
-		{
-			base.OnSaveInstanceState (outState);
-			
-			outState.PutString (PENDING_ACTION_BUNDLE_KEY, pendingAction.ToString ());
-		}
+        protected override void OnSaveInstanceState(Bundle outState)
+        {
+            base.OnSaveInstanceState(outState);
 
-		protected override void OnActivityResult (int requestCode, Result resultCode, Intent data)
-		{
-			base.OnActivityResult (requestCode, resultCode, data);
-			
-          //  callbackManager.OnActivityResult (requestCode, (int)resultCode, data);
-		}
+            outState.PutString(PENDING_ACTION_BUNDLE_KEY, pendingAction.ToString());
+        }
 
-		protected override void OnPause ()
-		{
-			base.OnPause ();
-			
-           // AppEventsLogger.DeactivateApp (this.Application);
-		}
+        protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
+        {
+            base.OnActivityResult(requestCode, resultCode, data);
 
-		protected override void OnDestroy ()
-		{
-			base.OnDestroy ();
-			
-            profileTracker.StopTracking ();
-		}
+            //  callbackManager.OnActivityResult (requestCode, (int)resultCode, data);
+        }
 
-		private void UpdateUI ()
-		{
-			var enableButtons = AccessToken.CurrentAccessToken != null;
+        protected override void OnPause()
+        {
+            base.OnPause();
 
-			postStatusUpdateButton.Enabled = (enableButtons || canPresentShareDialog);
-			postPhotoButton.Enabled = (enableButtons || canPresentShareDialogWithPhotos);
-			
+            // AppEventsLogger.DeactivateApp (this.Application);
+        }
+
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+
+            profileTracker.StopTracking();
+        }
+
+        private void UpdateUI()
+        {
+            var enableButtons = AccessToken.CurrentAccessToken != null;
+
+            postStatusUpdateButton.Enabled = (enableButtons || canPresentShareDialog);
+            postPhotoButton.Enabled = (enableButtons || canPresentShareDialogWithPhotos);
+
             var profile = Profile.CurrentProfile;
 
-            if (enableButtons && profile != null) {
+            if (enableButtons && profile != null)
+            {
                 profilePictureView.ProfileId = profile.Id;
-				greeting.Text = GetString (Resource.String.hello_user, new Java.Lang.String (profile.FirstName));
-			} else {
-				profilePictureView.ProfileId = null;
+                greeting.Text = GetString(Resource.String.hello_user, new Java.Lang.String(profile.FirstName));
+            }
+            else
+            {
+                profilePictureView.ProfileId = null;
                 greeting.Text = null;
-			}
-		}
+            }
+        }
 
-		private void HandlePendingAction ()
-		{
-			PendingAction previouslyPendingAction = pendingAction;
-			// These actions may re-set pendingAction if they are still pending, but we assume they
-			// will succeed.
-			pendingAction = PendingAction.NONE;
+        private void HandlePendingAction()
+        {
+            PendingAction previouslyPendingAction = pendingAction;
+            // These actions may re-set pendingAction if they are still pending, but we assume they
+            // will succeed.
+            pendingAction = PendingAction.NONE;
 
-			switch (previouslyPendingAction) {
-			case PendingAction.POST_PHOTO:
-				PostPhoto ();
-				break;
-			case PendingAction.POST_STATUS_UPDATE:
-				PostStatusUpdate ();
-				break;
-			}
-		}
-        	
-        		
-		void PostStatusUpdate ()
-		{
+            switch (previouslyPendingAction)
+            {
+                case PendingAction.POST_PHOTO:
+                    PostPhoto();
+                    break;
+                case PendingAction.POST_STATUS_UPDATE:
+                    PostStatusUpdate();
+                    break;
+            }
+        }
+
+
+        void PostStatusUpdate()
+        {
             //var profile = Profile.CurrentProfile;
 
             //var linkContent = new ShareLinkContent.Builder ()
@@ -270,20 +301,19 @@ namespace HelloFacebookSample
             //    ShareApi.Share (linkContent, shareCallback);
             //else
             //    pendingAction = PendingAction.POST_STATUS_UPDATE;
-                
-		}
+        }
 
-		private void PostPhoto ()
-		{
-            var image = BitmapFactory.DecodeResource (this.Resources, Resource.Drawable.icon);
-            var sharePhoto = new SharePhoto.Builder ()
-                .SetBitmap (image).Build ().JavaCast<SharePhoto> ();
+        private void PostPhoto()
+        {
+            var image = BitmapFactory.DecodeResource(this.Resources, Resource.Drawable.icon);
+            var sharePhoto = new SharePhoto.Builder()
+                .SetBitmap(image).Build().JavaCast<SharePhoto>();
 
-            var photos = new List<SharePhoto> ();
-            photos.Add (sharePhoto);
+            var photos = new List<SharePhoto>();
+            photos.Add(sharePhoto);
 
-            var sharePhotoContent = new SharePhotoContent.Builder ()
-                .SetPhotos (photos).Build ();
+            var sharePhotoContent = new SharePhotoContent.Builder()
+                .SetPhotos(photos).Build();
 
             if (canPresentShareDialogWithPhotos)
                 shareDialog.Show(sharePhotoContent);
@@ -292,34 +322,39 @@ namespace HelloFacebookSample
             else
                 pendingAction = PendingAction.POST_PHOTO;
         }
-        		
-		bool HasPublishPermission ()
-		{
-            var accessToken = AccessToken.CurrentAccessToken;
-            return accessToken != null && accessToken.Permissions.Contains ("publish_actions");
-		}
 
-        void PerformPublish (PendingAction action, bool allowNoToken)
-		{
+        bool HasPublishPermission()
+        {
+            var accessToken = AccessToken.CurrentAccessToken;
+            return accessToken != null && accessToken.Permissions.Contains("publish_actions");
+        }
+
+        void PerformPublish(PendingAction action, bool allowNoToken)
+        {
             var accessToken = AccessToken.CurrentAccessToken;
 
-            if (accessToken != null) {
+            if (accessToken != null)
+            {
                 pendingAction = action;
-                if (HasPublishPermission ()) {
-                    HandlePendingAction ();
+                if (HasPublishPermission())
+                {
+                    HandlePendingAction();
                     return;
-                } else {
-                    LoginManager.Instance.LogInWithPublishPermissions (this, PERMISSIONS);
+                }
+                else
+                {
+                    LoginManager.Instance.LogInWithPublishPermissions(this, PERMISSIONS);
                     return;
                 }
             }
 
-            if (allowNoToken) {
+            if (allowNoToken)
+            {
                 pendingAction = action;
-                HandlePendingAction ();
+                HandlePendingAction();
             }
-		}
-	}
+        }
+    }
 
     class FacebookCallback<TResult> : Java.Lang.Object, IFacebookCallback where TResult : Java.Lang.Object
     {
@@ -327,39 +362,39 @@ namespace HelloFacebookSample
         public Action<FacebookException> HandleError { get; set; }
         public Action<TResult> HandleSuccess { get; set; }
 
-        public void OnCancel ()
+        public void OnCancel()
         {
             var c = HandleCancel;
             if (c != null)
-                c ();
+                c();
         }
 
-        public void OnError (FacebookException error)
+        public void OnError(FacebookException error)
         {
             var c = HandleError;
             if (c != null)
-                c (error);
+                c(error);
         }
 
-        public void OnSuccess (Java.Lang.Object result)
+        public void OnSuccess(Java.Lang.Object result)
         {
             var c = HandleSuccess;
             if (c != null)
-                c (result.JavaCast<TResult> ());
+                c(result.JavaCast<TResult>());
         }
     }
 
     class CustomProfileTracker : ProfileTracker
     {
-        public delegate void CurrentProfileChangedDelegate (Profile oldProfile, Profile currentProfile);
+        public delegate void CurrentProfileChangedDelegate(Profile oldProfile, Profile currentProfile);
 
         public CurrentProfileChangedDelegate HandleCurrentProfileChanged { get; set; }
 
-        protected override void OnCurrentProfileChanged (Profile oldProfile, Profile currentProfile)
+        protected override void OnCurrentProfileChanged(Profile oldProfile, Profile currentProfile)
         {
             var p = HandleCurrentProfileChanged;
             if (p != null)
-                p (oldProfile, currentProfile);
+                p(oldProfile, currentProfile);
         }
     }
 }

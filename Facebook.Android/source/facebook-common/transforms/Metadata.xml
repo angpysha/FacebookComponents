@@ -11,9 +11,6 @@
     <attr path="/api/package[@name='com.facebook.share.model']" name="managedName">Xamarin.Facebook.Share.Model</attr>
     <attr path="/api/package[@name='com.facebook.share.widget']" name="managedName">Xamarin.Facebook.Share.Widget</attr>
 
-    <!--<attr path="/api/package[@name='com.facebook']/class[@name='GraphRequestAsyncTask']/method[@name='doInBackground' and count(parameter)=1 and parameter[1][@type='java.lang.Void...']]/parameter[1]" name="managedType">params Java.Lang.Object[]</attr>
-    <attr path="/api/package[@name='com.facebook']/class[@name='GraphRequestAsyncTask']/method[@name='doInBackground' and count(parameter)=1 and parameter[1][@type='java.lang.Void...']]" name="managedReturn">Java.Lang.Object</attr>
--->
     <remove-node path="/api/package[contains(@name, 'com.facebook.share.internal')]" />
 
     <attr path="/api/package[@name='com.facebook.login']/class[@name='WebLoginMethodHandler']" name="visibility">public</attr>
@@ -79,32 +76,6 @@
         </class>
     </add-node>
 
-    <!--<add-node path="/api/package[@name='org.alljoyn.bus']">
-        <class abstract="false" deprecated="not deprecated" final="false" name="AuthListener.AuthRequest" static="true" visibility="public" extends="java.lang.Object">
-            <constructor deprecated="not deprecated" final="false" name="AuthListener.AuthRequest" static="false" type="org.alljoyn.bus.AuthListener.AuthRequest" visibility="public" />
-            <field name="p0" type="org.alljoyn.bus.AuthListener.Credentials" />
-        </class>
-    </add-node>-->
-
-    <!--<add-node path="/api/package[@name='com.facebook.share.widget']">
-        <class abstract="false" deprecated="not deprecated" final="false" name="ShareDialog" static="false" visibility="public" extends="java.lang.Object" implements="com.facebook.share.Sharer">
-            <method abstract="false" deprecated="not deprecated" final="false" name="getShouldFailOnDataError" native="false" return="boolean" static="false" synchronized="false" visibility="public">
-            </method>
-
-            --><!-- Adding the setter method with return type 'void' --><!--
-            <method abstract="false" deprecated="not deprecated" final="false" name="setShouldFailOnDataError" native="false" return="void" static="false" synchronized="false" visibility="public">
-                <parameter name="shouldFailOnDataError" type="boolean"/>
-            </method>
-        </class>
-    </add-node>-->
-    <!-- <add-node path="/api/package[@name='com.facebook.share.widget']/class[@name='ShareDialog']/method[@name='"/> -->
-    <!--<attr path="/api/package[@name='com.facebook.share.widget']/class[@name='ShareDialog']/method[@name='getShouldFailOnDataError' and count(parameter)=0]"
-          name="propertyName">ShouldFailOnDataError</attr>
-    <attr path="/api/package[@name='com.facebook.share.widget']/class[@name='ShareDialog']/method[@name='setShouldFailOnDataError' and count(parameter)=1 and parameter[1][@type='boolean']]"
-          name="propertyName">ShouldFailOnDataError</attr>-->
-
-    <!-- <attr path="/api/package[@name='com.facebook.share.widget']/class[@name='ShareDialog']" -->
-    <!--       name="propertyName">ShouldFailOnDataError</attr> -->
     <!-- Remove the original methods -->
     <remove-node path="/api/package[@name='com.facebook.share.widget']/class[@name='ShareDialog']/method[@name='getShouldFailOnDataError']" />
     <remove-node path="/api/package[@name='com.facebook.share.widget']/class[@name='ShareDialog']/method[@name='setShouldFailOnDataError']" />
@@ -125,10 +96,7 @@
         path="/api/package[@name='com.facebook.share']/interface[@name='Sharer']/method[@name='getShouldFailOnDataError']"
         name="propertyName">
     </attr>
-    <!--   <attr
-        path="/api/package[@name='com.facebook.share']/class[@name='ShareDialog']/method[@name='getShouldFailOnDataError']"
-        name="propertyName">
-    </attr>-->
+
     <attr
         path="/api/package[@name='com.facebook.share.widget']/class[@name='ShareDialog']/method[@name='getShouldFailOnDataError']"
         name="propertyName">
