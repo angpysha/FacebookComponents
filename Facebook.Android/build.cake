@@ -1,4 +1,6 @@
 #addin nuget:?package=Cake.FileHelpers&version=3.2.1
+#addin nuget:?package=Cake.DotNetTool.Module
+
 
 var FB_VERSION = "16.2.0";
 var NUGET_VERSION = "16.2.0";
