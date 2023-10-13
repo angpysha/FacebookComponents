@@ -71,7 +71,7 @@ Task ("libs")
 	.IsDependentOn("ci-setup")
 	.Does(() =>
 {
-	DotNetCoreBuild("./source/Xamarin.Facebook.sln", new DotNetCoreBuildSettings
+	DotNetBuild("./source/Xamarin.Facebook.sln", new DotNetBuildSettings
 	{
 		Configuration = "Release",
 		NoRestore = false, // This means it will perform a restore
@@ -110,11 +110,11 @@ Task ("nuget")
 	foreach (var art in ARTIFACTS) {
 		var csproj = "./source/" + art.ArtifactId + "/" + art.ArtifactId + ".csproj";
 
-var msBuildSettings = new DotNetCoreMSBuildSettings
+var msBuildSettings = new DotNetMSBuildSettings
 {
     PackageVersion = art.NugetVersion,
 };
-		DotNetCorePack(csproj, new DotNetCorePackSettings
+		DotNetPack(csproj, new DotNetPackSettings
 {
     Configuration = "Release",
     NoBuild = true,
