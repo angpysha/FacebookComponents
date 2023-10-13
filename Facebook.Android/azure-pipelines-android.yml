@@ -16,6 +16,7 @@ steps:
       targetType: 'inline'
       script: |
         # Write your PowerShell commands here.
+        dotnet new tool-manifest
         dotnet tool install Cake.Tool --version 3.1.0
         cd ./Facebook.Android
         
