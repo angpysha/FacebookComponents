@@ -70,11 +70,13 @@ Task ("libs")
 	.IsDependentOn("ci-setup")
 	.Does(() =>
 {
-	MSBuild("./source/Xamarin.Facebook.sln", c => 
-		c.SetConfiguration("Release")
-		.WithRestore()
- 		.WithTarget("Build")
-		.WithProperty("DesignTimeBuild", "false"));
+	DotNetCoreBuild("./source/Xamarin.Facebook.sln", new DotNetCoreBuildSettings
+	{
+		Configuration = "Release",
+		NoRestore = false, // This means it will perform a restore
+		ArgumentCustomization = args => args.Append("/p:DesignTimeBuild=false")
+	});
+
 });
 
 Task ("samples")
@@ -107,13 +109,15 @@ Task ("nuget")
 	foreach (var art in ARTIFACTS) {
 		var csproj = "./source/" + art.ArtifactId + "/" + art.ArtifactId + ".csproj";
 
-		MSBuild(csproj, c => 
-			c.SetConfiguration("Release")
-			.WithProperty("NoBuild", "true")
-			.WithProperty("PackageVersion", art.NugetVersion)
-			.WithProperty("PackageOutputPath", MakeAbsolute((DirectoryPath)"./output/").FullPath)
-			.WithProperty("DesignTimeBuild", "false")
- 			.WithTarget("Pack"));	
+		DotNetCorePack(csproj, new DotNetCorePackSettings
+{
+    Configuration = "Release",
+    NoBuild = true,
+    VersionSuffix = art.NugetVersion,
+    OutputDirectory = "./output/",
+    ArgumentCustomization = args => args.Append("/p:DesignTimeBuild=false")
+});
+
 	}
 });
 

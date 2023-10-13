@@ -18,11 +18,11 @@
     <!--    <attr path="/api/package[@name='com.facebook.login']/class[@name='LoginClient']" name="visibility">public</attr>-->
 
     <!-- FacebookDialogBase has an abstract IList OrderedModeHandlers and the generator tries to create proper generic list types, but that doesn't match the overridden member -->
-    <attr
+    <!-- <attr
         path="/api/package[@name='com.facebook.internal']/class[@name='FacebookDialogBase']/method[@name='getOrderedModeHandlers' and count(parameter)=0]"
         name="managedName">
         _OrderedModeHandlers
-    </attr>
+    </attr> -->
 
     <attr
         path="/api/package[@name='com.facebook.share.model']/class[@name='ShareHashtag.Builder']/method[@name='build' and count(parameter)=0]"
@@ -57,11 +57,11 @@
 
 
     <!-- FacebookDialogBase has an abstract IList OrderedModeHandlers and the generator tries to create proper generic list types, but that doesn't match the overridden member -->
-    <attr
+    <!-- <attr
         path="/api/package[@name='com.facebook.internal']/class[@name='FacebookDialogBase']/method[@name='getOrderedModeHandlers' and count(parameter)=0]"
         name="managedName">
         _OrderedModeHandlers
-    </attr>
+    </attr> -->
 
     <remove-node
         path="/api/package[@name='com.facebook.login']/class[@name='LoginFragment']/method[@name='createLoginClient' and count(parameter)=0]" />
@@ -101,6 +101,8 @@
         path="/api/package[@name='com.facebook.share.widget']/class[@name='ShareDialog']/method[@name='getShouldFailOnDataError']"
         name="propertyName">
     </attr>
+
+    <remove-node path="/api/package[@name='com.facebook.internal']/class[@name='FacebookDialogBase']/method[@name='getOrderedModeHandlers' and count(parameter)=0]"/>
 
 
 </metadata>

@@ -115,14 +115,14 @@ namespace Xamarin.Facebook.Share.Widget
 {
     public partial class ShareDialog
 	{
-		protected override global::System.Collections.IList _OrderedModeHandlers()
-		{
-			return OrderedModeHandlers.ToList();
-		}
+		//protected override global::System.Collections.IList _OrderedModeHandlers()
+		//{
+		//	return OrderedModeHandlers.ToList();
+		//}
 
-		//      public bool ShouldFailOnDataError
-		//      {
-		// get =>
-		//      }
+		////      public bool ShouldFailOnDataError
+		////      {
+		//// get =>
+		////      }
 	}
 }

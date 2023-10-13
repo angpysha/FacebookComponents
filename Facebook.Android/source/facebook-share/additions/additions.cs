@@ -13,12 +13,12 @@ namespace Xamarin.Facebook.Share.Widget
 		static IntPtr id_setEnabled_Z;
     }
 
-    public partial class GameRequestDialog
+    public partial class GameRequestDialog 
     {
-        protected override IList _OrderedModeHandlers()
-        {
-            return OrderedModeHandlers.ToList();
-        }
+        // protected override IList _OrderedModeHandlers()
+        // {
+        //     return OrderedModeHandlers.ToList();
+        // }
     }
 }
 
