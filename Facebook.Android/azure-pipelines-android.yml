@@ -23,3 +23,9 @@ steps:
         
         dotnet cake --target nuget
       pwsh: true
+  
+  - task: PublishPipelineArtifact@1
+    inputs:
+      targetPath: '$(Build.SourcesDirectory)/Facebook.Android/output'
+      artifact: 'android'
+      publishLocation: 'pipeline'
