@@ -17,6 +17,7 @@ steps:
       script: |
         # Write your PowerShell commands here.
         dotnet new tool-manifest
+        dotnet workload install android
         dotnet tool install Cake.Tool --version 3.1.0
         cd ./Facebook.Android
         
