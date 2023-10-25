@@ -5,7 +5,7 @@
     <TargetFrameworks>MonoAndroid12.0;net7.0-android</TargetFrameworks>
     <IsBindingProject>true</IsBindingProject>
 
-    <AssemblyName>Xamarin.Facebook.AppLinks.Android</AssemblyName>
+    <AssemblyName>Xamarin.Facebook.Messenger.Android</AssemblyName>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
@@ -14,17 +14,16 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <PackageId>Xamarin.Facebook.AppLinks.Android</PackageId>
-    <Title>Xamarin Facebook Android - App Links</Title>
-    <Summary>Xamarin.Android bindings for Facebook Android - App Links</Summary>
-    <Description>Xamarin.Android bindings for Facebook Android - App Links</Description>
-    <PackageTags>Xamarin Android Xamarin.Android Facebook</PackageTags>
-    <Authors>Microsoft</Authors>
-    <Owners>Microsoft</Owners>
-    <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
-    <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=865581</PackageProjectUrl>
-    <PackageLicenseUrl>https://go.microsoft.com/fwlink/?linkid=865585</PackageLicenseUrl>
-    
+    <PackageId>Angpysha.Facebook.Messenger.Android</PackageId>
+    <Title>Xamarin/.NET Facebook Android - Messenger</Title>
+    <Summary>Xamarin/.NET Android bindings for Facebook Android - Messenger</Summary>
+    <Description>Xamarin/.NET bindings for Facebook Android - Messenger</Description>
+    <PackageTags>Xamarin MAUI Android Xamarin.Android Facebook</PackageTags>
+    <Authors>Microsoft;Andrii Petrovskyi</Authors>
+    <Owners>Microsoft;Andrii Petrovskyi</Owners>
+    <Copyright>© Andrii Petrovskyi.</Copyright>
+    <PackageProjectUrl>https://github.com/angpysha/FacebookComponents</PackageProjectUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/angpysha/FacebookComponents/main/License.md</PackageLicenseUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/xamarin/FacebookComponents/master/icons/facebook-android_128x128.png</PackageIconUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
@@ -38,7 +37,7 @@
   </ItemGroup>
     
   <PropertyGroup>
-    <Java8DocPaths>..\..\externals\facebook-applinks-docs\</Java8DocPaths>
+    <Java8DocPaths>..\..\externals\facebook-messenger-docs\</Java8DocPaths>
       <RootNamespace>$(MSBuildProjectName.Replace(" ", "_").Replace("-","_"))</RootNamespace>
   </PropertyGroup>
 
@@ -49,23 +48,19 @@
     <None Include="..\..\External-Dependency-Info.txt" Pack="True" PackagePath="THIRD-PARTY-NOTICES.txt" />
   </ItemGroup>
 
-
   <ItemGroup>
     <Compile Include="..\AssemblyInfo.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <LibraryProjectZip Include="..\..\externals\facebook-applinks.aar" />
-  </ItemGroup>
-  
-  <ItemGroup>
-    <ProjectReference Include="..\facebook-core\facebook-core.csproj" PrivateAssets="None" />
+    <LibraryProjectZip Include="..\..\externals\facebook-messenger.aar" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.AndroidX.Annotation" Version="1.7.0.1" />
-    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.Core.Utils" Version="1.0.0.20" />
+    <ProjectReference Include="..\facebook-core\Angpysha.Facebook.Core.Android.csproj" PrivateAssets="None" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Xamarin.Kotlin.StdLib.Jdk8" Version="1.9.10.1" />
   </ItemGroup>
-
 </Project>

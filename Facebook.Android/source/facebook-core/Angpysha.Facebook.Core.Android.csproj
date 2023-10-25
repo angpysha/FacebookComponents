@@ -14,17 +14,16 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <PackageId>Xamarin.Facebook.Core.Android</PackageId>
-    <Title>Xamarin Facebook Android - Core</Title>
-    <Summary>Xamarin.Android bindings for Facebook Android - Core</Summary>
-    <Description>Xamarin.Android bindings for Facebook Android - Core</Description>
-    <PackageTags>Xamarin Android Xamarin.Android Facebook</PackageTags>
-    <Authors>Microsoft</Authors>
-    <Owners>Microsoft</Owners>
-    <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
-    <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=865581</PackageProjectUrl>
-    <PackageLicenseUrl>https://go.microsoft.com/fwlink/?linkid=865585</PackageLicenseUrl>
-    
+    <PackageId>Angpysha.Facebook.Core.Android</PackageId>
+    <Title>Xamarin/.NET Facebook Android - Core</Title>
+    <Summary>Xamarin/.NET Android bindings for Facebook Android - Core</Summary>
+    <Description>Xamarin/.NET bindings for Facebook Android - Core</Description>
+    <PackageTags>Xamarin MAUI Android Xamarin.Android Facebook</PackageTags>
+    <Authors>Microsoft;Andrii Petrovskyi</Authors>
+    <Owners>Microsoft;Andrii Petrovskyi</Owners>
+    <Copyright>© Andrii Petrovskyi.</Copyright>
+    <PackageProjectUrl>https://github.com/angpysha/FacebookComponents</PackageProjectUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/angpysha/FacebookComponents/main/License.md</PackageLicenseUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/xamarin/FacebookComponents/master/icons/facebook-android_128x128.png</PackageIconUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>

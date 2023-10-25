@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net7.0-android</TargetFramework>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -19,13 +19,13 @@
     <None Include="Resources\Resource.designer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\source\facebook-android-sdk\facebook-android-sdk.csproj" />
-    <ProjectReference Include="..\..\source\facebook-applinks\facebook-applinks.csproj" />
-    <ProjectReference Include="..\..\source\facebook-common\facebook-common.csproj" />
-    <ProjectReference Include="..\..\source\facebook-core\facebook-core.csproj" />
-    <ProjectReference Include="..\..\source\facebook-gamingservices\facebook-gamingservices.csproj" />
-    <ProjectReference Include="..\..\source\facebook-login\facebook-login.csproj" />
-    <ProjectReference Include="..\..\source\facebook-messenger\facebook-messenger.csproj" />
-    <ProjectReference Include="..\..\source\facebook-share\facebook-share.csproj" />
+    <ProjectReference Include="..\..\source\facebook-android-sdk\Angpysha.Facebook.Android.csproj" />
+    <ProjectReference Include="..\..\source\facebook-applinks\Angpysha.Facebook.AppLinks.Android.csproj" />
+    <ProjectReference Include="..\..\source\facebook-common\Angpysha.Facebook.Common.Android.csproj" />
+    <ProjectReference Include="..\..\source\facebook-core\Angpysha.Facebook.Core.Android.csproj" />
+    <ProjectReference Include="..\..\source\facebook-gamingservices\Angpysha.Facebook.GamingServices.Android.csproj" />
+    <ProjectReference Include="..\..\source\facebook-login\Angpysha.Facebook.Login.Android.csproj" />
+    <ProjectReference Include="..\..\source\facebook-messenger\Angpysha.Facebook.Messenger.Android.csproj" />
+    <ProjectReference Include="..\..\source\facebook-share\Angpysha.Facebook.Share.Android.csproj" />
   </ItemGroup>
   </Project>

@@ -5,7 +5,7 @@
     <TargetFrameworks>MonoAndroid12.0;net7.0-android</TargetFrameworks>
     <IsBindingProject>true</IsBindingProject>
 
-    <AssemblyName>Xamarin.Facebook.Common.Android</AssemblyName>
+    <AssemblyName>Xamarin.Facebook.Share.Android</AssemblyName>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
@@ -14,17 +14,16 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <PackageId>Xamarin.Facebook.Common.Android</PackageId>
-    <Title>Xamarin Facebook Android - Common</Title>
-    <Summary>Xamarin.Android bindings for Facebook Android - Common</Summary>
-    <Description>Xamarin.Android bindings for Facebook Android - Common</Description>
-    <PackageTags>Xamarin Android Xamarin.Android Facebook</PackageTags>
-    <Authors>Microsoft</Authors>
-    <Owners>Microsoft</Owners>
-    <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
-    <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=865581</PackageProjectUrl>
-    <PackageLicenseUrl>https://go.microsoft.com/fwlink/?linkid=865585</PackageLicenseUrl>
-    
+    <PackageId>Angpysha.Facebook.Share.Android</PackageId>
+    <Title>Xamarin/.NET Facebook Android - Share</Title>
+    <Summary>Xamarin/.NET Android bindings for Facebook Android - Share</Summary>
+    <Description>Xamarin/.NET bindings for Facebook Android - Share</Description>
+    <PackageTags>Xamarin MAUI Android Xamarin.Android Facebook</PackageTags>
+    <Authors>Microsoft;Andrii Petrovskyi</Authors>
+    <Owners>Microsoft;Andrii Petrovskyi</Owners>
+    <Copyright>© Andrii Petrovskyi.</Copyright>
+    <PackageProjectUrl>https://github.com/angpysha/FacebookComponents</PackageProjectUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/angpysha/FacebookComponents/main/License.md</PackageLicenseUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/xamarin/FacebookComponents/master/icons/facebook-android_128x128.png</PackageIconUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
@@ -38,8 +37,8 @@
   </ItemGroup>
     
   <PropertyGroup>
-    <Java8DocPaths>..\..\externals\facebook-common-docs\</Java8DocPaths>
-    <RootNamespace>$(MSBuildProjectName.Replace(" ", "_").Replace("-", "_"))</RootNamespace>
+    <Java8DocPaths>..\..\externals\facebook-share-docs\</Java8DocPaths>
+      <RootNamespace>$(MSBuildProjectName.Replace(" ", "_").Replace("-","_"))</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -54,21 +53,20 @@
   </ItemGroup>
 
   <ItemGroup>
-    <LibraryProjectZip Include="..\..\externals\facebook-common.aar" />
+    <LibraryProjectZip Include="..\..\externals\facebook-share.aar" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\facebook-core\facebook-core.csproj" PrivateAssets="None" />
+    <ProjectReference Include="..\facebook-core\Angpysha.Facebook.Core.Android.csproj" PrivateAssets="None" />
+    <ProjectReference Include="..\facebook-common\Angpysha.Facebook.Common.Android.csproj" PrivateAssets="None" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.AndroidX.Activity" Version="1.7.2.2" />
-    <PackageReference Include="Xamarin.Google.ZXing.Core" Version="3.3.3" PrivateAssets="None" />
     <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.6.1.4" />
-    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0.20" />
-    <PackageReference Include="Xamarin.AndroidX.CardView" Version="1.0.0.22" />
-    <PackageReference Include="Xamarin.AndroidX.Browser" Version="1.6.0.1" />
     <PackageReference Include="Xamarin.Kotlin.StdLib.Jdk8" Version="1.9.10.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="additions\" />
+  </ItemGroup>
 </Project>

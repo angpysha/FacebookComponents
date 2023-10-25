@@ -3,23 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloFacebookSample", "HelloFacebookSample\HelloFacebookSample.csproj", "{64AA396D-EF93-4853-ACF6-A293D451D1B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloFacebookSample", "HelloFacebookSample\HelloFacebookSample.csproj", "{64AA396D-EF93-4853-ACF6-A293D451D1B4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "facebook-android-sdk", "..\source\facebook-android-sdk\facebook-android-sdk.csproj", "{6036BCD2-89C4-4FE8-BF09-741F1F6DF352}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Angpysha.Facebook.Android", "..\source\facebook-android-sdk\Angpysha.Facebook.Android.csproj", "{6036BCD2-89C4-4FE8-BF09-741F1F6DF352}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "facebook-applinks", "..\source\facebook-applinks\facebook-applinks.csproj", "{EB36D886-A79E-4F4F-82A4-7C9DF2675E05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Angpysha.Facebook.AppLinks.Android", "..\source\facebook-applinks\Angpysha.Facebook.AppLinks.Android.csproj", "{EB36D886-A79E-4F4F-82A4-7C9DF2675E05}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "facebook-common", "..\source\facebook-common\facebook-common.csproj", "{A3D74100-6CD4-4331-AFBB-63F14F5E5040}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Angpysha.Facebook.Common.Android", "..\source\facebook-common\Angpysha.Facebook.Common.Android.csproj", "{A3D74100-6CD4-4331-AFBB-63F14F5E5040}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "facebook-core", "..\source\facebook-core\facebook-core.csproj", "{4D1EF409-F2B0-4381-A232-ACFBEE8ADF14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Angpysha.Facebook.Core.Android", "..\source\facebook-core\Angpysha.Facebook.Core.Android.csproj", "{4D1EF409-F2B0-4381-A232-ACFBEE8ADF14}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "facebook-login", "..\source\facebook-login\facebook-login.csproj", "{777C95DA-95B2-4171-B694-77F4741B0F33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Angpysha.Facebook.Login.Android", "..\source\facebook-login\Angpysha.Facebook.Login.Android.csproj", "{777C95DA-95B2-4171-B694-77F4741B0F33}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "facebook-messenger", "..\source\facebook-messenger\facebook-messenger.csproj", "{8C2FE975-7E42-4406-A227-F784B1229711}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Angpysha.Facebook.Messenger.Android", "..\source\facebook-messenger\Angpysha.Facebook.Messenger.Android.csproj", "{8C2FE975-7E42-4406-A227-F784B1229711}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "facebook-share", "..\source\facebook-share\facebook-share.csproj", "{2CBCDFF2-8FF9-4FA8-BD40-078EB43E5CE1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Angpysha.Facebook.Share.Android", "..\source\facebook-share\Angpysha.Facebook.Share.Android.csproj", "{2CBCDFF2-8FF9-4FA8-BD40-078EB43E5CE1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "facebook-gamingservices", "..\source\facebook-gamingservices\facebook-gamingservices.csproj", "{243678D8-8C80-4332-BEE1-8991133C4EDD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Angpysha.Facebook.GamingServices.Android", "..\source\facebook-gamingservices\Angpysha.Facebook.GamingServices.Android.csproj", "{243678D8-8C80-4332-BEE1-8991133C4EDD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,5 +67,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8917F278-ADCC-49BA-A2D1-F95D6362DC7F}
 	EndGlobalSection
 EndGlobal
