@@ -66,4 +66,8 @@
     <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.6.1.4" />
     <PackageReference Include="Xamarin.Kotlin.StdLib.Jdk8" Version="1.9.10.1" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="additions\" />
+  </ItemGroup>
 </Project>

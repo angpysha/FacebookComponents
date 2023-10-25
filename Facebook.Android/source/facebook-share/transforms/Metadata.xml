@@ -22,20 +22,4 @@
             </method>
         </class>
     </add-node>
-
- <!--   <attr
-        path="/api/package[@name='com.facebook.share.widget']/class[@name='GameRequestDialog']/method[@name='getOrderedModeHandlers' and count(parameter)=0]"
-        name="managedName">
-        _OrderedModeHandlers
-    </attr>
-    <attr
-        path="/api/package[@name='com.facebook.share.widget']/class[@name='GameRequestDialog']/method[@name='getOrderedModeHandlers' and count(parameter)=0]"
-        name="managedName">
-        _OrderedModeHandlers
-    </attr>
-    <attr
-        path="/api/package[@name='com.facebook.share.widget']/class[@name='GameRequestDialog']/method[@name='getOrderedModeHandlers' and count(parameter)=0]"
-        name="managedReturn">
-        System.Collections.Generic.IList&lt;Xamarin.Facebook.Internal.FacebookDialogBase&gt;
-    </attr>-->
 </metadata>

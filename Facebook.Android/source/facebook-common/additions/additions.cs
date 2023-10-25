@@ -91,12 +91,6 @@ namespace Com.Facebook.Share.Model
 			}
 
 
-			//// This method is explicitly implemented as a member of an instantiated Xamarin.Facebook.Share.Model.IShareModelBuilder
-			//global::Java.Lang.Object global::Xamarin.Facebook.Share.Model.IShareModelBuilder.ReadFrom (global::Android.OS.Parcel p0)
-			//{
-			//    return global::Java.Interop.JavaObjectExtensions.JavaCast<Java.Lang.Object>(ReadFrom (p0));
-			//}
-
 			static IntPtr id_readFrom_Landroid_os_Parcel_;
 
 			[Register("readFrom", "(Landroid/os/Parcel;)Lcom/facebook/share/model/ShareMessengerActionButton$Builder;", "")]
