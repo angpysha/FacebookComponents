@@ -26,13 +26,15 @@ using Android.Text;
 using Android.Views;
 using Android.Widget;
 using Xamarin.Facebook;
-using Xamarin.Facebook.Share.Widget;
-using Xamarin.Facebook.Login.Widget;
-using Xamarin.Facebook.AppEvents;
-using Xamarin.Facebook.Share.Model;
-using Xamarin.Facebook.Share;
-using Xamarin.Facebook.Login;
 using AndroidX.Fragment.App;
+using Com.Facebook;
+using Com.Facebook.AppEvents;
+using Com.Facebook.Internal;
+using Com.Facebook.Login;
+using Com.Facebook.Login.Widget;
+using Com.Facebook.Share.Model;
+using Com.Facebook.Share.Widget;
+using HelloFacebook;
 
 [assembly: Permission(Name = Android.Manifest.Permission.Internet)]
 [assembly: Permission(Name = Android.Manifest.Permission.WriteExternalStorage)]
@@ -53,7 +55,7 @@ namespace HelloFacebookSample
             Longitude = (-122.3331)
         };
 
-        private Login l = new Xamarin.Facebook.Login.Login();
+        private Login l = new Com.Facebook.Login.Login();
         const String PENDING_ACTION_BUNDLE_KEY = "com.facebook.samples.hellofacebook:PendingAction";
         Button postStatusUpdateButton;
         Button postPhotoButton;
@@ -66,7 +68,8 @@ namespace HelloFacebookSample
         ICallbackManager callbackManager;
         ProfileTracker profileTracker;
         ShareDialog shareDialog;
-        FacebookCallback<SharerResult> shareCallback;
+        
+        FacebookCallback<Com.Facebook.Share.ISharer.Result> shareCallback;
 
         enum PendingAction
         {
@@ -80,8 +83,8 @@ namespace HelloFacebookSample
             base.OnCreate(savedInstanceState);
 
             // FacebookSdk.SdkInitialize (this.ApplicationContext);
-
-            callbackManager = CallbackManagerFactory.Create();
+            
+            callbackManager = ICallbackManager.Factory.Create();
 
             var loginCallback = new FacebookCallback<LoginResult>
             {
@@ -119,7 +122,7 @@ namespace HelloFacebookSample
 
             LoginManager.Instance.RegisterCallback(callbackManager, loginCallback);
 
-            shareCallback = new FacebookCallback<SharerResult>
+            shareCallback = new FacebookCallback<Com.Facebook.Share.ISharer.Result>
             {
                 HandleSuccess = shareResult =>
                 {

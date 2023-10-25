@@ -1,99 +1,31 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+    <TargetFramework>net7.0-android</TargetFramework>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{64AA396D-EF93-4853-ACF6-A293D451D1B4}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>HelloFacebookSample</RootNamespace>
-    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
-    <AndroidResgenClass>Resource</AndroidResgenClass>
-    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
-    <AndroidApplication>True</AndroidApplication>
-    <AssemblyName>HelloFacebookSample</AssemblyName>
-    <TargetFrameworkVersion>v12.0</TargetFrameworkVersion>
-    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
-    <AndroidSupportedAbis>armeabi-v7a;x86;arm64-v8a;x86_64</AndroidSupportedAbis>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <AndroidLinkMode>None</AndroidLinkMode>
-    <ConsolePause>false</ConsolePause>
-    <AndroidDexTool>d8</AndroidDexTool>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>full</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
-    <ConsolePause>false</ConsolePause>
-    <AndroidDexTool>d8</AndroidDexTool>
+    <OutputType>Exe</OutputType>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
+    <AssemblyName>HelloFacebook</AssemblyName>
+    <RootNamespace>HelloFacebook</RootNamespace>
+    <Configurations>Debug;Release</Configurations>
+    <IsPackable>false</IsPackable>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Core" />
-    <Reference Include="Mono.Android" />
+    <Compile Remove="Properties\AssemblyInfo.cs" />
+    <Compile Remove="Resources\Resource.designer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Resources\Resource.designer.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="HelloFacebookBroadcastReceiver.cs" />
-    <Compile Include="HelloFacebookSampleActivity.cs" />
+    <None Include="Properties\AssemblyInfo.cs" />
+    <None Include="Resources\Resource.designer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AboutResources.txt" />
-    <None Include="Assets\AboutAssets.txt" />
-    <None Include="Properties\AndroidManifest.xml" />
+    <ProjectReference Include="..\..\source\facebook-android-sdk\facebook-android-sdk.csproj" />
+    <ProjectReference Include="..\..\source\facebook-applinks\facebook-applinks.csproj" />
+    <ProjectReference Include="..\..\source\facebook-common\facebook-common.csproj" />
+    <ProjectReference Include="..\..\source\facebook-core\facebook-core.csproj" />
+    <ProjectReference Include="..\..\source\facebook-gamingservices\facebook-gamingservices.csproj" />
+    <ProjectReference Include="..\..\source\facebook-login\facebook-login.csproj" />
+    <ProjectReference Include="..\..\source\facebook-messenger\facebook-messenger.csproj" />
+    <ProjectReference Include="..\..\source\facebook-share\facebook-share.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\values\strings.xml" />
-    <AndroidResource Include="Resources\drawable\icon.png" />
-    <AndroidResource Include="Resources\layout\main.xml" />
-    <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\icon.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\drawable-xxhdpi\" />
-    <Folder Include="Resources\drawable-xxxhdpi\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\source\facebook-android-sdk\facebook-android-sdk.csproj">
-      <Project>{6036BCD2-89C4-4FE8-BF09-741F1F6DF352}</Project>
-      <Name>facebook-android-sdk</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\source\facebook-common\facebook-common.csproj">
-      <Project>{a3d74100-6cd4-4331-afbb-63f14f5e5040}</Project>
-      <Name>facebook-common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\source\facebook-core\facebook-core.csproj">
-      <Project>{4d1ef409-f2b0-4381-a232-acfbee8adf14}</Project>
-      <Name>facebook-core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\source\facebook-login\facebook-login.csproj">
-      <Project>{777c95da-95b2-4171-b694-77f4741b0f33}</Project>
-      <Name>facebook-login</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\source\facebook-share\facebook-share.csproj">
-      <Project>{2cbcdff2-8ff9-4fa8-bd40-078eb43e5ce1}</Project>
-      <Name>facebook-share</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.1.0.1" />
-  </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
-</Project>
+  </Project>

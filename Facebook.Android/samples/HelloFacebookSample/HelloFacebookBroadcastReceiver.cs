@@ -2,6 +2,7 @@
 using Xamarin.Facebook;
 using Android.Content;
 using Android.App;
+using Com.Facebook;
 
 namespace HelloFacebookSample
 {
