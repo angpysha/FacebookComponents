@@ -4,7 +4,7 @@ using System.Collections;
 using System.Linq;
 
 
-namespace Xamarin.Facebook.Share.Widget
+namespace Com.Facebook.Share.Widget
 {
     public partial class ShareButtonBase
 	{

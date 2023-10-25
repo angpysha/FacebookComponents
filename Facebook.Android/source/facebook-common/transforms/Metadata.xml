@@ -1,15 +1,15 @@
 <metadata>
-    <attr path="/api/package[@name='com.facebook']" name="managedName">Xamarin.Facebook</attr>
-    <attr path="/api/package[@name='com.facebook.common']" name="managedName">Xamarin.Facebook.Common</attr>
-    <attr path="/api/package[@name='com.facebook.devicerequests.internal']" name="managedName">Xamarin.Facebook.DeviceRequests.Internal</attr>
+    <attr path="/api/package[@name='com.facebook']" name="managedName">Com.Facebook</attr>
+    <attr path="/api/package[@name='com.facebook.common']" name="managedName">Com.Facebook.Common</attr>
+    <attr path="/api/package[@name='com.facebook.devicerequests.internal']" name="managedName">Com.Facebook.DeviceRequests.Internal</attr>
 
-    <attr path="/api/package[@name='com.facebook.internal']" name="managedName">Xamarin.Facebook.Internal</attr>
-    <attr path="/api/package[@name='com.facebook.login']" name="managedName">Xamarin.Facebook.Login</attr>
-    <attr path="/api/package[@name='com.facebook.referrals']" name="managedName">Xamarin.Facebook.Referrals</attr>
-    <attr path="/api/package[@name='com.facebook.share']" name="managedName">Xamarin.Facebook.Share</attr>
-    <attr path="/api/package[@name='com.facebook.share.internal']" name="managedName">Xamarin.Facebook.Share.Internal</attr>
-    <attr path="/api/package[@name='com.facebook.share.model']" name="managedName">Xamarin.Facebook.Share.Model</attr>
-    <attr path="/api/package[@name='com.facebook.share.widget']" name="managedName">Xamarin.Facebook.Share.Widget</attr>
+    <attr path="/api/package[@name='com.facebook.internal']" name="managedName">Com.Facebook.Internal</attr>
+    <attr path="/api/package[@name='com.facebook.login']" name="managedName">Com.Facebook.Login</attr>
+    <attr path="/api/package[@name='com.facebook.referrals']" name="managedName">Com.Facebook.Referrals</attr>
+    <attr path="/api/package[@name='com.facebook.share']" name="managedName">Com.Facebook.Share</attr>
+    <attr path="/api/package[@name='com.facebook.share.internal']" name="managedName">Com.Facebook.Share.Internal</attr>
+    <attr path="/api/package[@name='com.facebook.share.model']" name="managedName">Com.Facebook.Share.Model</attr>
+    <attr path="/api/package[@name='com.facebook.share.widget']" name="managedName">Com.Facebook.Share.Widget</attr>
 
     <remove-node path="/api/package[contains(@name, 'com.facebook.share.internal')]" />
 

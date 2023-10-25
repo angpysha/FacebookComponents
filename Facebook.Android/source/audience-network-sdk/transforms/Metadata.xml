@@ -1,6 +1,6 @@
 <metadata>
-    <attr path="/api/package[@name='com.facebook']" name="managedName">Xamarin.Facebook</attr>
-    <attr path="/api/package[@name='com.facebook.ads']" name="managedName">Xamarin.Facebook.Ads</attr>
+    <attr path="/api/package[@name='com.facebook']" name="managedName">Com.Facebook</attr>
+    <attr path="/api/package[@name='com.facebook.ads']" name="managedName">Com.Facebook.Ads</attr>
 
     <attr path="/api/package[@name='com.facebook.ads']/class[@name='MediaView']" name="extends">android.widget.RelativeLayout</attr>
 

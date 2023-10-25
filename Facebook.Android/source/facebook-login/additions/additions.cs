@@ -2,7 +2,7 @@ using Android.Runtime;
 using System;
 using System.Linq;
 
-namespace Xamarin.Facebook
+namespace Com.Facebook
 {
 	public partial class GraphRequestAsyncTask : global::Android.OS.AsyncTask
 	{

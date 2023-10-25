@@ -2,7 +2,7 @@ using System;
 using Android.Runtime;
 using Java.Interop;
 
-namespace Xamarin.Facebook
+namespace Com.Facebook
 {
 	public partial class GraphRequestAsyncTask {
 		protected override Java.Lang.Object DoInBackground(params Java.Lang.Object[] @params)
@@ -46,7 +46,7 @@ namespace Xamarin.Facebook
 	}
 }
 
-namespace Xamarin.Facebook.AppEvents.Internal
+namespace Com.Facebook.AppEvents.Internal
 {
 	public partial class FileDownloadTask
 	{
@@ -61,7 +61,7 @@ namespace Xamarin.Facebook.AppEvents.Internal
 
 		static IntPtr n_DoInBackground_arrayLjava_lang_String_(IntPtr jnienv, IntPtr native__this, IntPtr native_args)
 		{
-			var __this = global::Java.Lang.Object.GetObject<global::Xamarin.Facebook.AppEvents.Internal.FileDownloadTask>(jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			var __this = global::Java.Lang.Object.GetObject<global::Com.Facebook.AppEvents.Internal.FileDownloadTask>(jnienv, native__this, JniHandleOwnership.DoNotTransfer);
 			var args = (Java.Lang.Object[])JNIEnv.GetArray(native_args, JniHandleOwnership.DoNotTransfer, typeof(Java.Lang.Object));
 			IntPtr __ret = JNIEnv.ToLocalJniHandle(__this.DoInBackground(args));
 			if (args != null)

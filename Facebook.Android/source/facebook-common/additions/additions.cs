@@ -3,7 +3,7 @@ using Android.Runtime;
 using System;
 using System.Linq;
 
-namespace Xamarin.Facebook.Share.Model
+namespace Com.Facebook.Share.Model
 {
 	public partial class ShareContent
 	{
@@ -25,11 +25,11 @@ namespace Xamarin.Facebook.Share.Model
             static IntPtr id_readFrom_Landroid_os_Parcel_;
 
 			[Register("readFrom", "(Landroid/os/Parcel;)Lcom/facebook/share/model/ShareContent$Builder;", "")]
-			public global::Xamarin.Facebook.Share.Model.ShareContent.Builder ReadFrom(global::Android.OS.Parcel p0)
+			public global::Com.Facebook.Share.Model.ShareContent.Builder ReadFrom(global::Android.OS.Parcel p0)
 			{
 				if (id_readFrom_Landroid_os_Parcel_ == IntPtr.Zero)
 					id_readFrom_Landroid_os_Parcel_ = JNIEnv.GetMethodID(class_ref, "readFrom", "(Landroid/os/Parcel;)Lcom/facebook/share/model/ShareContent$Builder;");
-				global::Xamarin.Facebook.Share.Model.ShareContent.Builder __ret = global::Java.Lang.Object.GetObject<global::Xamarin.Facebook.Share.Model.ShareContent.Builder>(JNIEnv.CallObjectMethod(Handle, id_readFrom_Landroid_os_Parcel_, new JValue(p0)), JniHandleOwnership.TransferLocalRef);
+				global::Com.Facebook.Share.Model.ShareContent.Builder __ret = global::Java.Lang.Object.GetObject<global::Com.Facebook.Share.Model.ShareContent.Builder>(JNIEnv.CallObjectMethod(Handle, id_readFrom_Landroid_os_Parcel_, new JValue(p0)), JniHandleOwnership.TransferLocalRef);
 				return __ret;
 			}
 		}
@@ -55,11 +55,11 @@ namespace Xamarin.Facebook.Share.Model
             static IntPtr id_readFrom_Landroid_os_Parcel_;
 
 			[Register("readFrom", "(Landroid/os/Parcel;)Lcom/facebook/share/model/ShareMedia$Builder;", "")]
-			public global::Xamarin.Facebook.Share.Model.ShareMedia.Builder ReadFrom(global::Android.OS.Parcel p0)
+			public global::Com.Facebook.Share.Model.ShareMedia.Builder ReadFrom(global::Android.OS.Parcel p0)
 			{
 				if (id_readFrom_Landroid_os_Parcel_ == IntPtr.Zero)
 					id_readFrom_Landroid_os_Parcel_ = JNIEnv.GetMethodID(class_ref, "readFrom", "(Landroid/os/Parcel;)Lcom/facebook/share/model/ShareMedia$Builder;");
-				global::Xamarin.Facebook.Share.Model.ShareMedia.Builder __ret = global::Java.Lang.Object.GetObject<global::Xamarin.Facebook.Share.Model.ShareMedia.Builder>(JNIEnv.CallObjectMethod(Handle, id_readFrom_Landroid_os_Parcel_, new JValue(p0)), JniHandleOwnership.TransferLocalRef);
+				global::Com.Facebook.Share.Model.ShareMedia.Builder __ret = global::Java.Lang.Object.GetObject<global::Com.Facebook.Share.Model.ShareMedia.Builder>(JNIEnv.CallObjectMethod(Handle, id_readFrom_Landroid_os_Parcel_, new JValue(p0)), JniHandleOwnership.TransferLocalRef);
 				return __ret;
 			}
 		}
@@ -100,29 +100,13 @@ namespace Xamarin.Facebook.Share.Model
 			static IntPtr id_readFrom_Landroid_os_Parcel_;
 
 			[Register("readFrom", "(Landroid/os/Parcel;)Lcom/facebook/share/model/ShareMessengerActionButton$Builder;", "")]
-			public global::Xamarin.Facebook.Share.Model.ShareMessengerActionButton.Builder ReadFrom(global::Android.OS.Parcel p0)
+			public global::Com.Facebook.Share.Model.ShareMessengerActionButton.Builder ReadFrom(global::Android.OS.Parcel p0)
 			{
 				if (id_readFrom_Landroid_os_Parcel_ == IntPtr.Zero)
 					id_readFrom_Landroid_os_Parcel_ = JNIEnv.GetMethodID(class_ref, "readFrom", "(Landroid/os/Parcel;)Lcom/facebook/share/model/ShareMedia$Builder;");
-				global::Xamarin.Facebook.Share.Model.ShareMessengerActionButton.Builder __ret = global::Java.Lang.Object.GetObject<global::Xamarin.Facebook.Share.Model.ShareMessengerActionButton.Builder>(JNIEnv.CallObjectMethod(Handle, id_readFrom_Landroid_os_Parcel_, new JValue(p0)), JniHandleOwnership.TransferLocalRef);
+				global::Com.Facebook.Share.Model.ShareMessengerActionButton.Builder __ret = global::Java.Lang.Object.GetObject<global::Com.Facebook.Share.Model.ShareMessengerActionButton.Builder>(JNIEnv.CallObjectMethod(Handle, id_readFrom_Landroid_os_Parcel_, new JValue(p0)), JniHandleOwnership.TransferLocalRef);
 				return __ret;
 			}
 		}
-	}
-}
-
-namespace Xamarin.Facebook.Share.Widget
-{
-    public partial class ShareDialog
-	{
-		//protected override global::System.Collections.IList _OrderedModeHandlers()
-		//{
-		//	return OrderedModeHandlers.ToList();
-		//}
-
-		////      public bool ShouldFailOnDataError
-		////      {
-		//// get =>
-		////      }
 	}
 }

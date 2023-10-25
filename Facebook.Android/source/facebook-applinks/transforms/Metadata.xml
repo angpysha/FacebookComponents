@@ -1,5 +1,5 @@
 <metadata>
-    <attr path="/api/package[@name='com.facebook']" name="managedName">Xamarin.Facebook</attr>
-    <attr path="/api/package[@name='com.facebook.applinks']" name="managedName">Xamarin.Facebook.AppLinks</attr>
+    <attr path="/api/package[@name='com.facebook']" name="managedName">Com.Facebook</attr>
+    <attr path="/api/package[@name='com.facebook.applinks']" name="managedName">Com.Facebook.AppLinks</attr>
 
 </metadata>
