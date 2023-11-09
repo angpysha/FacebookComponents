@@ -1,11 +1,10 @@
-
-#load "common.cake"
-#load "poco.cake"
-#load "components.cake"
-#load "custom_externals_download.cake"
+#addin "Cake.FileHelpers"
 
 var TARGET = Argument ("t", Argument ("target", "ci"));
 var NAMES = Argument ("names", "");
+
+var FB_VERSION = "16.2.0";
+var NUGET_VERSION = "16.2.0";
 
 var BUILD_COMMIT = EnvironmentVariable("BUILD_COMMIT") ?? "DEV";
 var BUILD_NUMBER = EnvironmentVariable("BUILD_NUMBER") ?? "DEBUG";
@@ -16,8 +15,29 @@ var IS_LOCAL_BUILD = true;
 var SOLUTION_PATH = "./Xamarin.Facebook.sln";
 var EXTERNALS_PATH = new DirectoryPath ("./externals");
 
+class ArtifactInfo
+{
+    public ArtifactInfo(string id, string version, string nugetVersion = null)
+    {
+        ArtifactId = id;
+        Version = version;
+        NugetVersion = nugetVersion ?? version;
+    }
+
+    public string ArtifactId { get;set; }
+    public string Version { get;set; }
+    public string NugetVersion { get;set; }
+}
+
 // Artifacts that need to be built from pods or be copied from pods
-var ARTIFACTS_TO_BUILD = new List<Artifact> ();
+var ARTIFACTS_TO_BUILD = new List<ArtifactInfo>  
+{
+	new ArtifactInfo("CoreKit", FB_VERSION, NUGET_VERSION),
+	new ArtifactInfo("LoginKit", FB_VERSION, NUGET_VERSION),
+	new ArtifactInfo("ShareKit", FB_VERSION, NUGET_VERSION),
+	new ArtifactInfo("GamingServicesKit", FB_VERSION, NUGET_VERSION),
+	new ArtifactInfo("FacebookSdks", FB_VERSION, NUGET_VERSION)
+};
 
 var SOURCES_TARGETS = new List<string> ();
 var SAMPLES_TARGETS = new List<string> ();
@@ -28,100 +48,37 @@ Setup (context =>
 	Information ($"Is a local build? {IS_LOCAL_BUILD}");
 });
 
-// Prepares the artifacts to be built.
-// From CI will always build everything but, locally you can customize what
-// you build, just to save time when testing locally.
 Task("prepare-artifacts")
-	.IsDependeeOf("externals")
-	.Does(() =>
-{
-	SetArtifactsDependencies ();
-	SetArtifactsPodSpecs ();
-	SetArtifactsExtraPodfileLines ();
-	SetArtifactsSamples ();
-
-	var orderedArtifactsForBuild = new List<Artifact> ();
-	var orderedArtifactsForSamples = new List<Artifact> ();
-
-	if (string.IsNullOrWhiteSpace (NAMES)) {
-		orderedArtifactsForBuild.AddRange (ARTIFACTS.Values);
-		orderedArtifactsForSamples.AddRange (ARTIFACTS.Values);
-	} else {
-		var names = NAMES.Split (',');
-		foreach (var name in names) {
-			if (!(ARTIFACTS.ContainsKey (name) && ARTIFACTS [name] is Artifact artifact))
-				throw new Exception($"The {name} component does not exist.");
-			
-			orderedArtifactsForBuild.Add (artifact);
-			AddArtifactDependencies (orderedArtifactsForBuild, artifact.Dependencies);
-			orderedArtifactsForSamples.Add (artifact);
-		}
-
-		orderedArtifactsForBuild = orderedArtifactsForBuild.Distinct ().ToList ();
-		orderedArtifactsForSamples = orderedArtifactsForSamples.Distinct ().ToList ();
-	}
-
-	orderedArtifactsForBuild.Sort ((f, s) => s.BuildOrder.CompareTo (f.BuildOrder));
-	orderedArtifactsForSamples.Sort ((f, s) => s.BuildOrder.CompareTo (f.BuildOrder));
-	ARTIFACTS_TO_BUILD.AddRange (orderedArtifactsForBuild);
-
-	Information ("Build order:");
-
+.Does(() => {
 	foreach (var artifact in ARTIFACTS_TO_BUILD) {
-		SOURCES_TARGETS.Add(artifact.CsprojName.Replace ('.', '_'));
-		Information (artifact.Id);
+		//var projectPath = $"./source/{artifact.ArtifactId}/{artifact.ArtifactId}.csproj";
+		SOURCES_TARGETS.Add(artifact.ArtifactId);
 	}
-
-	foreach (var artifact in orderedArtifactsForSamples)
-		if (artifact.Samples != null)
-			foreach (var sample in artifact.Samples)
-				SAMPLES_TARGETS.Add(sample.Replace ('.', '_'));
 });
 
-Task ("externals")
-	.WithCriteria (!DirectoryExists (EXTERNALS_PATH) || !string.IsNullOrWhiteSpace (NAMES))
-	.Does (() => 
+Task("externals")
+ .Does (() => 
 {
-	EnsureDirectoryExists (EXTERNALS_PATH);
+    EnsureDirectoryExists("./output");
+    EnsureDirectoryExists ("./externals/");
 
-	Information ("////////////////////////////////////////");
-	Information ("// Pods Repo Update Started           //");
-	Information ("////////////////////////////////////////");
-	
-	Information ("\nUpdating Cocoapods repo...");
-	CocoaPodRepoUpdate ();
+	var downloadUrl = $"https://github.com/facebook/facebook-ios-sdk/releases/download/v{FB_VERSION}/FacebookSDK_Dynamic.xcframework.zip";
+	DownloadFile(downloadUrl, "./externals/FacebookSDK_Dynamic.xcframework.zip");
+	Unzip("./externals/FacebookSDK_Dynamic.xcframework.zip","./externals/");
+	var directories = GetDirectories("./externals/XCFrameworks");
 
-	Information ("////////////////////////////////////////");
-	Information ("// Pods Repo Update Ended             //");
-	Information ("////////////////////////////////////////");
-
-	if (string.IsNullOrWhiteSpace (NAMES)) {
-		foreach (var artifact in ARTIFACTS_TO_BUILD) {
-			UpdateVersionInCsproj (artifact);
-			CreateAndInstallPodfile (artifact);
-			CopyXcFrameworksToExternals (artifact);
-		}
-	} else {
-		foreach (var artifact in ARTIFACTS_TO_BUILD) {
-			UpdateVersionInCsproj (artifact);
-
-			foreach (var podSpec in artifact.PodSpecs) {
-				if (podSpec.FrameworkSource != FrameworkSource.Pods)
-					continue;
-				
-				if (DirectoryExists (EXTERNALS_PATH.Combine ($"{podSpec.FrameworkName}.framework")))
-					break;
-
-				CreateAndInstallPodfile (artifact);
-				CopyXcFrameworksToExternals (artifact);
-			}
-		}
+	foreach (var dir in directories)
+	{
+		CopyDirectory(dir, "./externals");
 	}
 
-	// Call here custom methods created at custom_externals_download.cake file
-	// to download frameworks and/or bundles for the artifact
-	if (ARTIFACTS_TO_BUILD.Contains (AUDIENCE_NETWORK_ARTIFACT))
-		DownloadAudienceNetwork (AUDIENCE_NETWORK_ARTIFACT);
+	DeleteFile("./externals/FacebookSDK_Dynamic.xcframework.zip");
+	DeleteDirectory("./externals/XCFrameworks", new DeleteDirectorySettings 
+	{
+    	Recursive = true,
+    	Force = true
+	});
+	
 });
 
 Task ("ci-setup")
@@ -140,60 +97,65 @@ Task ("libs")
 	.IsDependentOn("ci-setup")
 	.Does(() =>
 {
-	var msBuildSettings = new DotNetCoreMSBuildSettings { 
+	var msBuildSettings = new DotNetMSBuildSettings { 
 			MaxCpuCount = 1,
 	};
-	var dotNetCoreBuildSettings = new DotNetCoreBuildSettings { 
+	var dotNetCoreBuildSettings = new DotNetBuildSettings { 
 		Configuration = "Release",
-		Verbosity = DotNetCoreVerbosity.Diagnostic,
+		Verbosity = DotNetVerbosity.Diagnostic,
 		MSBuildSettings = msBuildSettings
 	};
 	
 	foreach (var target in SOURCES_TARGETS)
 		msBuildSettings.Targets.Add($@"source\{target}");
 	
-	DotNetCoreBuild(SOLUTION_PATH, dotNetCoreBuildSettings);
+	DotNetBuild(SOLUTION_PATH, dotNetCoreBuildSettings);
 });
 
 Task ("samples")
 	.IsDependentOn("libs")
 	.Does(() =>
 {
-	var msBuildSettings = new DotNetCoreMSBuildSettings { 
+	var msBuildSettings = new DotNetMSBuildSettings { 
 			MaxCpuCount = 1,
 	};
-	var dotNetCoreBuildSettings = new DotNetCoreBuildSettings { 
+	var dotNetCoreBuildSettings = new DotNetBuildSettings { 
 		Configuration = "Release",
-		Verbosity = DotNetCoreVerbosity.Diagnostic,
+		Verbosity = DotNetVerbosity.Diagnostic,
 		MSBuildSettings = msBuildSettings
 	};
 	
 	foreach (var target in SAMPLES_TARGETS)
 		msBuildSettings.Targets.Add($@"samples-using-source\{target}");
 	
-	DotNetCoreBuild(SOLUTION_PATH, dotNetCoreBuildSettings);
+	DotNetBuild(SOLUTION_PATH, dotNetCoreBuildSettings);
 });
 
 Task ("nuget")
 	.IsDependentOn("libs")
+	.IsDependentOn("prepare-artifacts")
 	.Does(() =>
 {
 	EnsureDirectoryExists("./output");
 
-	var msBuildSettings = new DotNetCoreMSBuildSettings { 
-		MaxCpuCount = 1,
-	};
-	var dotNetCorePackSettings = new DotNetCorePackSettings {
-		Configuration = "Release",
-		NoRestore = true,
-		NoBuild = true,
-		OutputDirectory = "./output/",
-		Verbosity = DotNetCoreVerbosity.Diagnostic,
-		MSBuildSettings = msBuildSettings
-	};
+	foreach (var artifact in ARTIFACTS_TO_BUILD)
+	{
+		var msBuildSettings = new DotNetMSBuildSettings { 
+			MaxCpuCount = 1,
+			PackageVersion = artifact.NugetVersion,
+		};
 
-	foreach (var target in SOURCES_TARGETS)
-		DotNetCorePack($"./source/{target}", dotNetCorePackSettings);
+		var dotNetCorePackSettings = new DotNetPackSettings {
+			Configuration = "Release",
+			NoRestore = true,
+			NoBuild = true,
+			OutputDirectory = "./output/",
+			Verbosity = DotNetVerbosity.Diagnostic,
+			MSBuildSettings = msBuildSettings
+		};
+
+		DotNetPack($"./source/{artifact.ArtifactId}", dotNetCorePackSettings);
+	}
 });
 
 Task ("clean")
