@@ -20,16 +20,16 @@ steps:
         dotnet tool install Cake.Tool --version 3.1.0
         dotnet cake --target nuget
       pwsh: true
-  - task: NuGetAuthenticate@1
-    displayName: 'NuGet Authenticate'
-  - task: NuGetCommand@2
-    displayName: 'NuGet push'
-    inputs:
-      command: 'push'
-      packagesToPush: '$(Build.SourcesDirectory)/output/*.nupkg;!$(Build.SourcesDirectory)/output/*.symbols.nupkg'
-      nuGetFeedType: 'internal'
-      publishVstsFeed: 'FocusBrands_Framework'
-      allowPackageConflicts: true
+  # - task: NuGetAuthenticate@1
+  #   displayName: 'NuGet Authenticate'
+  # - task: NuGetCommand@2
+  #   displayName: 'NuGet push'
+  #   inputs:
+  #     command: 'push'
+  #     packagesToPush: '$(Build.SourcesDirectory)/output/*.nupkg;!$(Build.SourcesDirectory)/output/*.symbols.nupkg'
+  #     nuGetFeedType: 'internal'
+  #     publishVstsFeed: 'FocusBrands_Framework'
+  #     allowPackageConflicts: true
   - task: PublishPipelineArtifact@1
     inputs:
       targetPath: '$(Build.SourcesDirectory)/output'
