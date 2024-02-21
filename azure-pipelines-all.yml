@@ -1,31 +1,27 @@
+name: $(Build.BuildId)
 
 pool: 
-  vmImage: 'windows-latest'
+  vmImage: 'macOS-12'
 
 steps:
   - task: UseDotNet@2
+    displayName: Install .NET SDK
     inputs:
       packageType: 'sdk'
       version: '7.0.400'
       installationPath: $(Agent.ToolsDirectory)/dotnet
-  
-
-
   - task: PowerShell@2
+    displayName: Cake nuget packages
     inputs:
       targetType: 'inline'
       script: |
-        # Write your PowerShell commands here.
         dotnet new tool-manifest
-        dotnet workload install android
+        dotnet workload install ios android
         dotnet tool install Cake.Tool --version 3.1.0
-        cd ./Facebook.Android
-        
         dotnet cake --target nuget
       pwsh: true
-  
   - task: PublishPipelineArtifact@1
     inputs:
-      targetPath: '$(Build.SourcesDirectory)/Facebook.Android/output'
-      artifact: 'android'
+      targetPath: '$(Build.SourcesDirectory)/output'
+      artifact: 'packages'
       publishLocation: 'pipeline'
